@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — [COURSE BRAND]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Razorpay Checkout JS SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+  <script type="module" crossorigin src="/bright-future-academy/assets/checkout-BAlA5Vhe.js"></script>
+  <link rel="modulepreload" crossorigin href="/bright-future-academy/assets/config-DZnAvSjb.js">
+  <link rel="stylesheet" crossorigin href="/bright-future-academy/assets/config-CsUxpk3A.css">
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
+
+  <header class="site-header">
+    <div class="page-container h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-space-sm">
+        <span class="material-symbols-outlined text-primary-container text-[20px]">terminal</span>
+        <span class="font-headline-md text-headline-md text-on-surface tracking-tight" id="nav-brand">[COURSE BRAND]</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1 bg-surface-container-lowest/80 p-1.5 rounded-xl border border-surface-container-high/50">
+        <div class="step-item done">
+          <span class="material-symbols-outlined text-[14px] text-primary-container">check_circle</span>
+          01 Register
+        </div>
+        <span class="text-outline-variant text-xs">→</span>
+        <div class="step-item active">
+          <span class="w-2 h-2 rounded-full bg-on-primary-container animate-ping-slow"></span>
+          02 Payment
+        </div>
+        <span class="text-outline-variant text-xs">→</span>
+        <div class="step-item pending">
+          <span class="material-symbols-outlined text-[14px]">lock</span>
+          03 Confirmation
+        </div>
+        <span class="text-outline-variant text-xs">→</span>
+        <div class="step-item pending">
+          <span class="material-symbols-outlined text-[14px]">lock</span>
+          04 Access
+        </div>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-high text-on-surface-variant">
+        <span class="material-symbols-outlined text-[16px] text-primary-container">lock</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-widest">256-Bit Encrypted</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-16 flex-1">
+    <div class="relative w-full overflow-hidden py-space-xl px-margin md:px-margin-md">
+
+      <!-- Ambient glows -->
+      <div class="ambient-spot w-[600px] h-[300px] bg-primary-container/5 top-1/4 left-1/2 -translate-x-1/2 opacity-60"></div>
+
+      <!-- Step identity -->
+      <div class="max-w-[760px] mx-auto mb-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+        <div class="flex items-center gap-space-sm">
+          <span class="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">02</span>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Step 02 — Review & Launch Payment</span>
+        </div>
+        <div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container text-on-surface-variant self-start sm:self-auto">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
+          </span>
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container">Gateway Armed</span>
+        </div>
+      </div>
+
+      <!-- Main card -->
+      <div class="max-w-[760px] mx-auto card-glass overflow-hidden">
+
+        <!-- Security ribbon -->
+        <div class="px-space-lg py-space-sm bg-surface-container flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+          <div class="flex items-center gap-space-xs">
+            <span class="material-symbols-outlined text-[15px] text-primary-container">verified_user</span>
+            <span class="tracking-widest uppercase">Razorpay Tokenized Gateway // 256-Bit Encryption</span>
+          </div>
+          <div class="flex items-center gap-space-xs">
+            <span class="material-symbols-outlined text-[14px] text-secondary">flash_on</span>
+            <span class="text-secondary font-medium tracking-wide">Zero Latency Sync</span>
+          </div>
+        </div>
+
+        <div class="p-space-lg md:p-space-xl flex flex-col gap-space-lg">
+
+          <!-- Title -->
+          <div>
+            <div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-1">
+              <span>Order Checkpoint</span>
+              <span class="text-on-surface-variant">•</span>
+              <span id="order-token">TOKEN ID: —</span>
+            </div>
+            <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-on-surface tracking-tight">
+              Review Order & Launch Gateway
+            </h1>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mt-1">
+              Confirm your details. Once settled, your Google Drive privileges are provisioned automatically within 60 seconds.
+            </p>
+          </div>
+
+          <!-- Order summary card -->
+          <div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col gap-space-md">
+            <div class="flex items-center justify-between flex-wrap gap-space-md">
+              <div>
+                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Enrolling In</p>
+                <p class="font-headline-md text-headline-md text-on-surface mt-0.5" id="checkout-course-name">[COURSE NAME]</p>
+              </div>
+              <div class="text-right">
+                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Total Due</p>
+                <p class="font-headline-lg text-headline-lg text-primary-container font-bold" id="checkout-price">[PRICE]</p>
+              </div>
+            </div>
+
+            <!-- Registered details -->
+            <div class="divider"></div>
+            <div class="flex flex-col gap-space-sm">
+              <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Registered Details</p>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Name</span>
+                  <span class="font-body-sm text-body-sm text-on-surface" id="detail-name">—</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Google Email (Drive Access)</span>
+                  <span class="font-body-sm text-body-sm text-primary-container" id="detail-email">—</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-[10px] text-on-surface-variant uppercase">WhatsApp</span>
+                  <span class="font-body-sm text-body-sm text-on-surface" id="detail-phone">Not provided</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="/register" class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-1 self-start">
+              <span class="material-symbols-outlined text-[14px]">edit</span>
+              Edit Details
+            </a>
+          </div>
+
+          <!-- Drive banner -->
+          <div class="border-drive pl-4 py-3 bg-surface-container-low rounded-r-xl">
+            <p class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Drive Access Provisioning</p>
+            <p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+              Folder shared to <strong class="text-primary-container" id="drive-email-preview">your Gmail</strong> within 60 seconds of settlement.
+            </p>
+          </div>
+
+          <!-- Error banner -->
+          <div id="payment-error" class="hidden bg-error-container/20 border border-error/30 rounded-xl p-space-md flex items-start gap-space-sm">
+            <span class="material-symbols-outlined text-error text-[20px] shrink-0">error</span>
+            <div>
+              <p class="font-label-sm text-label-sm text-error uppercase">Payment Error</p>
+              <p class="font-body-sm text-body-sm text-on-surface mt-0.5" id="payment-error-text">An error occurred. Please try again.</p>
+            </div>
+          </div>
+
+          <!-- Launch button -->
+          <div class="flex flex-col gap-space-sm">
+            <button class="btn-hero" id="launch-payment-btn" onclick="launchRazorpay()">
+              <span class="material-symbols-outlined text-[20px]">payments</span>
+              <span id="launch-btn-text">Launch Secure Payment — <span id="launch-price">[PRICE]</span></span>
+            </button>
+            <p class="text-center font-label-sm text-label-sm text-on-surface-variant">
+              You will be redirected to Razorpay's secure checkout. Do not close the window during UPI verification.
+            </p>
+          </div>
+
+          <!-- Payment methods -->
+          <div class="flex flex-wrap justify-center gap-2">
+            <span class="badge">UPI</span>
+            <span class="badge">GPay</span>
+            <span class="badge">PhonePe</span>
+            <span class="badge">Cards</span>
+            <span class="badge">Net Banking</span>
+            <span class="badge" id="checkout-emi" style="display:none">EMI</span>
+          </div>
+
+          <a href="/" class="text-center font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors flex items-center justify-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">arrow_back</span>
+            Return to Course Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

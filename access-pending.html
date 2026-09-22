@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Access Pending — [COURSE BRAND]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script type="module" crossorigin src="/bright-future-academy/assets/access-pending-BQC2TLLU.js"></script>
+  <link rel="modulepreload" crossorigin href="/bright-future-academy/assets/config-DZnAvSjb.js">
+  <link rel="stylesheet" crossorigin href="/bright-future-academy/assets/config-CsUxpk3A.css">
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex items-center justify-center">
+  <div class="page-container py-space-xl max-w-lg mx-auto flex flex-col items-center gap-space-xl text-center">
+
+    <!-- Animated icon -->
+    <div class="w-20 h-20 rounded-full bg-tertiary-container/10 border border-tertiary-fixed-dim/30 flex items-center justify-center">
+      <span class="material-symbols-outlined text-tertiary-fixed-dim text-[40px] animate-pulse-slow">cloud_sync</span>
+    </div>
+
+    <div class="flex flex-col gap-space-sm">
+      <span class="badge border-tertiary-fixed-dim/40 text-tertiary mx-auto flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+        Drive Provisioning In Progress
+      </span>
+      <h1 class="font-headline-lg text-headline-lg-mobile text-on-surface">Payment Confirmed ✓</h1>
+      <p class="font-body-md text-body-md text-on-surface-variant">
+        Your payment went through successfully. We're securing your Google Drive access right now — this usually takes under 60 seconds.
+      </p>
+    </div>
+
+    <!-- Progress animation -->
+    <div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+      <div class="h-full bg-tertiary-fixed-dim rounded-full" id="access-progress" style="width: 40%; animation: progress-fill 3s ease-in-out infinite alternate;"></div>
+    </div>
+    <style>
+      @keyframes progress-fill {
+        from { width: 30%; }
+        to { width: 80%; }
+      }
+    </style>
+
+    <div class="card w-full flex flex-col gap-space-sm text-left">
+      <div class="flex items-center gap-space-sm">
+        <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+        <span class="font-body-sm text-body-sm text-on-surface">Payment verified by Razorpay</span>
+      </div>
+      <div class="flex items-center gap-space-sm">
+        <svg class="animate-spin text-tertiary-fixed-dim shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-dasharray="31.416" stroke-dashoffset="10" stroke-linecap="round"/>
+        </svg>
+        <span class="font-body-sm text-body-sm text-on-surface">Granting Google Drive access to your Gmail…</span>
+      </div>
+      <div class="flex items-center gap-space-sm opacity-40">
+        <span class="material-symbols-outlined text-on-surface-variant text-[18px]">mail</span>
+        <span class="font-body-sm text-body-sm text-on-surface-variant">Sending confirmation email</span>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-space-sm w-full">
+      <button id="check-btn" onclick="checkStatus()" class="btn-secondary h-[52px] px-space-xl flex items-center justify-center gap-space-sm">
+        <span class="material-symbols-outlined text-[18px]">refresh</span>
+        Check Access Status
+      </button>
+      <a id="whatsapp-link" href="#" target="_blank" rel="noopener" class="text-center font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors">
+        Taking too long? Contact WhatsApp Support
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>

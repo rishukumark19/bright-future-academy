@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Cancelled — [COURSE BRAND]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script type="module" crossorigin src="/bright-future-academy/assets/cancelled-CZrU5j8P.js"></script>
+  <link rel="modulepreload" crossorigin href="/bright-future-academy/assets/config-DZnAvSjb.js">
+  <link rel="stylesheet" crossorigin href="/bright-future-academy/assets/config-CsUxpk3A.css">
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex items-center justify-center">
+  <div class="page-container py-space-xl max-w-lg mx-auto flex flex-col items-center gap-space-xl text-center">
+
+    <div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center">
+      <span class="material-symbols-outlined text-on-surface-variant text-[32px]">cancel</span>
+    </div>
+
+    <div class="flex flex-col gap-space-sm">
+      <span class="badge mx-auto">Payment Cancelled</span>
+      <h1 class="font-headline-lg text-headline-lg-mobile text-on-surface">You cancelled the payment</h1>
+      <p class="font-body-md text-body-md text-on-surface-variant">
+        No money was charged. Your details are saved — you can pick up right where you left off.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-space-sm w-full">
+      <button onclick="resumeCheckout()" class="btn-hero">
+        <span class="material-symbols-outlined text-[20px]">replay</span>
+        Resume — Try Again
+      </button>
+      <a href="/" class="btn-secondary h-[52px] px-space-xl flex items-center justify-center gap-space-sm">
+        Return to Course Details
+      </a>
+    </div>
+
+    <p class="font-body-sm text-body-sm text-on-surface-variant">
+      Need help choosing a payment method?
+      <a id="whatsapp-link" href="#" target="_blank" rel="noopener" class="text-primary-container hover:underline">Chat on WhatsApp</a>
+    </p>
+  </div>
+
+</body>
+</html>

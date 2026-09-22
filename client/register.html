@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — [COURSE BRAND]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/src/css/main.css" />
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="page-container h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-space-sm">
+        <span class="material-symbols-outlined text-primary-container text-[20px]">terminal</span>
+        <span class="font-headline-md text-headline-md text-on-surface tracking-tight" id="nav-brand">[COURSE BRAND]</span>
+      </a>
+
+      <!-- Progress stepper -->
+      <nav class="hidden lg:flex items-center gap-1 bg-surface-container-lowest/80 p-1.5 rounded-xl border border-surface-container-high/50">
+        <div class="step-item active">
+          <span class="w-2 h-2 rounded-full bg-on-primary-container animate-ping-slow"></span>
+          01 Register
+        </div>
+        <span class="text-outline-variant text-xs">→</span>
+        <div class="step-item pending">
+          <span class="material-symbols-outlined text-[14px]">lock</span>
+          02 Payment
+        </div>
+        <span class="text-outline-variant text-xs">→</span>
+        <div class="step-item pending">
+          <span class="material-symbols-outlined text-[14px]">lock</span>
+          03 Confirmation
+        </div>
+        <span class="text-outline-variant text-xs">→</span>
+        <div class="step-item pending">
+          <span class="material-symbols-outlined text-[14px]">lock</span>
+          04 Access
+        </div>
+      </nav>
+
+      <div class="flex items-center gap-space-sm bg-surface-container-low px-space-sm py-space-xs rounded-lg">
+        <span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline uppercase">256-Bit SSL</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-16 min-h-screen">
+    <div class="page-container py-space-xl">
+
+      <!-- Step tag -->
+      <div class="flex flex-col gap-space-xs mb-space-lg">
+        <div class="flex items-center gap-space-sm">
+          <span class="badge-primary">Step 1 of 4</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest flex items-center gap-1">
+            <span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+            Course Enrollment
+          </span>
+        </div>
+        <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight" id="reg-heading">Register for [COURSE NAME]</h1>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Enter your details below to begin your enrollment and set up your course access.</p>
+      </div>
+
+      <!-- 12-col grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+
+        <!-- ORDER SUMMARY (left, 5 cols) -->
+        <aside class="lg:col-span-5 flex flex-col gap-space-md order-2 lg:order-1">
+          <div class="card relative overflow-hidden">
+            <!-- Ambient glow -->
+            <div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="flex flex-col gap-space-sm pb-space-sm">
+              <span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest">Order Summary</span>
+              <h2 class="font-headline-md text-headline-md text-on-surface" id="summary-name">[COURSE NAME]</h2>
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase" id="summary-sub">[COURSE TAGLINE]</span>
+            </div>
+
+            <!-- Price block -->
+            <div class="bg-surface-container-lowest rounded-lg p-space-md flex items-baseline justify-between mt-space-sm">
+              <div class="flex flex-col">
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">One-Time Enrollment</span>
+                <span class="font-headline-xl text-headline-xl text-primary-container font-bold tracking-tight mt-1 leading-none" id="summary-price">[PRICE]</span>
+              </div>
+              <span class="badge-primary hidden" id="summary-discount"></span>
+            </div>
+
+            <!-- Inclusions -->
+            <div class="flex flex-col gap-space-sm mt-space-md">
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Included</span>
+              <ul class="flex flex-col gap-2" id="summary-inclusions">
+                <!-- JS populated -->
+              </ul>
+            </div>
+
+            <!-- Gmail notice -->
+            <div class="bg-surface-container-high rounded-lg p-space-md flex gap-space-sm items-start mt-space-md">
+              <span class="material-symbols-outlined text-tertiary text-[22px] shrink-0">info</span>
+              <div>
+                <span class="font-label-sm text-label-sm text-primary-container uppercase font-semibold tracking-wider block">Google Account Required</span>
+                <p class="font-body-sm text-body-sm text-on-surface mt-0.5">Your course materials are delivered via Google Drive to the Gmail address you provide below.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- REGISTRATION FORM (right, 7 cols) -->
+        <section class="lg:col-span-7 flex flex-col gap-space-lg order-1 lg:order-2">
+          <form id="registration-form" class="card flex flex-col gap-space-lg" novalidate>
+            <div class="flex flex-col pb-space-xs">
+              <span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest">Step 01 of 04</span>
+              <h2 class="font-headline-md text-headline-md text-on-surface mt-1">Enter Your Details</h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">We'll use these to process your enrollment and provide course access.</p>
+            </div>
+
+            <!-- Error banner (hidden by default) -->
+            <div id="form-error" class="hidden bg-error-container/20 border border-error/30 rounded-lg p-space-md flex items-start gap-space-sm">
+              <span class="material-symbols-outlined text-error text-[20px] shrink-0">error</span>
+              <p class="font-body-sm text-body-sm text-error" id="form-error-text">Please fix the errors below.</p>
+            </div>
+
+            <div class="flex flex-col gap-space-md">
+
+              <!-- Full Name -->
+              <div class="flex flex-col gap-1.5">
+                <label class="input-label flex items-center justify-between" for="fullName">
+                  Full Name
+                  <span class="text-on-surface-variant text-[10px] font-normal">REQUIRED</span>
+                </label>
+                <input
+                  class="input-field"
+                  id="fullName" name="fullName"
+                  type="text"
+                  placeholder="Alex Chen"
+                  required
+                  autocomplete="name"
+                />
+                <p class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-1 hidden" id="name-error">
+                  <span class="material-symbols-outlined text-error text-[13px]">error</span>
+                  Please enter your full name.
+                </p>
+              </div>
+
+              <!-- Google Account Email -->
+              <div class="flex flex-col gap-1.5">
+                <label class="input-label flex items-center justify-between" for="email">
+                  Google Account Email
+                  <span class="badge-primary text-[10px] py-0 px-1">Drive Access</span>
+                </label>
+                <input
+                  class="input-field"
+                  id="email" name="email"
+                  type="email"
+                  placeholder="yourname@gmail.com"
+                  required
+                  autocomplete="email"
+                />
+                <div class="bg-surface-container-low p-space-xs rounded-lg flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">cloud_done</span>
+                  <span class="font-body-sm text-[11px] text-on-surface-variant">
+                    ✨ Enter the Gmail address you want your Drive folder shared to.
+                  </span>
+                </div>
+                <p class="font-body-sm text-[11px] text-error flex items-center gap-1 hidden" id="email-error">
+                  <span class="material-symbols-outlined text-[13px]">error</span>
+                  Please enter a valid email address.
+                </p>
+              </div>
+
+              <!-- WhatsApp / Phone -->
+              <div class="flex flex-col gap-1.5">
+                <label class="input-label flex items-center justify-between" for="phone">
+                  WhatsApp Number
+                  <span class="text-on-surface-variant text-[10px] font-normal">OPTIONAL</span>
+                </label>
+                <input
+                  class="input-field"
+                  id="phone" name="phone"
+                  type="tel"
+                  placeholder="+91 98765 43210"
+                  autocomplete="tel"
+                />
+                <span class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px] text-primary">chat</span>
+                  For backup access link and payment receipt via WhatsApp.
+                </span>
+              </div>
+            </div>
+
+            <!-- Drive delivery indicator -->
+            <div class="bg-surface-container-low rounded-lg p-space-md flex items-center justify-between gap-space-sm">
+              <div class="flex items-center gap-space-sm min-w-0">
+                <div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-secondary text-[22px]">add_to_drive</span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider truncate">Google Drive Delivery</span>
+                  <span class="font-body-sm text-[11px] text-on-surface-variant truncate">Folder access shared on successful payment</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-1 shrink-0 px-2 py-1 rounded-lg bg-surface-container text-primary-container font-label-sm text-label-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+                READY
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="flex flex-col gap-space-sm">
+              <button class="btn-hero" type="submit" id="submit-btn">
+                <span id="submit-text">Continue to Payment</span>
+                <span class="material-symbols-outlined text-[20px]" id="submit-icon">arrow_forward</span>
+              </button>
+              <div class="flex flex-col items-center text-center gap-1 px-space-xs">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">You'll complete your payment securely via Razorpay.</span>
+                <p class="font-label-sm text-[11px] text-outline">No payment is processed at this step.</p>
+              </div>
+            </div>
+
+            <!-- Trust strip -->
+            <div class="grid grid-cols-3 gap-space-xs bg-surface-container-lowest p-space-sm rounded-lg">
+              <div class="flex items-center gap-1.5 p-1">
+                <span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-[10px] text-on-surface uppercase font-medium">Secure SSL</span>
+                  <span class="font-label-sm text-[10px] text-on-surface-variant">256-Bit</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 p-1">
+                <span class="material-symbols-outlined text-secondary text-[18px]">account_balance</span>
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-[10px] text-on-surface uppercase font-medium">Razorpay</span>
+                  <span class="font-label-sm text-[10px] text-on-surface-variant">RBI Regulated</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 p-1">
+                <span class="material-symbols-outlined text-secondary text-[18px]">cloud_download</span>
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-[10px] text-on-surface uppercase font-medium">Instant</span>
+                  <span class="font-label-sm text-[10px] text-on-surface-variant">Drive Access</span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+
+      </div>
+
+      <!-- Help bar -->
+      <div class="mt-space-xl p-space-md rounded-xl bg-surface-container-lowest flex flex-col md:flex-row items-center justify-between gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <span class="material-symbols-outlined text-primary text-[20px]">help_center</span>
+          <span class="font-body-sm text-body-sm text-on-surface">Need help with enrollment?</span>
+        </div>
+        <a class="font-label-sm text-label-sm text-primary-container hover:underline uppercase tracking-wider" id="support-link" href="#">
+          Contact Support on WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-surface-container-lowest border-t border-[rgba(255,255,255,0.05)] py-space-lg">
+    <div class="page-container flex flex-col md:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-on-surface-variant">
+      <div class="flex items-center gap-space-sm">
+        <span class="inline-block w-2 h-2 rounded-full bg-primary-container"></span>
+        <span class="uppercase tracking-wider">Secure Razorpay Gateway</span>
+      </div>
+      <div class="flex items-center gap-space-lg">
+        <span class="uppercase">PCI-DSS Compliant</span>
+        <a class="text-on-surface hover:text-primary transition-colors uppercase" id="footer-support" href="#">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/register.js"></script>
+</body>
+</html>

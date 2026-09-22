@@ -2,7 +2,7 @@
  * CHECKOUT PAGE — JS
  * Reads session storage, populates UI, launches Razorpay, handles callbacks
  */
-import { COURSE } from './config.js';
+import { COURSE, API_BASE_URL } from './config.js';
 
 let razorpayData = null;
 let enrollmentData = null;
@@ -100,7 +100,7 @@ async function verifyPayment(response) {
   setLaunchButtonLoading(true);
 
   try {
-    const res = await fetch('/api/verify-payment', {
+    const res = await fetch(API_BASE_URL + '/api/verify-payment', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

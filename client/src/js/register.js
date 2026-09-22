@@ -2,7 +2,7 @@
  * REGISTRATION PAGE — JS
  * Handles form validation, calls /api/create-order, then redirects to Razorpay
  */
-import { COURSE } from './config.js';
+import { COURSE, API_BASE_URL } from './config.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   populatePage();
@@ -80,7 +80,7 @@ async function handleSubmit(e) {
   setLoadingState(true);
 
   try {
-    const res = await fetch('/api/create-order', {
+    const res = await fetch(API_BASE_URL + '/api/create-order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, phone }),

@@ -7,6 +7,10 @@
  * Search for "TODO:" comments to find things that need your input.
  */
 
+export const API_BASE_URL = window.location.hostname.includes('github.io') || window.location.hostname.includes('is-a.dev') 
+  ? 'https://bright-future-academy-production.up.railway.app' 
+  : '';
+
 export const COURSE = {
   // ─── IDENTITY ─────────────────────────────────────────────────────────────
   brand:      'Bright Future Academy',

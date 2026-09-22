@@ -53,7 +53,7 @@ app.use('/api', apiRouter);
 
 // ── SERVE BUILT FRONTEND ───────────────────────────────────────────────────
 const publicDir = join(__dirname, '../../server/public');
-app.use(express.static(publicDir, { extensions: ['html'] }));
+app.use(express.static(publicDir));
 
 // Multi-page fallback — serve index.html for unknown routes
 // Individual pages (register.html, checkout.html etc.) are served directly

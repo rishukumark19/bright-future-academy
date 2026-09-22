@@ -23,7 +23,7 @@ function loadSessionData() {
 
   // If no order data, redirect back to registration
   if (!razorpayData.order_id) {
-    window.location.href = '/register';
+    window.location.href = './register.html';
   }
 }
 
@@ -73,7 +73,7 @@ window.launchRazorpay = function() {
       ondismiss: function() {
         // User closed the Razorpay modal
         sessionStorage.setItem('payment_cancelled', 'true');
-        window.location.href = `/cancelled?id=${razorpayData.enrollment_id}`;
+        window.location.href = `./cancelled.html?id=${razorpayData.enrollment_id}`;
       },
     },
     handler: async function(response) {
@@ -87,7 +87,7 @@ window.launchRazorpay = function() {
     rzp.on('payment.failed', function(response) {
       const reason = response.error?.description || 'Payment could not be processed.';
       sessionStorage.setItem('payment_failure_reason', reason);
-      window.location.href = `/failed?id=${razorpayData.enrollment_id}`;
+      window.location.href = `./failed.html?id=${razorpayData.enrollment_id}`;
     });
     rzp.open();
   } catch (err) {
@@ -118,11 +118,11 @@ async function verifyPayment(response) {
     }
 
     // Redirect to status/success page
-    window.location.href = `/status?id=${razorpayData.enrollment_id}`;
+    window.location.href = `./status.html?id=${razorpayData.enrollment_id}`;
 
   } catch (err) {
     console.error('Verification error:', err);
-    window.location.href = `/status?id=${razorpayData.enrollment_id}&verify_error=1`;
+    window.location.href = `./status.html?id=${razorpayData.enrollment_id}&verify_error=1`;
   }
 }
 

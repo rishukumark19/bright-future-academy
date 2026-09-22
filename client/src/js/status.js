@@ -15,7 +15,7 @@ let progress = 10;
 document.getElementById('whatsapp-help').href = COURSE.support.whatsappUrl;
 
 if (!enrollmentId) {
-  window.location.href = '/';
+  window.location.href = './index.html';
 } else {
   document.getElementById('order-ref').textContent = `Order: ${enrollmentId.slice(0, 8).toUpperCase()}`;
   if (verifyError) {
@@ -55,7 +55,7 @@ async function poll() {
       updateProgress(100);
       updateStep('Access Granted ✓');
       setTimeout(() => {
-        window.location.href = `/success?id=${enrollmentId}`;
+        window.location.href = `./success.html?id=${enrollmentId}`;
       }, 600);
       return true;
     }
@@ -67,12 +67,12 @@ async function poll() {
     }
 
     if (payment_status === 'failed') {
-      window.location.href = `/failed?id=${enrollmentId}`;
+      window.location.href = `./failed.html?id=${enrollmentId}`;
       return true;
     }
 
     if (payment_status === 'cancelled') {
-      window.location.href = `/cancelled?id=${enrollmentId}`;
+      window.location.href = `./cancelled.html?id=${enrollmentId}`;
       return true;
     }
 
@@ -85,7 +85,7 @@ async function poll() {
 
 function handleTimeout() {
   // After 60s, if Drive access not yet granted but payment is likely done
-  window.location.href = `/access-pending?id=${enrollmentId}`;
+  window.location.href = `./access-pending.html?id=${enrollmentId}`;
 }
 
 function updateProgress(pct) {

@@ -14,8 +14,8 @@ if (reason) {
 window.retryPayment = function() {
   const rzp = sessionStorage.getItem('razorpay');
   if (rzp) {
-    window.location.href = '/checkout';
+    window.location.href = './checkout.html';
   } else {
-    window.location.href = '/register';
+    window.location.href = './register.html';
   }
 };

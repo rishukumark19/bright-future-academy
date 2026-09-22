@@ -97,7 +97,7 @@ async function handleSubmit(e) {
     sessionStorage.setItem('razorpay', JSON.stringify({ order_id, amount, key_id, enrollment_id }));
 
     // Redirect to checkout review page
-    window.location.href = `/checkout?id=${enrollment_id}`;
+    window.location.href = `./checkout.html?id=${enrollment_id}`;
 
   } catch (err) {
     console.error('Order creation failed:', err);

@@ -3,8 +3,9 @@ import { resolve } from 'path';
 
 export default defineConfig({
   root: '.',
+  base: '/bright-future-academy/',
   build: {
-    outDir: '../server/public',
+    outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
       input: {

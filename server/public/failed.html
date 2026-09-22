@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Failed — [COURSE BRAND]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script type="module" crossorigin src="/assets/failed-BIT64k_n.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/config-DZnAvSjb.js">
+  <link rel="stylesheet" crossorigin href="/assets/config-CsUxpk3A.css">
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
+
+  <header class="site-header">
+    <div class="page-container h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-space-sm">
+        <span class="material-symbols-outlined text-primary-container text-[20px]">terminal</span>
+        <span class="font-headline-md text-headline-md text-on-surface tracking-tight" id="nav-brand">[COURSE BRAND]</span>
+      </a>
+      <a href="/help" class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors uppercase">Help</a>
+    </div>
+  </header>
+
+  <main class="pt-16 flex-1 flex items-center">
+    <div class="page-container py-space-xl max-w-2xl mx-auto">
+
+      <!-- Reassurance banner -->
+      <div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-space-md mb-space-lg border-l-2 border-l-secondary">
+        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">verified_user</span>
+        <div>
+          <p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Bank Auto-Reversal Guarantee · RBI Mandate</p>
+          <p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+            If any amount was debited from your bank, NPCI protocol triggers an automatic reversal within 24–48 hours back to your original source account. You will not lose money.
+          </p>
+        </div>
+      </div>
+
+      <!-- Main card -->
+      <div class="card flex flex-col gap-space-lg">
+        <div class="flex items-start gap-space-md">
+          <div class="w-12 h-12 rounded-xl bg-error-container/20 border border-error/30 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-error text-[26px]">credit_card_off</span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="font-label-sm text-label-sm text-error uppercase tracking-wider">Payment Could Not Be Completed</span>
+            <h1 class="font-headline-md text-headline-md text-on-surface">Transaction Unsuccessful</h1>
+            <p class="font-body-sm text-body-sm text-on-surface-variant" id="failure-reason">
+              The payment did not go through. This could be due to a UPI timeout, insufficient funds, or a temporary bank issue.
+            </p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- What happened -->
+        <div class="flex flex-col gap-space-sm">
+          <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">What Happened?</p>
+          <div class="flex flex-col gap-space-sm">
+            <div class="flex items-start gap-space-sm">
+              <span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">info</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Your payment was <strong class="text-on-surface">not charged</strong> or will be <strong class="text-on-surface">automatically reversed</strong> by your bank within 24–48 hours.</p>
+            </div>
+            <div class="flex items-start gap-space-sm">
+              <span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">replay</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">You can retry immediately using a different payment method (e.g., switch from UPI to Card).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Actions -->
+        <div class="flex flex-col gap-space-sm">
+          <button class="btn-hero" id="retry-btn" onclick="retryPayment()">
+            <span class="material-symbols-outlined text-[20px]">replay</span>
+            Retry Payment with Alternate Method
+          </button>
+          <a id="whatsapp-help" href="#" target="_blank" rel="noopener" class="btn-secondary h-[52px] px-space-xl flex items-center justify-center gap-space-sm">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            Pay via Direct UPI / WhatsApp Assistance
+          </a>
+          <a href="/" class="text-center font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors mt-1">
+            Return to Course Page
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

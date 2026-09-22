@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="[COURSE NAME] — [COURSE TAGLINE]. Master [SKILL] and start earning. Instant Google Drive access on enrollment." />
+  <title>[COURSE NAME] — [COURSE BRAND]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script type="module" crossorigin src="/assets/main-ChK3WQE0.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/config-DZnAvSjb.js">
+  <link rel="stylesheet" crossorigin href="/assets/config-CsUxpk3A.css">
+</head>
+<body class="bg-background text-on-surface antialiased">
+
+  <!-- ══════════════════════════════════════════════════════
+       TOP URGENCY BAR (sticky)
+       ══════════════════════════════════════════════════════ -->
+  <div id="urgency-bar" class="fixed top-0 left-0 w-full z-[60] bg-primary-container text-on-primary-container py-2 px-4 flex items-center justify-center gap-3 text-center">
+    <span class="material-symbols-outlined text-[16px]">bolt</span>
+    <span class="font-label-sm text-label-sm uppercase tracking-wide font-semibold">
+      Founding Student Offer — Limited Seats Available
+    </span>
+    <button onclick="document.getElementById('urgency-bar').remove()" class="ml-auto absolute right-4 opacity-70 hover:opacity-100 transition-opacity">
+      <span class="material-symbols-outlined text-[18px]">close</span>
+    </button>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVIGATION (sticky, below urgency bar)
+       ══════════════════════════════════════════════════════ -->
+  <header id="site-nav" class="fixed left-0 w-full z-50 transition-all duration-300" style="top: 40px;">
+    <div class="bg-surface/85 backdrop-blur-xl border-b border-[rgba(255,255,255,0.05)]">
+      <div class="page-container h-16 flex items-center justify-between">
+        <!-- Brand -->
+        <div class="flex items-center gap-space-sm">
+          <span class="material-symbols-outlined text-primary-container text-[22px]">terminal</span>
+          <span class="font-headline-md text-headline-md text-on-surface tracking-tight leading-none" id="nav-brand">[COURSE BRAND]</span>
+        </div>
+
+        <!-- Desktop nav scroll links -->
+        <nav class="hidden lg:flex items-center gap-1">
+          <a href="#curriculum" class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase">Curriculum</a>
+          <a href="#whats-included" class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase">Included</a>
+          <a href="#how-it-works" class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase">How It Works</a>
+          <a href="#pricing" class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase">Pricing</a>
+          <a href="#faq" class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase">FAQ</a>
+        </nav>
+
+        <!-- Enroll CTA -->
+        <a href="/register" class="btn-primary h-10 px-5 text-[14px]">
+          Enroll Now
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-[96px]"> <!-- 40px urgency bar + 56px nav -->
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 1 — HERO
+         ══════════════════════════════════════════════════════ -->
+    <section id="hero" class="relative min-h-[90vh] flex items-center overflow-hidden">
+
+      <!-- Ambient background glows -->
+      <div class="ambient-spot w-[600px] h-[600px] bg-primary-container/8 -top-32 -right-24 opacity-60"></div>
+      <div class="ambient-spot w-[400px] h-[400px] bg-secondary-container/6 bottom-0 -left-20 opacity-50"></div>
+      <div class="ambient-spot w-[300px] h-[300px] bg-tertiary-container/5 top-1/2 right-1/4 opacity-40"></div>
+
+      <div class="page-container relative z-10 py-space-xl lg:py-[80px]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+
+          <!-- LEFT — Copy -->
+          <div class="lg:col-span-7 flex flex-col gap-space-lg animate-slide-up">
+
+            <!-- Eyebrow tag -->
+            <div class="flex items-center gap-space-sm flex-wrap">
+              <span class="badge-primary">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+                Founding Cohort — Now Enrolling
+              </span>
+              <span class="badge">
+                <span class="material-symbols-outlined text-[14px]">verified</span>
+                Instant Drive Access
+              </span>
+            </div>
+
+            <!-- Hero headline -->
+            <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface" id="hero-headline">
+              Master <span class="text-gradient-primary" id="hero-highlight">[SKILL]</span><br/>
+              <span id="hero-suffix">& Land Global Clients</span>
+            </h1>
+
+            <!-- Sub copy -->
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-[540px]" id="hero-sub">
+              A complete, self-paced course delivered directly to your Google Drive.
+              Start watching in under 60 seconds from right now.
+            </p>
+
+            <!-- Stat badges -->
+            <div class="flex flex-wrap items-center gap-space-sm">
+              <div class="badge">
+                <span class="material-symbols-outlined text-[14px] text-secondary">play_circle</span>
+                <span id="stat-lessons">[X]+ HD Lessons</span>
+              </div>
+              <div class="badge">
+                <span class="material-symbols-outlined text-[14px] text-secondary">folder_open</span>
+                Lifetime Drive Access
+              </div>
+              <div class="badge">
+                <span class="material-symbols-outlined text-[14px] text-secondary">update</span>
+                Future Updates Included
+              </div>
+              <div class="badge">
+                <span class="material-symbols-outlined text-[14px] text-secondary">phone_android</span>
+                Self-Paced, Any Device
+              </div>
+            </div>
+
+            <!-- Social proof row (founding mode) -->
+            <div id="social-proof-row" class="flex items-center gap-space-md flex-wrap">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary-container text-[18px]">groups</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Be among the <strong class="text-on-surface">first students</strong> in this cohort</span>
+              </div>
+            </div>
+
+            <!-- Price pill -->
+            <div class="flex items-center gap-space-md flex-wrap">
+              <div class="flex items-baseline gap-2">
+                <span class="font-headline-xl text-headline-xl text-primary-container font-bold" id="hero-price">[PRICE]</span>
+                <span class="font-body-md text-body-md text-on-surface-variant line-through" id="hero-price-original" style="display:none"></span>
+              </div>
+              <span class="badge-primary hidden" id="hero-discount-badge"></span>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row gap-space-sm">
+              <a href="/register" class="btn-hero" style="max-width: 340px;">
+                <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+                Enroll Now — Get Instant Access
+              </a>
+              <button onclick="document.getElementById('preview-modal').classList.remove('hidden')"
+                      class="btn-secondary h-[52px] px-space-xl">
+                <span class="material-symbols-outlined text-[18px]">play_circle</span>
+                Watch Free Preview
+              </button>
+            </div>
+
+            <!-- Trust strip -->
+            <div class="flex items-center gap-space-md flex-wrap pt-space-xs">
+              <div class="flex items-center gap-1 text-on-surface-variant">
+                <span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+                <span class="font-label-sm text-label-sm uppercase">256-Bit Secured by Razorpay</span>
+              </div>
+              <div class="flex items-center gap-1 text-on-surface-variant">
+                <span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+                <span class="font-label-sm text-label-sm uppercase">UPI · Cards · EMI Accepted</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT — Visual card -->
+          <div class="lg:col-span-5 hidden lg:flex flex-col gap-space-md">
+            <!-- Drive Vault Preview Card -->
+            <div class="card-glass p-space-lg flex flex-col gap-space-md">
+              <div class="flex items-center gap-space-sm">
+                <div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center">
+                  <span class="material-symbols-outlined text-tertiary text-[20px]">folder_open</span>
+                </div>
+                <div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Your Course Vault</p>
+                  <p class="font-body-sm text-body-sm text-on-surface" id="vault-folder-name">[COURSE NAME] — Student Vault</p>
+                </div>
+                <div class="ml-auto badge-primary text-[10px] flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+                  LIVE ACCESS
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-1.5" id="vault-file-list">
+                <!-- Populated by JS -->
+              </div>
+
+              <!-- Drive integration banner -->
+              <div class="border-drive pl-3 py-2 mt-space-xs">
+                <p class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Instant Sync</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Drive privileges dispatched within 60 seconds of Razorpay settlement</p>
+              </div>
+            </div>
+
+            <!-- Instructor card -->
+            <div class="card flex items-start gap-space-md">
+              <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-primary text-[28px]">person</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Your Instructor</span>
+                <span class="font-headline-md text-headline-md text-on-surface" id="instructor-name">[INSTRUCTOR NAME]</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant" id="instructor-sub">Expert in [SKILL]</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         MARQUEE — FOUNDING STUDENT STRIP
+         ══════════════════════════════════════════════════════ -->
+    <div class="py-space-md bg-surface-container-lowest border-y border-[rgba(255,255,255,0.05)] overflow-hidden">
+      <div class="marquee-track">
+        <div class="marquee-inner" id="marquee-inner">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 2 — WHO IT'S FOR
+         ══════════════════════════════════════════════════════ -->
+    <section id="who-its-for" class="py-[80px] border-b border-[rgba(255,255,255,0.05)]">
+      <div class="page-container">
+        <div class="flex flex-col gap-space-sm mb-space-xl text-center">
+          <span class="section-tag mx-auto">Self-Qualify First</span>
+          <h2 class="section-heading md:text-headline-xl text-headline-lg-mobile">Is This Course For You?</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg max-w-4xl mx-auto">
+          <!-- For You -->
+          <div class="card flex flex-col gap-space-md border-l-2 border-l-primary-container">
+            <div class="flex items-center gap-space-sm">
+              <span class="material-symbols-outlined text-primary-container text-[22px]">check_circle</span>
+              <h3 class="font-headline-md text-headline-md text-on-surface">This IS For You If…</h3>
+            </div>
+            <ul class="flex flex-col gap-space-sm" id="for-you-list">
+              <!-- Populated by JS -->
+            </ul>
+          </div>
+
+          <!-- Not For You -->
+          <div class="card flex flex-col gap-space-md border-l-2 border-l-error">
+            <div class="flex items-center gap-space-sm">
+              <span class="material-symbols-outlined text-error text-[22px]">cancel</span>
+              <h3 class="font-headline-md text-headline-md text-on-surface">This is NOT For You If…</h3>
+            </div>
+            <ul class="flex flex-col gap-space-sm" id="not-for-you-list">
+              <!-- Populated by JS -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center mt-space-xl">
+          <a href="/register" class="btn-primary inline-flex">
+            I'm Ready — Let's Begin
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 3 — DRIVE VAULT PREVIEW
+         ══════════════════════════════════════════════════════ -->
+    <section id="whats-included" class="py-[80px] bg-surface-container-lowest border-b border-[rgba(255,255,255,0.05)]">
+      <div class="page-container">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+          <div class="lg:col-span-5 flex flex-col gap-space-md">
+            <span class="section-tag">The Drive Master Vault</span>
+            <h2 class="section-heading text-headline-lg-mobile md:text-headline-lg">You're Not Just Getting Videos</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+              You're getting a complete, organized operating system — structured exactly like a professional's working folder. Streamable, downloadable, yours forever.
+            </p>
+            <div class="flex flex-col gap-space-sm" id="inclusions-list">
+              <!-- Populated by JS -->
+            </div>
+            <div class="flex items-center gap-space-sm mt-space-sm">
+              <span class="badge-primary flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">all_inclusive</span>
+                Lifetime Access — Future Updates Included
+              </span>
+            </div>
+            <a href="/register" class="btn-primary mt-space-sm" style="max-width:280px;">
+              Claim Vault Access
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Drive folder mock -->
+          <div class="lg:col-span-7">
+            <div class="card-glass p-space-lg flex flex-col gap-space-sm">
+              <!-- Folder header -->
+              <div class="flex items-center gap-space-sm pb-space-sm border-b border-[rgba(255,255,255,0.06)]">
+                <span class="material-symbols-outlined text-tertiary text-[24px]">folder_open</span>
+                <div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Google Drive</p>
+                  <p class="font-body-md text-body-md text-on-surface" id="drive-folder-name">[COURSE NAME] — Student Vault</p>
+                </div>
+                <div class="ml-auto badge-primary flex items-center gap-1 text-[10px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Shared with you
+                </div>
+              </div>
+
+              <!-- File tree -->
+              <div class="flex flex-col gap-2" id="drive-file-tree">
+                <!-- Populated by JS -->
+              </div>
+
+              <!-- Info banner -->
+              <div class="mt-space-sm bg-surface-container-high rounded-lg p-space-sm flex items-start gap-space-sm border-drive">
+                <span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">info</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  <strong class="text-on-surface">Why Google Drive?</strong> Zero buffering, streamable on mobile, tablet, and desktop. Download offline via the Google Drive app.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 4 — CURRICULUM
+         ══════════════════════════════════════════════════════ -->
+    <section id="curriculum" class="py-[80px] border-b border-[rgba(255,255,255,0.05)]">
+      <div class="page-container">
+        <div class="flex flex-col gap-space-sm mb-space-xl">
+          <span class="section-tag">Complete Curriculum</span>
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <h2 class="section-heading text-headline-lg-mobile md:text-headline-lg">Everything You Will Learn</h2>
+            <button class="btn-secondary h-10 px-5 text-[14px] self-start md:self-auto" id="download-syllabus-btn">
+              <span class="material-symbols-outlined text-[16px]">download</span>
+              Download Syllabus
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-space-sm" id="curriculum-accordion">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="mt-space-xl text-center">
+          <a href="/register" class="btn-primary inline-flex">
+            <span class="material-symbols-outlined text-[20px]">lock_open</span>
+            Unlock Full Curriculum Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 5 — HOW IT WORKS
+         ══════════════════════════════════════════════════════ -->
+    <section id="how-it-works" class="py-[80px] bg-surface-container-lowest border-b border-[rgba(255,255,255,0.05)]">
+      <div class="page-container">
+        <div class="flex flex-col gap-space-sm mb-space-xl text-center max-w-2xl mx-auto">
+          <span class="section-tag mx-auto">Demystified</span>
+          <h2 class="section-heading text-headline-lg-mobile md:text-headline-lg">How Drive Delivery Works</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">
+            No platform login. No password. Your course lives in your Google Drive — the same app already on your phone.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg max-w-5xl mx-auto" id="steps-grid">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Important notice -->
+        <div class="mt-space-xl max-w-2xl mx-auto bg-surface-container rounded-xl p-space-lg flex items-start gap-space-md border border-[rgba(0,240,144,0.15)]">
+          <span class="material-symbols-outlined text-primary-container text-[24px] shrink-0">info</span>
+          <div>
+            <p class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider mb-1">Important</p>
+            <p class="font-body-md text-body-md text-on-surface">
+              Make sure you enter the <strong>Gmail address you actively use</strong> on your phone or computer. This is the address that receives Drive access.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-space-md justify-center mt-space-xl">
+          <a href="/register" class="btn-primary inline-flex">
+            <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+            Get Instant Access Now
+          </a>
+          <a id="whatsapp-how-it-works" href="#" class="btn-secondary inline-flex h-[52px] px-space-xl">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            Questions? Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 6 — PRICING
+         ══════════════════════════════════════════════════════ -->
+    <section id="pricing" class="py-[80px] border-b border-[rgba(255,255,255,0.05)] relative overflow-hidden">
+      <div class="ambient-spot w-[500px] h-[500px] bg-primary-container/8 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-50"></div>
+
+      <div class="page-container relative z-10">
+        <div class="flex flex-col gap-space-sm mb-space-xl text-center">
+          <span class="section-tag mx-auto">Complete Offer</span>
+          <h2 class="section-heading text-headline-lg-mobile md:text-headline-lg">One Price. Everything Included.</h2>
+        </div>
+
+        <div class="max-w-lg mx-auto">
+          <div class="card-glass p-space-xl flex flex-col gap-space-lg animate-glow-pulse">
+
+            <!-- Price -->
+            <div class="flex flex-col gap-1 text-center">
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">One-Time Payment</span>
+              <div class="flex items-baseline justify-center gap-3 mt-1">
+                <span class="font-headline-xl text-headline-xl text-primary-container font-bold" id="pricing-current">[PRICE]</span>
+                <span class="font-headline-md text-headline-md text-on-surface-variant line-through hidden" id="pricing-original"></span>
+              </div>
+              <span class="badge-primary mx-auto mt-1 hidden" id="pricing-discount"></span>
+            </div>
+
+            <!-- Inclusions checklist -->
+            <div class="flex flex-col gap-space-sm" id="pricing-inclusions">
+              <!-- Populated by JS -->
+            </div>
+
+            <!-- Divider -->
+            <div class="divider"></div>
+
+            <!-- Payment methods -->
+            <div class="flex flex-col gap-space-sm items-center text-center">
+              <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Accepted Payment Methods</p>
+              <div class="flex flex-wrap justify-center gap-2">
+                <span class="badge">UPI</span>
+                <span class="badge">GPay</span>
+                <span class="badge">PhonePe</span>
+                <span class="badge">Paytm</span>
+                <span class="badge">Net Banking</span>
+                <span class="badge">Credit Card</span>
+                <span class="badge">Debit Card</span>
+                <span class="badge" id="emi-badge" style="display:none">0% EMI</span>
+              </div>
+              <div class="flex items-center gap-1 mt-1">
+                <span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Powered by Razorpay — RBI Regulated</span>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <a href="/register" class="btn-hero">
+              <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+              Proceed to Enrollment — Instant Access
+            </a>
+
+            <p class="text-center font-label-sm text-label-sm text-on-surface-variant">
+              No hidden fees. No platform subscription. Pay once, access forever.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 7 — FAQ
+         ══════════════════════════════════════════════════════ -->
+    <section id="faq" class="py-[80px] bg-surface-container-lowest">
+      <div class="page-container">
+        <div class="flex flex-col gap-space-sm mb-space-xl text-center">
+          <span class="section-tag mx-auto">Common Questions</span>
+          <h2 class="section-heading text-headline-lg-mobile md:text-headline-lg">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="flex flex-col gap-space-sm max-w-3xl mx-auto" id="faq-accordion">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-space-md justify-center mt-space-xl">
+          <a id="whatsapp-faq" href="#" class="btn-primary inline-flex">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            Still Have Questions? Ask on WhatsApp
+          </a>
+          <a href="/register" class="btn-secondary inline-flex h-[52px] px-space-xl">
+            Enroll Now
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         FOOTER
+         ══════════════════════════════════════════════════════ -->
+    <footer class="bg-surface-container-lowest border-t border-[rgba(255,255,255,0.05)] py-space-xl">
+      <div class="page-container flex flex-col md:flex-row items-center justify-between gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <span class="material-symbols-outlined text-primary-container text-[18px]">terminal</span>
+          <span class="font-label-md text-label-md text-on-surface uppercase" id="footer-brand">[COURSE BRAND]</span>
+        </div>
+        <div class="flex items-center gap-space-lg font-label-sm text-label-sm text-on-surface-variant">
+          <a id="footer-support-link" href="#" class="hover:text-on-surface transition-colors uppercase">Support</a>
+          <a href="/help" class="hover:text-on-surface transition-colors uppercase">Help</a>
+        </div>
+        <div class="flex items-center gap-space-sm">
+          <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Secure Razorpay Gateway</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════
+       MOBILE STICKY CTA
+       ══════════════════════════════════════════════════════ -->
+  <div class="mobile-sticky-cta">
+    <a href="/register" class="btn-hero w-full">
+      <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+      <span>Get Instant Access</span>
+      <span class="font-label-sm text-label-sm opacity-80 ml-1" id="mobile-cta-price">· [PRICE]</span>
+    </a>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       WHATSAPP FLOAT
+       ══════════════════════════════════════════════════════ -->
+  <a id="whatsapp-float" href="#" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ══════════════════════════════════════════════════════
+       VIDEO PREVIEW MODAL
+       ══════════════════════════════════════════════════════ -->
+  <div id="preview-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-[rgba(3,7,18,0.92)] backdrop-blur-lg" onclick="closePreviewModal()"></div>
+    <div class="relative z-10 w-full max-w-3xl card-glass p-space-lg flex flex-col gap-space-md">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Free Preview</p>
+          <h3 class="font-headline-md text-headline-md text-on-surface">Lesson 1.1 — Introduction</h3>
+        </div>
+        <button onclick="closePreviewModal()" class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Video placeholder — replace src with real embed -->
+      <div class="aspect-video bg-surface-container-lowest rounded-lg flex items-center justify-center">
+        <div class="flex flex-col items-center gap-space-sm text-on-surface-variant">
+          <span class="material-symbols-outlined text-[48px] text-primary-container">play_circle</span>
+          <p class="font-label-sm text-label-sm uppercase tracking-wider">Video Preview</p>
+          <p class="font-body-sm text-body-sm text-center max-w-xs">
+            <!-- TODO: Replace this div with an actual iframe embed once video is ready -->
+            Connect your course preview video here
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-space-sm items-center">
+        <a href="/register" class="btn-primary flex-1">
+          <span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+          Enjoyed this? Unlock All Lessons
+        </a>
+        <button onclick="closePreviewModal()" class="btn-secondary h-[52px] px-space-xl">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

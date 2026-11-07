@@ -235,7 +235,8 @@ function initModals() {
     document.getElementById('nav-sample-btn'),
     document.getElementById('mobile-sample-btn'),
     document.getElementById('hero-sample-btn'),
-    document.getElementById('cta-sample-btn')
+    document.getElementById('cta-sample-btn'),
+    ...document.querySelectorAll('.mobile-hero-sample-btn')
   ];
 
   function openSampleModal(classPref) {

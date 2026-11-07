@@ -17,6 +17,15 @@ export function initAnimations() {
 function initHeroEntrance() {
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
+  // Mobile dedicated hero entrance (smooth spring)
+  if (document.getElementById('hero-mobile-container')) {
+    gsap.fromTo(
+      '#hero-mobile-container',
+      { opacity: 0, y: 15 },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', delay: 0.05 }
+    );
+  }
+
   // Hero badge pop
   tl.fromTo(
     '#hero-badge',

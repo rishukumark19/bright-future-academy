@@ -4,7 +4,7 @@
  */
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 const FROM = process.env.EMAIL_FROM || 'Course Platform <noreply@yourdomain.com>';
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || process.env.EMAIL_FROM;

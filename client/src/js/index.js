@@ -326,62 +326,14 @@ function initModals() {
     });
   }
 
-  // Buy Notes Modal elements
-  const buyModal = document.getElementById('buy-notes-modal');
-  const closeBuyBtn = document.getElementById('close-buy-modal');
-  const buyForm = document.getElementById('buy-notes-form');
-  const buyTitle = document.getElementById('buy-modal-title');
-  const buyPkg = document.getElementById('buy-modal-pkg');
-  const buyOrig = document.getElementById('buy-modal-orig');
-  const buyPrice = document.getElementById('buy-modal-price');
-
-  let activeBuyCourse = null;
-
-  function openBuyModal(course) {
-    if (!buyModal || !course) return;
-    activeBuyCourse = course;
-    if (buyTitle) buyTitle.textContent = `Get ${course.category} Study Notes`;
-    if (buyPkg) buyPkg.textContent = course.title;
-    if (buyOrig) buyOrig.textContent = course.originalPrice ? `₹${course.originalPrice}` : '₹550';
-    if (buyPrice) buyPrice.textContent = course.price.startsWith('₹') ? course.price : `₹${course.price}`;
-
-    buyModal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeBuyModal() {
-    if (!buyModal) return;
-    buyModal.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-
-  closeBuyBtn?.addEventListener('click', closeBuyModal);
-  buyModal?.addEventListener('click', (e) => {
-    if (e.target === buyModal) closeBuyModal();
-  });
-
+  // Buy Notes Direct Navigation (Redirects straight to checkout.html)
   document.querySelectorAll('[data-buy-course]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const courseId = btn.getAttribute('data-buy-course');
-      const course = BFA_COURSES.find(c => c.id === courseId);
-      if (course) {
-        openBuyModal(course);
-      }
+      window.location.href = `./checkout.html?package=${encodeURIComponent(courseId || 'class-10-science-notes')}`;
     });
   });
-
-  if (buyForm) {
-    buyForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const studentName = document.getElementById('buy-name')?.value || '';
-      const email = document.getElementById('buy-email')?.value || '';
-      const phone = document.getElementById('buy-phone')?.value || '';
-      const courseId = activeBuyCourse?.id || 'class-10-science-notes';
-      closeBuyModal();
-      window.location.href = `./checkout.html?package=${courseId}&name=${encodeURIComponent(studentName)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`;
-    });
-  }
 }
 
 // ── 7. CUSTOM NOTES REQUEST FORM ──────────────────────────────────────────

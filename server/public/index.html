@@ -22,9 +22,9 @@
   <!-- Material Symbols Outlined -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   
-  <script type="module" crossorigin src="./assets/main-rKhN7nDo.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/main-T3M0WdYu.js">
-  <link rel="stylesheet" crossorigin href="./assets/main-B-vbLj3n.css">
+  <script type="module" crossorigin src="./assets/main-BuhmZNpu.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/main-B6UXiDVK.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-MokF3Ry1.css">
 </head>
 <body class="bg-[#F8FAF9] text-[#1E293B] font-sans antialiased selection:bg-[#20B486] selection:text-white overflow-x-clip">
 
@@ -76,41 +76,44 @@
        2. MAIN STICKY NAVIGATION BAR (LOCKED ON SCROLL ACROSS ALL VIEWPORTS)
        ========================================================================= -->
   <nav id="main-nav" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E2E8F0] shadow-xs transition-all duration-200">
-    <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
       
       <!-- Logo: Bright Future Academy -->
-      <a href="./index.html" class="flex items-center gap-1.5 sm:gap-2.5 text-decoration-none group min-w-0">
+      <a href="./index.html" class="flex items-center gap-1.5 sm:gap-2.5 text-decoration-none group shrink-0">
         <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs shrink-0">
-          <span class="material-symbols-outlined text-[20px] sm:text-[26px]">menu_book</span>
+          <span class="material-symbols-outlined text-[20px] sm:text-[24px]">menu_book</span>
         </div>
-        <span class="font-extrabold text-base sm:text-2xl tracking-tight text-[#0F172A] whitespace-nowrap truncate">Bright Future <span class="text-[#20B486]">Academy</span></span>
+        <span class="font-extrabold text-base sm:text-xl lg:text-lg xl:text-2xl tracking-tight text-[#0F172A] whitespace-nowrap">Bright Future <span class="text-[#20B486]">Academy</span></span>
       </a>
 
-      <!-- Desktop & Tablet Nav Links -->
-      <div class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-semibold text-[#475569]">
-        <a href="./index.html" class="text-[#20B486] border-b-2 border-[#20B486] pb-1 font-bold">Home</a>
-        <a href="#classes" class="hover:text-[#20B486] transition-colors">Classes 6–10</a>
-        <a href="#why-us" class="hover:text-[#20B486] transition-colors">Why Our Notes</a>
-        <a href="#notes" class="hover:text-[#20B486] transition-colors">Notes Catalog</a>
-        <a href="#reviews" class="hover:text-[#20B486] transition-colors">Toppers & Reviews</a>
-        <a href="#faq" class="hover:text-[#20B486] transition-colors">FAQ</a>
+      <!-- Desktop & Laptop Nav Links -->
+      <div class="hidden lg:flex items-center gap-3 xl:gap-6 text-xs xl:text-sm font-semibold text-[#475569] shrink min-w-0">
+        <a href="./index.html" class="text-[#20B486] border-b-2 border-[#20B486] pb-1 font-bold whitespace-nowrap">Home</a>
+        <a href="#classes" class="hover:text-[#20B486] transition-colors whitespace-nowrap">Classes 6–10</a>
+        <a href="#why-us" class="hover:text-[#20B486] transition-colors whitespace-nowrap">Why Us</a>
+        <a href="#notes" class="hover:text-[#20B486] transition-colors whitespace-nowrap">Notes Catalog</a>
+        <a href="#reviews" class="hover:text-[#20B486] transition-colors whitespace-nowrap">Reviews</a>
+        <a href="#faq" class="hover:text-[#20B486] transition-colors whitespace-nowrap">FAQ</a>
       </div>
 
-      <!-- Action CTAs -->
-      <div class="hidden sm:flex items-center gap-3 lg:gap-4">
-        <button id="nav-sample-btn" class="px-4 lg:px-5 py-2.5 text-sm font-semibold text-[#334155] hover:text-[#20B486] transition-colors whitespace-nowrap flex items-center gap-1.5">
-          <span class="material-symbols-outlined text-[18px] text-[#20B486]">visibility</span>
+      <!-- Action CTAs & Mobile Toggle Wrapper -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <!-- Secondary: Free Sample (visible on xl and tablets, hidden on tight laptops to prevent any crowding) -->
+        <button id="nav-sample-btn" class="hidden xl:flex items-center gap-1.5 px-3.5 py-2 text-xs xl:text-sm font-semibold text-[#334155] hover:text-[#20B486] transition-colors whitespace-nowrap shrink-0">
+          <span class="material-symbols-outlined text-[16px] text-[#20B486]">visibility</span>
           <span>Free Sample</span>
         </button>
-        <a href="#notes" class="px-5 lg:px-6 py-2.5 rounded-full border-2 border-[#20B486] text-[#20B486] hover:bg-[#20B486] hover:text-white font-bold text-sm transition-all shadow-xs whitespace-nowrap">
-          Get Notes (10% Off)
-        </a>
-      </div>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-toggle" aria-label="Open Navigation Menu" class="lg:hidden p-1.5 sm:p-2 rounded-xl text-[#334155] hover:bg-[#F1F5F9] transition-colors shrink-0">
-        <span class="material-symbols-outlined text-[24px] sm:text-[28px]">menu</span>
-      </button>
+        <!-- Primary CTA: Get Notes -->
+        <a href="#notes" class="px-3.5 sm:px-4 xl:px-5 py-2 sm:py-2.5 rounded-full bg-[#20B486] hover:bg-[#1A966E] text-white font-bold text-xs sm:text-sm transition-all shadow-xs whitespace-nowrap shrink-0">
+          Get Notes <span class="hidden sm:inline">(10% Off)</span>
+        </a>
+
+        <!-- Mobile & Tablet Menu Toggle -->
+        <button id="mobile-menu-toggle" aria-label="Open Navigation Menu" class="lg:hidden p-1.5 sm:p-2 rounded-xl text-[#334155] hover:bg-[#F1F5F9] transition-colors shrink-0">
+          <span class="material-symbols-outlined text-[24px] sm:text-[26px]">menu</span>
+        </button>
+      </div>
 
     </div>
   </nav>

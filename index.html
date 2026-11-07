@@ -1,571 +1,1414 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="[COURSE NAME] — [COURSE TAGLINE]. Master [SKILL] and start earning. Instant Google Drive access on enrollment." />
-  <title>[COURSE NAME] — [COURSE BRAND]</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Bright Future Academy — Classes 6th to 10th Premium Study Notes & Formula Sheets</title>
+  <meta name="description" content="Bright Future Academy: Comprehensive chapter-wise study notes, formula cheat sheets, solved NCERT & board question banks for Classes 6, 7, 8, 9 & 10." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <script type="module" crossorigin src="/bright-future-academy/assets/main-wJEDBf8b.js"></script>
-  <link rel="modulepreload" crossorigin href="/bright-future-academy/assets/config-CINhJ9nL.js">
-  <link rel="stylesheet" crossorigin href="/bright-future-academy/assets/config-CsUxpk3A.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  
+  <script type="module" crossorigin src="./assets/main-DO9lG7wN.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/main-CV82Dt26.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-CEeiLlJA.css">
 </head>
-<body class="bg-background text-on-surface antialiased">
+<body class="bg-[#F8FAF9] text-[#1E293B] font-sans antialiased selection:bg-[#20B486] selection:text-white overflow-x-clip">
 
-  <!-- ══════════════════════════════════════════════════════
-       TOP URGENCY BAR (sticky)
-       ══════════════════════════════════════════════════════ -->
-  <div id="urgency-bar" class="fixed top-0 left-0 w-full z-[60] bg-primary-container text-on-primary-container py-2 px-4 flex items-center justify-center gap-3 text-center">
-    <span class="material-symbols-outlined text-[16px]">bolt</span>
-    <span class="font-label-sm text-label-sm uppercase tracking-wide font-semibold">
-      Founding Student Offer — Limited Seats Available
-    </span>
-    <button onclick="document.getElementById('urgency-bar').remove()" class="ml-auto absolute right-4 opacity-70 hover:opacity-100 transition-opacity">
-      <span class="material-symbols-outlined text-[18px]">close</span>
-    </button>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════
-       NAVIGATION (sticky, below urgency bar)
-       ══════════════════════════════════════════════════════ -->
-  <header id="site-nav" class="fixed left-0 w-full z-50 transition-all duration-300" style="top: 40px;">
-    <div class="bg-surface/85 backdrop-blur-xl border-b border-[rgba(255,255,255,0.05)]">
-      <div class="page-container h-16 flex items-center justify-between">
-        <!-- Brand -->
-        <div class="flex items-center gap-space-sm">
-          <span class="material-symbols-outlined text-primary-container text-[22px]">terminal</span>
-          <span class="font-headline-md text-headline-md text-on-surface tracking-tight leading-none" id="nav-brand">[COURSE BRAND]</span>
+  <!-- =========================================================================
+       1. TOP SLIDING ANNOUNCEMENT TICKER (10% OFF PROMOTION — SLIDING RIGHT TO LEFT)
+       ========================================================================= -->
+  <header class="w-full bg-[#17252A] text-[#E2E8F0] py-2.5 overflow-hidden border-b border-[#2C3E50] select-none">
+    <div class="animate-marquee-rtl flex items-center gap-8 text-xs sm:text-sm font-medium">
+      <!-- Item set 1 -->
+      <div class="flex items-center gap-8 shrink-0">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center justify-center p-1 rounded-full bg-[#20B486]/20 text-[#20B486]">
+            <span class="material-symbols-outlined text-[14px]">local_offer</span>
+          </span>
+          <span>Special Offer: Get <span class="text-[#20B486] font-bold">10% Off</span> on all Classes 6th to 10th Study Notes & Formula Sheets!</span>
         </div>
-
-        <!-- Desktop nav scroll links -->
-        <nav class="hidden lg:flex items-center gap-1">
-          <a href="#curriculum" class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase">Curriculum</a>
-          <a href="#whats-included" class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase">Included</a>
-          <a href="#how-it-works" class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase">How It Works</a>
-          <a href="#pricing" class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase">Pricing</a>
-          <a href="#faq" class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase">FAQ</a>
-        </nav>
-
-        <!-- Enroll CTA -->
-        <a href="./register.html" class="btn-primary h-10 px-5 text-[14px]">
-          Enroll Now
-          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-        </a>
+        <span class="text-[#20B486] text-xs">✦</span>
+        <span>Use Coupon: <span class="px-2 py-0.5 rounded bg-[#20B486]/15 text-[#20B486] font-mono font-bold tracking-wider">TOP10</span></span>
+        <span class="text-[#20B486] text-xs">✦</span>
+        <span>Instant PDF & Google Drive Access</span>
+        <span class="text-[#20B486] text-xs">✦</span>
+        <span>Chapter-wise Handwritten & Formula Summaries</span>
+        <span class="text-[#20B486] text-xs">✦</span>
+        <span>100% NCERT & Latest Board Pattern</span>
+        <span class="text-[#20B486] text-xs">✦</span>
+      </div>
+      <!-- Item set 2 (Seamless loop replica) -->
+      <div class="flex items-center gap-8 shrink-0">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center justify-center p-1 rounded-full bg-[#20B486]/20 text-[#20B486]">
+            <span class="material-symbols-outlined text-[14px]">local_offer</span>
+          </span>
+          <span>Special Offer: Get <span class="text-[#20B486] font-bold">10% Off</span> on all Classes 6th to 10th Study Notes & Formula Sheets!</span>
+        </div>
+        <span class="text-[#20B486] text-xs">✦</span>
+        <span>Use Coupon: <span class="px-2 py-0.5 rounded bg-[#20B486]/15 text-[#20B486] font-mono font-bold tracking-wider">TOP10</span></span>
+        <span class="text-[#20B486] text-xs">✦</span>
+        <span>Instant PDF & Google Drive Access</span>
+        <span class="text-[#20B486] text-xs">✦</span>
+        <span>Chapter-wise Handwritten & Formula Summaries</span>
+        <span class="text-[#20B486] text-xs">✦</span>
+        <span>100% NCERT & Latest Board Pattern</span>
+        <span class="text-[#20B486] text-xs">✦</span>
       </div>
     </div>
   </header>
 
-  <main class="pt-[96px]"> <!-- 40px urgency bar + 56px nav -->
-
-    <!-- ══════════════════════════════════════════════════════
-         SECTION 1 — HERO
-         ══════════════════════════════════════════════════════ -->
-    <section id="hero" class="relative min-h-[90vh] flex items-center overflow-hidden">
-
-      <!-- Ambient background glows -->
-      <div class="ambient-spot w-[600px] h-[600px] bg-primary-container/8 -top-32 -right-24 opacity-60"></div>
-      <div class="ambient-spot w-[400px] h-[400px] bg-secondary-container/6 bottom-0 -left-20 opacity-50"></div>
-      <div class="ambient-spot w-[300px] h-[300px] bg-tertiary-container/5 top-1/2 right-1/4 opacity-40"></div>
-
-      <div class="page-container relative z-10 py-space-xl lg:py-[80px]">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
-
-          <!-- LEFT — Copy -->
-          <div class="lg:col-span-7 flex flex-col gap-space-lg animate-slide-up">
-
-            <!-- Eyebrow tag -->
-            <div class="flex items-center gap-space-sm flex-wrap">
-              <span class="badge-primary">
-                <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
-                Founding Cohort — Now Enrolling
-              </span>
-              <span class="badge">
-                <span class="material-symbols-outlined text-[14px]">verified</span>
-                Instant Drive Access
-              </span>
-            </div>
-
-            <!-- Hero headline -->
-            <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface" id="hero-headline">
-              Master <span class="text-gradient-primary" id="hero-highlight">[SKILL]</span><br/>
-              <span id="hero-suffix">& Land Global Clients</span>
-            </h1>
-
-            <!-- Sub copy -->
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-[540px]" id="hero-sub">
-              A complete, self-paced course delivered directly to your Google Drive.
-              Start watching in under 60 seconds from right now.
-            </p>
-
-            <!-- Stat badges -->
-            <div class="flex flex-wrap items-center gap-space-sm">
-              <div class="badge">
-                <span class="material-symbols-outlined text-[14px] text-secondary">play_circle</span>
-                <span id="stat-lessons">[X]+ HD Lessons</span>
-              </div>
-              <div class="badge">
-                <span class="material-symbols-outlined text-[14px] text-secondary">folder_open</span>
-                Lifetime Drive Access
-              </div>
-              <div class="badge">
-                <span class="material-symbols-outlined text-[14px] text-secondary">update</span>
-                Future Updates Included
-              </div>
-              <div class="badge">
-                <span class="material-symbols-outlined text-[14px] text-secondary">phone_android</span>
-                Self-Paced, Any Device
-              </div>
-            </div>
-
-            <!-- Social proof row (founding mode) -->
-            <div id="social-proof-row" class="flex items-center gap-space-md flex-wrap">
-              <div class="flex items-center gap-space-xs">
-                <span class="material-symbols-outlined text-primary-container text-[18px]">groups</span>
-                <span class="font-body-sm text-body-sm text-on-surface-variant">Be among the <strong class="text-on-surface">first students</strong> in this cohort</span>
-              </div>
-            </div>
-
-            <!-- Price pill -->
-            <div class="flex items-center gap-space-md flex-wrap">
-              <div class="flex items-baseline gap-2">
-                <span class="font-headline-xl text-headline-xl text-primary-container font-bold" id="hero-price">[PRICE]</span>
-                <span class="font-body-md text-body-md text-on-surface-variant line-through" id="hero-price-original" style="display:none"></span>
-              </div>
-              <span class="badge-primary hidden" id="hero-discount-badge"></span>
-            </div>
-
-            <!-- CTAs -->
-            <div class="flex flex-col sm:flex-row gap-space-sm">
-              <a href="./register.html" class="btn-hero" style="max-width: 340px;">
-                <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
-                Enroll Now — Get Instant Access
-              </a>
-              <button onclick="document.getElementById('preview-modal').classList.remove('hidden')"
-                      class="btn-secondary h-[52px] px-space-xl">
-                <span class="material-symbols-outlined text-[18px]">play_circle</span>
-                Watch Free Preview
-              </button>
-            </div>
-
-            <!-- Trust strip -->
-            <div class="flex items-center gap-space-md flex-wrap pt-space-xs">
-              <div class="flex items-center gap-1 text-on-surface-variant">
-                <span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
-                <span class="font-label-sm text-label-sm uppercase">256-Bit Secured by Razorpay</span>
-              </div>
-              <div class="flex items-center gap-1 text-on-surface-variant">
-                <span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
-                <span class="font-label-sm text-label-sm uppercase">UPI · Cards · EMI Accepted</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- RIGHT — Visual card -->
-          <div class="lg:col-span-5 hidden lg:flex flex-col gap-space-md">
-            <!-- Drive Vault Preview Card -->
-            <div class="card-glass p-space-lg flex flex-col gap-space-md">
-              <div class="flex items-center gap-space-sm">
-                <div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center">
-                  <span class="material-symbols-outlined text-tertiary text-[20px]">folder_open</span>
-                </div>
-                <div>
-                  <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Your Course Vault</p>
-                  <p class="font-body-sm text-body-sm text-on-surface" id="vault-folder-name">[COURSE NAME] — Student Vault</p>
-                </div>
-                <div class="ml-auto badge-primary text-[10px] flex items-center gap-1">
-                  <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
-                  LIVE ACCESS
-                </div>
-              </div>
-
-              <div class="flex flex-col gap-1.5" id="vault-file-list">
-                <!-- Populated by JS -->
-              </div>
-
-              <!-- Drive integration banner -->
-              <div class="border-drive pl-3 py-2 mt-space-xs">
-                <p class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Instant Sync</p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Drive privileges dispatched within 60 seconds of Razorpay settlement</p>
-              </div>
-            </div>
-
-            <!-- Instructor card -->
-            <div class="card flex items-start gap-space-md">
-              <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-primary text-[28px]">person</span>
-              </div>
-              <div class="flex flex-col gap-1">
-                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Your Instructor</span>
-                <span class="font-headline-md text-headline-md text-on-surface" id="instructor-name">[INSTRUCTOR NAME]</span>
-                <span class="font-body-sm text-body-sm text-on-surface-variant" id="instructor-sub">Expert in [SKILL]</span>
-              </div>
-            </div>
-          </div>
-
+  <!-- =========================================================================
+       2. MAIN STICKY NAVIGATION BAR (LOCKED ON SCROLL ACROSS ALL VIEWPORTS)
+       ========================================================================= -->
+  <nav id="main-nav" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E2E8F0] shadow-xs transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 h-16 sm:h-20 flex items-center justify-between">
+      
+      <!-- Logo: Bright Future Academy -->
+      <a href="./index.html" class="flex items-center gap-1.5 sm:gap-2.5 text-decoration-none group min-w-0">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs shrink-0">
+          <span class="material-symbols-outlined text-[20px] sm:text-[26px]">menu_book</span>
         </div>
+        <span class="font-extrabold text-base sm:text-2xl tracking-tight text-[#0F172A] whitespace-nowrap truncate">Bright Future <span class="text-[#20B486]">Academy</span></span>
+      </a>
+
+      <!-- Desktop & Tablet Nav Links -->
+      <div class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-semibold text-[#475569]">
+        <a href="./index.html" class="text-[#20B486] border-b-2 border-[#20B486] pb-1 font-bold">Home</a>
+        <a href="#classes" class="hover:text-[#20B486] transition-colors">Classes 6–10</a>
+        <a href="#why-us" class="hover:text-[#20B486] transition-colors">Why Our Notes</a>
+        <a href="#notes" class="hover:text-[#20B486] transition-colors">Notes Catalog</a>
+        <a href="#reviews" class="hover:text-[#20B486] transition-colors">Toppers & Reviews</a>
+        <a href="#faq" class="hover:text-[#20B486] transition-colors">FAQ</a>
       </div>
-    </section>
 
-    <!-- ══════════════════════════════════════════════════════
-         MARQUEE — FOUNDING STUDENT STRIP
-         ══════════════════════════════════════════════════════ -->
-    <div class="py-space-md bg-surface-container-lowest border-y border-[rgba(255,255,255,0.05)] overflow-hidden">
-      <div class="marquee-track">
-        <div class="marquee-inner" id="marquee-inner">
-          <!-- Populated by JS -->
+      <!-- Action CTAs -->
+      <div class="hidden sm:flex items-center gap-3 lg:gap-4">
+        <button id="nav-sample-btn" class="px-4 lg:px-5 py-2.5 text-sm font-semibold text-[#334155] hover:text-[#20B486] transition-colors whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[18px] text-[#20B486]">visibility</span>
+          <span>Free Sample</span>
+        </button>
+        <a href="#notes" class="px-5 lg:px-6 py-2.5 rounded-full border-2 border-[#20B486] text-[#20B486] hover:bg-[#20B486] hover:text-white font-bold text-sm transition-all shadow-xs whitespace-nowrap">
+          Get Notes (10% Off)
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-toggle" aria-label="Open Navigation Menu" class="lg:hidden p-1.5 sm:p-2 rounded-xl text-[#334155] hover:bg-[#F1F5F9] transition-colors shrink-0">
+        <span class="material-symbols-outlined text-[24px] sm:text-[28px]">menu</span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/50 z-[60] hidden backdrop-blur-xs transition-opacity duration-300"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 bottom-0 w-[84vw] max-w-xs bg-white z-[60] shadow-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-[#E2E8F0]">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-[#E8F7F0] text-[#20B486] flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[20px]">menu_book</span>
+          </div>
+          <span class="font-bold text-base sm:text-lg text-[#0F172A]">Bright Future <span class="text-[#20B486]">Academy</span></span>
         </div>
+        <button id="mobile-menu-close" aria-label="Close menu" class="p-1.5 rounded-lg text-gray-500 hover:text-black hover:bg-gray-100 transition-colors">
+          <span class="material-symbols-outlined text-[24px]">close</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-4 mt-6 text-base font-semibold text-[#334155]">
+        <a href="./index.html" class="mobile-nav-link text-[#20B486] flex items-center gap-2.5 py-1">
+          <span class="material-symbols-outlined text-[20px]">home</span>
+          <span>Home</span>
+        </a>
+        <a href="#classes" class="mobile-nav-link hover:text-[#20B486] flex items-center gap-2.5 py-1">
+          <span class="material-symbols-outlined text-[20px]">school</span>
+          <span>Classes 6th to 10th</span>
+        </a>
+        <a href="#why-us" class="mobile-nav-link hover:text-[#20B486] flex items-center gap-2.5 py-1">
+          <span class="material-symbols-outlined text-[20px]">verified</span>
+          <span>Why Our Notes</span>
+        </a>
+        <a href="#notes" class="mobile-nav-link hover:text-[#20B486] flex items-center gap-2.5 py-1">
+          <span class="material-symbols-outlined text-[20px]">description</span>
+          <span>Study Notes Catalog</span>
+        </a>
+        <a href="#reviews" class="mobile-nav-link hover:text-[#20B486] flex items-center gap-2.5 py-1">
+          <span class="material-symbols-outlined text-[20px]">stars</span>
+          <span>Student Reviews</span>
+        </a>
+        <a href="#faq" class="mobile-nav-link hover:text-[#20B486] flex items-center gap-2.5 py-1">
+          <span class="material-symbols-outlined text-[20px]">help</span>
+          <span>FAQ</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link hover:text-[#20B486] flex items-center gap-2.5 py-1">
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>Contact & Support</span>
+        </a>
       </div>
     </div>
 
-    <!-- ══════════════════════════════════════════════════════
-         SECTION 2 — WHO IT'S FOR
-         ══════════════════════════════════════════════════════ -->
-    <section id="who-its-for" class="py-[80px] border-b border-[rgba(255,255,255,0.05)]">
-      <div class="page-container">
-        <div class="flex flex-col gap-space-sm mb-space-xl text-center">
-          <span class="section-tag mx-auto">Self-Qualify First</span>
-          <h2 class="section-heading md:text-headline-xl text-headline-lg-mobile">Is This Course For You?</h2>
-        </div>
+    <div class="flex flex-col gap-3 pt-6 border-t border-[#E2E8F0]">
+      <button id="mobile-sample-btn" class="w-full text-center py-3 border border-[#20B486] text-[#20B486] rounded-xl font-bold flex items-center justify-center gap-2">
+        <span class="material-symbols-outlined text-[18px]">visibility</span>
+        <span>Free Sample Notes</span>
+      </button>
+      <a href="#notes" class="mobile-nav-link w-full text-center py-3 bg-[#20B486] text-white rounded-xl font-bold shadow-md">Get Instant Access (10% Off)</a>
+    </div>
+  </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg max-w-4xl mx-auto">
-          <!-- For You -->
-          <div class="card flex flex-col gap-space-md border-l-2 border-l-primary-container">
-            <div class="flex items-center gap-space-sm">
-              <span class="material-symbols-outlined text-primary-container text-[22px]">check_circle</span>
-              <h3 class="font-headline-md text-headline-md text-on-surface">This IS For You If…</h3>
-            </div>
-            <ul class="flex flex-col gap-space-sm" id="for-you-list">
-              <!-- Populated by JS -->
-            </ul>
+  <!-- =========================================================================
+       3. HERO SECTION (WITH THREE.JS 3D AMBIENT CANVAS & FLOATING BADGES)
+       ========================================================================= -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#E8F7F0] via-[#F0FDF4] to-[#F8FAF9] pt-8 sm:pt-12 md:pt-16 pb-14 sm:pb-20 md:pb-28">
+    
+    <!-- Three.js Ambient 3D Interactive Canvas -->
+    <canvas id="hero-three-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-80"></canvas>
+
+    <!-- Background subtle doodle shapes -->
+    <div class="absolute top-12 left-10 text-[#F59E0B] opacity-75 hidden lg:block select-none pointer-events-none z-10">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path d="M4 12C12 10 20 14 28 8" stroke="#F59E0B" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 4"/>
+        <path d="M8 20C16 18 24 22 32 16" stroke="#F59E0B" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 4"/>
+        <path d="M12 28C20 26 28 30 36 24" stroke="#F59E0B" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 4"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 flex flex-col items-start z-10 text-left">
+          
+          <!-- Small Badge Pill with Lottie Sparkle -->
+          <div id="hero-badge" class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-xs border border-[#20B486]/30 text-[#20B486] font-bold text-[11px] sm:text-xs uppercase tracking-wider mb-4 sm:mb-6 shadow-xs">
+            <div id="lottie-sparkle-container" class="w-3.5 h-3.5 inline-flex items-center justify-center"></div>
+            <span>Classes 6th to 10th Chapter Notes & Formula Sheets</span>
           </div>
 
-          <!-- Not For You -->
-          <div class="card flex flex-col gap-space-md border-l-2 border-l-error">
-            <div class="flex items-center gap-space-sm">
-              <span class="material-symbols-outlined text-error text-[22px]">cancel</span>
-              <h3 class="font-headline-md text-headline-md text-on-surface">This is NOT For You If…</h3>
-            </div>
-            <ul class="flex flex-col gap-space-sm" id="not-for-you-list">
-              <!-- Populated by JS -->
-            </ul>
-          </div>
-        </div>
+          <!-- Main Bold Headline -->
+          <h1 id="hero-title" class="text-2xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-[#0F172A] leading-[1.2] sm:leading-[1.18] tracking-tight mb-3 sm:mb-6">
+            Score top marks with curated 
+            <span class="curved-underline text-[#20B486]">chapter notes & formula sheets.</span>
+          </h1>
 
-        <div class="text-center mt-space-xl">
-          <a href="./register.html" class="btn-primary inline-flex">
-            I'm Ready — Let's Begin
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </div>
-      </div>
-    </section>
+          <!-- Subtitle -->
+          <p id="hero-subtitle" class="text-[#475569] text-xs sm:text-base md:text-lg max-w-xl leading-relaxed mb-5 sm:mb-8">
+            Complete chapter-wise revision notes, quick formula sheets, solved question banks, and high-scorer summaries prepared by senior educators for Classes 6, 7, 8, 9 & 10.
+          </p>
 
-    <!-- ══════════════════════════════════════════════════════
-         SECTION 3 — DRIVE VAULT PREVIEW
-         ══════════════════════════════════════════════════════ -->
-    <section id="whats-included" class="py-[80px] bg-surface-container-lowest border-b border-[rgba(255,255,255,0.05)]">
-      <div class="page-container">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
-          <div class="lg:col-span-5 flex flex-col gap-space-md">
-            <span class="section-tag">The Drive Master Vault</span>
-            <h2 class="section-heading text-headline-lg-mobile md:text-headline-lg">You're Not Just Getting Videos</h2>
-            <p class="font-body-lg text-body-lg text-on-surface-variant">
-              You're getting a complete, organized operating system — structured exactly like a professional's working folder. Streamable, downloadable, yours forever.
-            </p>
-            <div class="flex flex-col gap-space-sm" id="inclusions-list">
-              <!-- Populated by JS -->
-            </div>
-            <div class="flex items-center gap-space-sm mt-space-sm">
-              <span class="badge-primary flex items-center gap-1">
-                <span class="material-symbols-outlined text-[14px]">all_inclusive</span>
-                Lifetime Access — Future Updates Included
-              </span>
-            </div>
-            <a href="./register.html" class="btn-primary mt-space-sm" style="max-width:280px;">
-              Claim Vault Access
-              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          <!-- Primary Hero CTA & Secondary Action -->
+          <div id="hero-cta-cluster" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
+            <a href="#notes" class="magnetic-btn text-center px-8 py-3.5 sm:py-4 rounded-xl bg-[#20B486] hover:bg-[#1A966E] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#20B486]/30 hover:shadow-[#20B486]/50 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+              Explore Study Notes
             </a>
-          </div>
-
-          <!-- Drive folder mock -->
-          <div class="lg:col-span-7">
-            <div class="card-glass p-space-lg flex flex-col gap-space-sm">
-              <!-- Folder header -->
-              <div class="flex items-center gap-space-sm pb-space-sm border-b border-[rgba(255,255,255,0.06)]">
-                <span class="material-symbols-outlined text-tertiary text-[24px]">folder_open</span>
-                <div>
-                  <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Google Drive</p>
-                  <p class="font-body-md text-body-md text-on-surface" id="drive-folder-name">[COURSE NAME] — Student Vault</p>
-                </div>
-                <div class="ml-auto badge-primary flex items-center gap-1 text-[10px]">
-                  <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
-                  Shared with you
-                </div>
-              </div>
-
-              <!-- File tree -->
-              <div class="flex flex-col gap-2" id="drive-file-tree">
-                <!-- Populated by JS -->
-              </div>
-
-              <!-- Info banner -->
-              <div class="mt-space-sm bg-surface-container-high rounded-lg p-space-sm flex items-start gap-space-sm border-drive">
-                <span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">info</span>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">
-                  <strong class="text-on-surface">Why Google Drive?</strong> Zero buffering, streamable on mobile, tablet, and desktop. Download offline via the Google Drive app.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════════════
-         SECTION 4 — CURRICULUM
-         ══════════════════════════════════════════════════════ -->
-    <section id="curriculum" class="py-[80px] border-b border-[rgba(255,255,255,0.05)]">
-      <div class="page-container">
-        <div class="flex flex-col gap-space-sm mb-space-xl">
-          <span class="section-tag">Complete Curriculum</span>
-          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
-            <h2 class="section-heading text-headline-lg-mobile md:text-headline-lg">Everything You Will Learn</h2>
-            <button class="btn-secondary h-10 px-5 text-[14px] self-start md:self-auto" id="download-syllabus-btn">
-              <span class="material-symbols-outlined text-[16px]">download</span>
-              Download Syllabus
+            <button id="hero-sample-btn" class="magnetic-btn text-center px-6 py-3.5 sm:py-4 rounded-xl bg-white hover:bg-[#E8F7F0] border border-[#CBD5E1] text-[#0F172A] font-semibold text-sm sm:text-base transition-colors flex items-center justify-center gap-2 shadow-xs">
+              <span class="material-symbols-outlined text-[20px] text-[#20B486]">download</span>
+              <span>Free Sample Notes</span>
             </button>
           </div>
+
+          <!-- Trust snippet (Non-overflowing on mobile) -->
+          <div class="mt-5 sm:mt-8 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[11px] sm:text-xs text-[#64748B]">
+            <div class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[15px] sm:text-[16px] text-[#20B486]">verified</span>
+              <span>100% NCERT Aligned</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[15px] sm:text-[16px] text-[#20B486]">bolt</span>
+              <span>Instant Download Access</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[15px] sm:text-[16px] text-[#20B486]">print</span>
+              <span>Print-Friendly Format</span>
+            </div>
+          </div>
+
         </div>
 
-        <div class="flex flex-col gap-space-sm" id="curriculum-accordion">
-          <!-- Populated by JS -->
+        <!-- Right Hero Image & Interactive Floating Badges -->
+        <div class="lg:col-span-5 relative flex justify-center items-center mt-4 sm:mt-8 lg:mt-0">
+          
+          <!-- Circular Pastel Mint Organic Glow -->
+          <div class="absolute w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[440px] md:h-[440px] bg-[#D1F2E2] rounded-full filter blur-2xl opacity-60 -z-0"></div>
+
+          <!-- Hero Student Photo Wrapper -->
+          <div id="hero-image-wrapper" class="relative z-10 max-w-[320px] sm:max-w-[380px] md:max-w-[430px] w-full">
+            <img 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLQlq1KtK00Aa2BnyChOPEKYd4SGDg_ZutOaSKiyn_dFp_fscobZrWDeS0-da8SkLxKWWliBWEJAUOemRzLmd3Ef7CnRvAZUTlFd4UckTh_YLIgdnH-6x57-hWnOAhA0NkeR_83mkzqBfJOAMnBSPsVaJbb6VdZ9Jk459YMI4LORxErug_utQXpbDx5_pwPu0F--VkTLMOPq1lt5bkW2eDipDmKJ0haw35QTrik3oBzQ7XAFaJLD-sKGzYpUy_nnI15HdWLwHR9Hyh" 
+              alt="Bright Future Academy student smiling with textbook and notes" 
+              class="w-full h-auto object-contain drop-shadow-xl"
+            />
+
+            <!-- Floating Badge: 500+ Study Notes (Bottom-Left on all devices) -->
+            <div class="hero-floating-badge hero-floating-badge-left absolute bottom-2 left-1 sm:bottom-6 sm:-left-6 top-auto right-auto bg-white/95 backdrop-blur-md border border-[#E2E8F0] shadow-md sm:shadow-xl rounded-xl sm:rounded-2xl p-2 sm:p-4 flex items-center gap-2 sm:gap-3 z-20">
+              <div class="w-7 h-7 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-[#20B486] text-white flex items-center justify-center shadow-md shadow-[#20B486]/30 shrink-0">
+                <span class="material-symbols-outlined text-[16px] sm:text-[24px]">description</span>
+              </div>
+              <div>
+                <p class="font-extrabold text-xs sm:text-lg text-[#0F172A] leading-tight">500+ Notes</p>
+                <p class="text-[9px] sm:text-xs font-semibold text-[#64748B]">Classes 6th–10th</p>
+              </div>
+            </div>
+
+            <!-- Floating Rating Pill: 4.9 ★★★★★ (Top-Right) -->
+            <div class="hero-floating-badge hero-floating-badge-right absolute top-2 right-1 sm:top-6 sm:-right-6 bg-white/95 backdrop-blur-md border border-[#E2E8F0] shadow-md sm:shadow-xl rounded-xl sm:rounded-2xl px-2.5 py-1.5 sm:px-4 sm:py-2.5 flex items-center gap-1.5 sm:gap-2 z-20">
+              <div class="flex items-center text-[#F59E0B]">
+                <span class="material-symbols-outlined text-[15px] sm:text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <div>
+                <p class="font-extrabold text-xs sm:text-sm text-[#0F172A] leading-tight">4.9 <span class="text-[9px] sm:text-xs font-normal text-[#64748B]">(1,500+)</span></p>
+              </div>
+            </div>
+
+            <!-- Decorative Hand-drawn Curved Arrow -->
+            <div class="absolute -top-3 -left-6 text-[#20B486] hidden sm:block pointer-events-none">
+              <svg width="60" height="40" viewBox="0 0 60 40" fill="none">
+                <path d="M5 28C20 8 45 10 55 20" stroke="#20B486" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M47 22L56 20L52 12" stroke="#20B486" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="mt-space-xl text-center">
-          <a href="./register.html" class="btn-primary inline-flex">
-            <span class="material-symbols-outlined text-[20px]">lock_open</span>
-            Unlock Full Curriculum Now
-          </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. KEY STATS & CREDIBILITY STRIP (COMPACT & NON-OVERFLOWING ON MOBILE)
+       ========================================================================= -->
+  <section class="relative z-20 -mt-6 sm:-mt-8 max-w-7xl mx-auto px-3 sm:px-4 md:px-8">
+    <div class="bg-white rounded-xl sm:rounded-2xl border border-[#E2E8F0] shadow-md sm:shadow-lg p-3 sm:p-6 md:p-8 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6 lg:gap-8">
+      
+      <!-- Stat 1 -->
+      <div class="flex items-center gap-2 sm:gap-3.5 md:gap-4 p-2 sm:p-0 rounded-lg bg-[#F8FAF9]/80 sm:bg-transparent">
+        <div class="w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-lg sm:rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[18px] sm:text-[22px] md:text-[26px]">groups</span>
+        </div>
+        <div class="min-w-0">
+          <p class="text-sm sm:text-xl lg:text-2xl font-extrabold text-[#0F172A] tracking-tight leading-tight">15,000+</p>
+          <p class="text-[10px] sm:text-xs md:text-sm font-medium text-[#64748B] leading-tight truncate sm:whitespace-normal">Students Enrolled</p>
         </div>
       </div>
-    </section>
 
-    <!-- ══════════════════════════════════════════════════════
-         SECTION 5 — HOW IT WORKS
-         ══════════════════════════════════════════════════════ -->
-    <section id="how-it-works" class="py-[80px] bg-surface-container-lowest border-b border-[rgba(255,255,255,0.05)]">
-      <div class="page-container">
-        <div class="flex flex-col gap-space-sm mb-space-xl text-center max-w-2xl mx-auto">
-          <span class="section-tag mx-auto">Demystified</span>
-          <h2 class="section-heading text-headline-lg-mobile md:text-headline-lg">How Drive Delivery Works</h2>
-          <p class="font-body-lg text-body-lg text-on-surface-variant">
-            No platform login. No password. Your course lives in your Google Drive — the same app already on your phone.
+      <!-- Stat 2 -->
+      <div class="flex items-center gap-2 sm:gap-3.5 md:gap-4 p-2 sm:p-0 rounded-lg bg-[#F8FAF9]/80 sm:bg-transparent">
+        <div class="w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-lg sm:rounded-xl bg-[#FEF3C7] text-[#D97706] flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[18px] sm:text-[22px] md:text-[26px]">menu_book</span>
+        </div>
+        <div class="min-w-0">
+          <p class="text-sm sm:text-xl lg:text-2xl font-extrabold text-[#0F172A] tracking-tight leading-tight">100%</p>
+          <p class="text-[10px] sm:text-xs md:text-sm font-medium text-[#64748B] leading-tight truncate sm:whitespace-normal">NCERT Aligned</p>
+        </div>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="flex items-center gap-2 sm:gap-3.5 md:gap-4 p-2 sm:p-0 rounded-lg bg-[#F8FAF9]/80 sm:bg-transparent">
+        <div class="w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-lg sm:rounded-xl bg-[#E0E7FF] text-[#4F46E5] flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[18px] sm:text-[22px] md:text-[26px]">download_for_offline</span>
+        </div>
+        <div class="min-w-0">
+          <p class="text-sm sm:text-xl lg:text-2xl font-extrabold text-[#0F172A] tracking-tight leading-tight">Instant</p>
+          <p class="text-[10px] sm:text-xs md:text-sm font-medium text-[#64748B] leading-tight truncate sm:whitespace-normal">PDF & Drive Access</p>
+        </div>
+      </div>
+
+      <!-- Stat 4 -->
+      <div class="flex items-center gap-2 sm:gap-3.5 md:gap-4 p-2 sm:p-0 rounded-lg bg-[#F8FAF9]/80 sm:bg-transparent">
+        <div class="w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-lg sm:rounded-xl bg-[#DCFCE7] text-[#15803D] flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[18px] sm:text-[22px] md:text-[26px]">trending_up</span>
+        </div>
+        <div class="min-w-0">
+          <p class="text-sm sm:text-xl lg:text-2xl font-extrabold text-[#0F172A] tracking-tight leading-tight">98.4%</p>
+          <p class="text-[10px] sm:text-xs md:text-sm font-medium text-[#64748B] leading-tight truncate sm:whitespace-normal">Score Improvement</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. "EXPLORE BY CLASS" CURRICULUM NAVIGATOR (CLASSES 6th TO 10th)
+       ========================================================================= -->
+  <section class="py-14 sm:py-20 max-w-7xl mx-auto px-4 md:px-8" id="classes">
+    <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+      <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#20B486] bg-[#E8F7F0] px-3.5 py-1 rounded-full inline-block mb-3">Structured Curriculum</span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+        Choose Your Class for <span class="curved-underline text-[#20B486]">Targeted Notes</span>
+      </h2>
+      <p class="text-[#64748B] text-xs sm:text-sm md:text-base mt-3">
+        Tailor-made study notes, topic-wise formula sheets, and solved question papers aligned specifically with your school class and syllabus.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
+      
+      <!-- Class 10th Card -->
+      <div class="bg-white rounded-2xl border border-[#CBD5E1]/80 p-5 sm:p-6 hover:border-[#20B486] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-[#20B486]/10 text-[#20B486] flex items-center justify-center font-extrabold text-lg mb-4 group-hover:scale-110 transition-transform">
+            10th
+          </div>
+          <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#FEF3C7] text-[#D97706] mb-2">Board Exams</span>
+          <h3 class="text-lg font-bold text-[#0F172A] mb-1.5 group-hover:text-[#20B486] transition-colors">Class 10th Notes</h3>
+          <p class="text-xs text-[#64748B] leading-relaxed mb-4">Science, Maths, Social Science + 10-Year Solved Board PYQs.</p>
+        </div>
+        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+          <span class="text-xs font-bold text-[#20B486]">From ₹499</span>
+          <button data-quick-filter="Class 10th" class="text-xs font-semibold text-[#0F172A] hover:text-[#20B486] flex items-center gap-1">
+            <span>View Notes</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Class 9th Card -->
+      <div class="bg-white rounded-2xl border border-[#CBD5E1]/80 p-5 sm:p-6 hover:border-[#20B486] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-[#20B486]/10 text-[#20B486] flex items-center justify-center font-extrabold text-lg mb-4 group-hover:scale-110 transition-transform">
+            9th
+          </div>
+          <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#E0E7FF] text-[#4F46E5] mb-2">Foundation</span>
+          <h3 class="text-lg font-bold text-[#0F172A] mb-1.5 group-hover:text-[#20B486] transition-colors">Class 9th Notes</h3>
+          <p class="text-xs text-[#64748B] leading-relaxed mb-4">Physics, Chem, Bio, Geometry & Algebra Core Concepts.</p>
+        </div>
+        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+          <span class="text-xs font-bold text-[#20B486]">From ₹399</span>
+          <button data-quick-filter="Class 9th" class="text-xs font-semibold text-[#0F172A] hover:text-[#20B486] flex items-center gap-1">
+            <span>View Notes</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Class 8th Card -->
+      <div class="bg-white rounded-2xl border border-[#CBD5E1]/80 p-5 sm:p-6 hover:border-[#20B486] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-[#20B486]/10 text-[#20B486] flex items-center justify-center font-extrabold text-lg mb-4 group-hover:scale-110 transition-transform">
+            8th
+          </div>
+          <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#DCFCE7] text-[#15803D] mb-2">Middle School</span>
+          <h3 class="text-lg font-bold text-[#0F172A] mb-1.5 group-hover:text-[#20B486] transition-colors">Class 8th Notes</h3>
+          <p class="text-xs text-[#64748B] leading-relaxed mb-4">Comprehensive Science, Maths formulas & English practice.</p>
+        </div>
+        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+          <span class="text-xs font-bold text-[#20B486]">From ₹299</span>
+          <button data-quick-filter="Class 8th" class="text-xs font-semibold text-[#0F172A] hover:text-[#20B486] flex items-center gap-1">
+            <span>View Notes</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Class 7th Card -->
+      <div class="bg-white rounded-2xl border border-[#CBD5E1]/80 p-5 sm:p-6 hover:border-[#20B486] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-[#20B486]/10 text-[#20B486] flex items-center justify-center font-extrabold text-lg mb-4 group-hover:scale-110 transition-transform">
+            7th
+          </div>
+          <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#F3E8FF] text-[#7E22CE] mb-2">Concept Builder</span>
+          <h3 class="text-lg font-bold text-[#0F172A] mb-1.5 group-hover:text-[#20B486] transition-colors">Class 7th Notes</h3>
+          <p class="text-xs text-[#64748B] leading-relaxed mb-4">Key definitions, diagrams, solved worksheets & revision maps.</p>
+        </div>
+        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+          <span class="text-xs font-bold text-[#20B486]">From ₹249</span>
+          <button data-quick-filter="Class 7th" class="text-xs font-semibold text-[#0F172A] hover:text-[#20B486] flex items-center gap-1">
+            <span>View Notes</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Class 6th Card -->
+      <div class="bg-white rounded-2xl border border-[#CBD5E1]/80 p-5 sm:p-6 hover:border-[#20B486] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-[#20B486]/10 text-[#20B486] flex items-center justify-center font-extrabold text-lg mb-4 group-hover:scale-110 transition-transform">
+            6th
+          </div>
+          <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#E8F7F0] text-[#0F5132] mb-2">Starter Kit</span>
+          <h3 class="text-lg font-bold text-[#0F172A] mb-1.5 group-hover:text-[#20B486] transition-colors">Class 6th Notes</h3>
+          <p class="text-xs text-[#64748B] leading-relaxed mb-4">Engaging visual concept summaries & fun activity worksheets.</p>
+        </div>
+        <div class="pt-4 border-t border-[#F1F5F9] flex items-center justify-between">
+          <span class="text-xs font-bold text-[#20B486]">Free Sample</span>
+          <button data-quick-filter="Class 6th" class="text-xs font-semibold text-[#0F172A] hover:text-[#20B486] flex items-center gap-1">
+            <span>View Notes</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. "WHY CHOOSE BRIGHT FUTURE ACADEMY NOTES?" (DESIGN-DNA VALUE CARDS)
+       ========================================================================= -->
+  <section class="py-14 sm:py-20 bg-white border-y border-[#E2E8F0]" id="why-us">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+        <div>
+          <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#20B486] bg-[#E8F7F0] px-3.5 py-1 rounded-full inline-block mb-3">Academic Excellence</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+            Why Our Notes Help Students <span class="curved-underline text-[#20B486]">Score 95%+</span>
+          </h2>
+          <p class="text-[#64748B] text-xs sm:text-sm md:text-base mt-3 max-w-xl">
+            Designed to replace bulky 600-page guidebooks with clear, handwritten, exam-proven revision material.
+          </p>
+        </div>
+        <div class="hidden sm:flex items-center gap-2 text-xs font-semibold text-[#20B486]">
+          <span class="material-symbols-outlined text-[20px]">verified_user</span>
+          <span>Verified by Senior Coaching Mentors</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        
+        <!-- Feature 1 -->
+        <div class="p-6 rounded-2xl bg-[#F8FAF9] border border-[#E2E8F0] hover:border-[#20B486] hover:bg-white hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-[#20B486]/10 text-[#20B486] flex items-center justify-center mb-5">
+            <span class="material-symbols-outlined text-[26px]">edit_note</span>
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-[#0F172A] mb-2">Handwritten & Color-Coded</h3>
+          <p class="text-xs sm:text-sm text-[#64748B] leading-relaxed">
+            Written cleanly by senior faculty with highlighted keywords, labeled diagrams, and step-by-step solutions that stick in your memory.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg max-w-5xl mx-auto" id="steps-grid">
-          <!-- Populated by JS -->
-        </div>
-
-        <!-- Important notice -->
-        <div class="mt-space-xl max-w-2xl mx-auto bg-surface-container rounded-xl p-space-lg flex items-start gap-space-md border border-[rgba(0,240,144,0.15)]">
-          <span class="material-symbols-outlined text-primary-container text-[24px] shrink-0">info</span>
-          <div>
-            <p class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider mb-1">Important</p>
-            <p class="font-body-md text-body-md text-on-surface">
-              Make sure you enter the <strong>Gmail address you actively use</strong> on your phone or computer. This is the address that receives Drive access.
-            </p>
+        <!-- Feature 2 -->
+        <div class="p-6 rounded-2xl bg-[#F8FAF9] border border-[#E2E8F0] hover:border-[#20B486] hover:bg-white hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-[#20B486]/10 text-[#20B486] flex items-center justify-center mb-5">
+            <span class="material-symbols-outlined text-[26px]">calculate</span>
           </div>
+          <h3 class="text-base sm:text-lg font-bold text-[#0F172A] mb-2">1-Page Formula Sheets</h3>
+          <p class="text-xs sm:text-sm text-[#64748B] leading-relaxed">
+            Every chapter condensed into a single formula cheat sheet with variable definitions, units, and common calculation pitfalls.
+          </p>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-space-md justify-center mt-space-xl">
-          <a href="./register.html" class="btn-primary inline-flex">
-            <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
-            Get Instant Access Now
-          </a>
-          <a id="whatsapp-how-it-works" href="#" class="btn-secondary inline-flex h-[52px] px-space-xl">
-            <span class="material-symbols-outlined text-[20px]">chat</span>
-            Questions? Chat on WhatsApp
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════════════
-         SECTION 6 — PRICING
-         ══════════════════════════════════════════════════════ -->
-    <section id="pricing" class="py-[80px] border-b border-[rgba(255,255,255,0.05)] relative overflow-hidden">
-      <div class="ambient-spot w-[500px] h-[500px] bg-primary-container/8 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-50"></div>
-
-      <div class="page-container relative z-10">
-        <div class="flex flex-col gap-space-sm mb-space-xl text-center">
-          <span class="section-tag mx-auto">Complete Offer</span>
-          <h2 class="section-heading text-headline-lg-mobile md:text-headline-lg">One Price. Everything Included.</h2>
-        </div>
-
-        <div class="max-w-lg mx-auto">
-          <div class="card-glass p-space-xl flex flex-col gap-space-lg animate-glow-pulse">
-
-            <!-- Price -->
-            <div class="flex flex-col gap-1 text-center">
-              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">One-Time Payment</span>
-              <div class="flex items-baseline justify-center gap-3 mt-1">
-                <span class="font-headline-xl text-headline-xl text-primary-container font-bold" id="pricing-current">[PRICE]</span>
-                <span class="font-headline-md text-headline-md text-on-surface-variant line-through hidden" id="pricing-original"></span>
-              </div>
-              <span class="badge-primary mx-auto mt-1 hidden" id="pricing-discount"></span>
-            </div>
-
-            <!-- Inclusions checklist -->
-            <div class="flex flex-col gap-space-sm" id="pricing-inclusions">
-              <!-- Populated by JS -->
-            </div>
-
-            <!-- Divider -->
-            <div class="divider"></div>
-
-            <!-- Payment methods -->
-            <div class="flex flex-col gap-space-sm items-center text-center">
-              <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Accepted Payment Methods</p>
-              <div class="flex flex-wrap justify-center gap-2">
-                <span class="badge">UPI</span>
-                <span class="badge">GPay</span>
-                <span class="badge">PhonePe</span>
-                <span class="badge">Paytm</span>
-                <span class="badge">Net Banking</span>
-                <span class="badge">Credit Card</span>
-                <span class="badge">Debit Card</span>
-                <span class="badge" id="emi-badge" style="display:none">0% EMI</span>
-              </div>
-              <div class="flex items-center gap-1 mt-1">
-                <span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span>
-                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Powered by Razorpay — RBI Regulated</span>
-              </div>
-            </div>
-
-            <!-- CTA -->
-            <a href="./register.html" class="btn-hero">
-              <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
-              Proceed to Enrollment — Instant Access
-            </a>
-
-            <p class="text-center font-label-sm text-label-sm text-on-surface-variant">
-              No hidden fees. No platform subscription. Pay once, access forever.
-            </p>
+        <!-- Feature 3 -->
+        <div class="p-6 rounded-2xl bg-[#F8FAF9] border border-[#E2E8F0] hover:border-[#20B486] hover:bg-white hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-[#20B486]/10 text-[#20B486] flex items-center justify-center mb-5">
+            <span class="material-symbols-outlined text-[26px]">history_edu</span>
           </div>
+          <h3 class="text-base sm:text-lg font-bold text-[#0F172A] mb-2">10-Year Solved PYQs</h3>
+          <p class="text-xs sm:text-sm text-[#64748B] leading-relaxed">
+            Recurring board and school examination questions categorized by chapter with full step marking schemes included.
+          </p>
         </div>
+
+        <!-- Feature 4 -->
+        <div class="p-6 rounded-2xl bg-[#F8FAF9] border border-[#E2E8F0] hover:border-[#20B486] hover:bg-white hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-[#20B486]/10 text-[#20B486] flex items-center justify-center mb-5">
+            <span class="material-symbols-outlined text-[26px]">devices</span>
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-[#0F172A] mb-2">Print-Ready & Mobile PDF</h3>
+          <p class="text-xs sm:text-sm text-[#64748B] leading-relaxed">
+            Instant Google Drive links with lifetime access. Read on your phone, tablet, or take crisp high-contrast black-and-white printouts.
+          </p>
+        </div>
+
       </div>
-    </section>
 
-    <!-- ══════════════════════════════════════════════════════
-         SECTION 7 — FAQ
-         ══════════════════════════════════════════════════════ -->
-    <section id="faq" class="py-[80px] bg-surface-container-lowest">
-      <div class="page-container">
-        <div class="flex flex-col gap-space-sm mb-space-xl text-center">
-          <span class="section-tag mx-auto">Common Questions</span>
-          <h2 class="section-heading text-headline-lg-mobile md:text-headline-lg">Frequently Asked Questions</h2>
-        </div>
+    </div>
+  </section>
 
-        <div class="flex flex-col gap-space-sm max-w-3xl mx-auto" id="faq-accordion">
-          <!-- Populated by JS -->
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-space-md justify-center mt-space-xl">
-          <a id="whatsapp-faq" href="#" class="btn-primary inline-flex">
-            <span class="material-symbols-outlined text-[20px]">chat</span>
-            Still Have Questions? Ask on WhatsApp
-          </a>
-          <a href="./register.html" class="btn-secondary inline-flex h-[52px] px-space-xl">
-            Enroll Now
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </div>
+  <!-- =========================================================================
+       7. STUDY NOTES CATALOG SECTION (SEARCH, FILTERS & 3D TILT CARDS)
+       ========================================================================= -->
+  <section class="py-14 sm:py-20 md:py-28 max-w-7xl mx-auto px-4 md:px-8" id="notes">
+    
+    <!-- Section Header with Search Box -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 sm:pb-8 border-b border-[#E2E8F0]">
+      <div>
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#20B486] bg-[#E8F7F0] px-3.5 py-1 rounded-full inline-block mb-3">Instant Access</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+          Complete <span class="curved-underline text-[#20B486]">Study Notes Catalog</span>
+        </h2>
+        <p class="text-[#64748B] text-xs sm:text-sm md:text-base mt-2">
+          Select your class below to access chapter notes, formula sheets, and solved question banks in easy-to-read PDF format.
+        </p>
       </div>
-    </section>
 
-    <!-- ══════════════════════════════════════════════════════
-         FOOTER
-         ══════════════════════════════════════════════════════ -->
-    <footer class="bg-surface-container-lowest border-t border-[rgba(255,255,255,0.05)] py-space-xl">
-      <div class="page-container flex flex-col md:flex-row items-center justify-between gap-space-md">
-        <div class="flex items-center gap-space-sm">
-          <span class="material-symbols-outlined text-primary-container text-[18px]">terminal</span>
-          <span class="font-label-md text-label-md text-on-surface uppercase" id="footer-brand">[COURSE BRAND]</span>
-        </div>
-        <div class="flex items-center gap-space-lg font-label-sm text-label-sm text-on-surface-variant">
-          <a id="footer-support-link" href="#" class="hover:text-on-surface transition-colors uppercase">Support</a>
-          <a href="./help.html" class="hover:text-on-surface transition-colors uppercase">Help</a>
-        </div>
-        <div class="flex items-center gap-space-sm">
-          <span class="w-2 h-2 rounded-full bg-primary-container"></span>
-          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Secure Razorpay Gateway</span>
-        </div>
-      </div>
-    </footer>
+      <!-- Search Input Form -->
+      <form id="course-search-form" class="relative w-full md:w-80 flex items-center">
+        <span class="material-symbols-outlined absolute left-3 text-[#94A3B8] text-[18px] sm:text-[20px] pointer-events-none">search</span>
+        <input 
+          id="course-search-input"
+          type="text" 
+          placeholder="Search subject, class, topic..." 
+          class="w-full h-10 sm:h-12 pl-9 sm:pl-11 pr-20 sm:pr-24 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] focus:ring-2 focus:ring-[#20B486]/20 outline-none transition-all shadow-xs"
+        />
+        <button type="submit" class="absolute right-1 px-3 sm:px-3.5 py-1.5 bg-[#20B486] hover:bg-[#1A966E] text-white font-semibold text-xs rounded-lg transition-colors">
+          Find
+        </button>
+      </form>
+    </div>
 
-  </main>
-
-  <!-- ══════════════════════════════════════════════════════
-       MOBILE STICKY CTA
-       ══════════════════════════════════════════════════════ -->
-  <div class="mobile-sticky-cta">
-    <a href="./register.html" class="btn-hero w-full">
-      <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
-      <span>Get Instant Access</span>
-      <span class="font-label-sm text-label-sm opacity-80 ml-1" id="mobile-cta-price">· [PRICE]</span>
-    </a>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════
-       WHATSAPP FLOAT
-       ══════════════════════════════════════════════════════ -->
-  <a id="whatsapp-float" href="#" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
-
-  <!-- ══════════════════════════════════════════════════════
-       VIDEO PREVIEW MODAL
-       ══════════════════════════════════════════════════════ -->
-  <div id="preview-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
-    <div class="absolute inset-0 bg-[rgba(3,7,18,0.92)] backdrop-blur-lg" onclick="closePreviewModal()"></div>
-    <div class="relative z-10 w-full max-w-3xl card-glass p-space-lg flex flex-col gap-space-md">
-      <div class="flex items-center justify-between">
-        <div>
-          <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Free Preview</p>
-          <h3 class="font-headline-md text-headline-md text-on-surface">Lesson 1.1 — Introduction</h3>
-        </div>
-        <button onclick="closePreviewModal()" class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
-          <span class="material-symbols-outlined text-[20px]">close</span>
+    <!-- Class-wise Filter Pills Bar with Smooth Scrolling -->
+    <div class="py-5 sm:py-6 flex items-center justify-between gap-3">
+      <div id="category-pills-container" class="flex items-center gap-2 sm:gap-2.5 overflow-x-auto pb-2 scrollbar-none w-full">
+        <button data-filter-category="all" class="filter-btn whitespace-nowrap flex-shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#20B486] text-white font-semibold text-xs sm:text-sm shadow-md transition-all active:scale-95">
+          All Classes
+        </button>
+        <button data-filter-category="Class 10th" class="filter-btn whitespace-nowrap flex-shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white hover:bg-[#E8F7F0] border border-[#CBD5E1] text-[#475569] font-medium text-xs sm:text-sm transition-all">
+          Class 10th (Boards)
+        </button>
+        <button data-filter-category="Class 9th" class="filter-btn whitespace-nowrap flex-shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white hover:bg-[#E8F7F0] border border-[#CBD5E1] text-[#475569] font-medium text-xs sm:text-sm transition-all">
+          Class 9th
+        </button>
+        <button data-filter-category="Class 8th" class="filter-btn whitespace-nowrap flex-shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white hover:bg-[#E8F7F0] border border-[#CBD5E1] text-[#475569] font-medium text-xs sm:text-sm transition-all">
+          Class 8th
+        </button>
+        <button data-filter-category="Class 7th" class="filter-btn whitespace-nowrap flex-shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white hover:bg-[#E8F7F0] border border-[#CBD5E1] text-[#475569] font-medium text-xs sm:text-sm transition-all">
+          Class 7th
+        </button>
+        <button data-filter-category="Class 6th" class="filter-btn whitespace-nowrap flex-shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white hover:bg-[#E8F7F0] border border-[#CBD5E1] text-[#475569] font-medium text-xs sm:text-sm transition-all">
+          Class 6th
         </button>
       </div>
 
-      <!-- Video placeholder — replace src with real embed -->
-      <div class="aspect-video bg-surface-container-lowest rounded-lg flex items-center justify-center">
-        <div class="flex flex-col items-center gap-space-sm text-on-surface-variant">
-          <span class="material-symbols-outlined text-[48px] text-primary-container">play_circle</span>
-          <p class="font-label-sm text-label-sm uppercase tracking-wider">Video Preview</p>
-          <p class="font-body-sm text-body-sm text-center max-w-xs">
-            <!-- TODO: Replace this div with an actual iframe embed once video is ready -->
-            Connect your course preview video here
-          </p>
-        </div>
-      </div>
-
-      <div class="flex flex-col sm:flex-row gap-space-sm items-center">
-        <a href="./register.html" class="btn-primary flex-1">
-          <span class="material-symbols-outlined text-[18px]">rocket_launch</span>
-          Enjoyed this? Unlock All Lessons
-        </a>
-        <button onclick="closePreviewModal()" class="btn-secondary h-[52px] px-space-xl">
-          Close
+      <!-- Arrow Controls -->
+      <div class="hidden sm:flex items-center gap-1.5 shrink-0">
+        <button id="category-scroll-prev" aria-label="Previous categories" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-[#CBD5E1] flex items-center justify-center text-[#64748B] hover:border-[#20B486] hover:text-[#20B486] transition-colors">
+          <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+        </button>
+        <button id="category-scroll-next" aria-label="Next categories" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-[#CBD5E1] flex items-center justify-center text-[#64748B] hover:border-[#20B486] hover:text-[#20B486] transition-colors">
+          <span class="material-symbols-outlined text-[18px]">chevron_right</span>
         </button>
       </div>
     </div>
+
+    <!-- Empty Filter Notice -->
+    <div id="no-courses-found" class="hidden text-center py-12">
+      <span class="material-symbols-outlined text-5xl text-[#94A3B8]">search_off</span>
+      <h3 class="text-xl font-bold text-[#0F172A] mt-2">No matching study notes found</h3>
+      <p class="text-[#64748B] text-sm mt-1">Try another search keyword or switch class tabs.</p>
+    </div>
+
+    <!-- 6 Responsive Study Notes Cards Grid with Preview & Buy Actions -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pt-4">
+
+      <!-- Note Card 1: Class 10 Science -->
+      <div data-course-card data-course-id="class-10-science-notes" data-category="Class 10th" data-title="Class 10 Science — Complete Chapter Notes & Board Question Bank" data-price="499" data-original-price="550" data-instructor="Er. R. Sharma" class="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative aspect-video w-full overflow-hidden bg-[#F1F5F9]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrYk5JFJmJmCi0M9ZEb1w2LQyMdZyZ2Rb37NdWuXvxjhYe5gDvon-OVAvpzdKd8riqrqHf08BJzlIlkgPiv9nkGBtANkz5iGGD631bjDOkq_0k1cctxUXWQV24mej3SVonutcp1hBsCVr2Q1C8Yz5en3cgo9uBfUIT17zQwJTprvQHTDQ10eY-W1Phz9m25K8mxfOsCcoPS9EsnQV95dGJzZ-qo-LhNJ0ao3j_9ra6a7xaE2vJ_f4LqiBxX3uTdVq6s7CTAxACkXKP" alt="Class 10 Science Notes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-[#E8F7F0] text-[#0F5132] font-bold text-xs px-3 py-1 rounded-full shadow-xs">Class 10th</span>
+          <span class="absolute top-3 right-3 bg-[#17252A]/90 text-[#20B486] font-bold text-[11px] px-2.5 py-1 rounded-full">10% OFF</span>
+        </div>
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 mb-3">
+              <div class="w-8 h-8 rounded-full bg-[#E8F7F0] text-[#20B486] font-bold text-xs flex items-center justify-center shrink-0">RS</div>
+              <span class="text-xs sm:text-sm font-medium text-[#64748B]">Er. R. Sharma (Senior Faculty)</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-[#0F172A] line-clamp-2 group-hover:text-[#20B486] transition-colors mb-4">
+              Class 10 Science — Complete Chapter Notes & Board Question Bank
+            </h3>
+          </div>
+          <div>
+            <div class="flex items-center gap-4 sm:gap-5 text-xs text-[#64748B] pb-4 border-b border-[#F1F5F9]">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">picture_as_pdf</span>
+                <span>Instant PDF Access</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">description</span>
+                <span>45 Chapter Notes + PYQs</span>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center justify-between mb-4">
+              <div class="flex items-baseline gap-2">
+                <span class="text-lg sm:text-xl font-extrabold text-[#20B486]">₹499</span>
+                <span class="text-xs text-[#94A3B8] line-through">₹550</span>
+              </div>
+              <div class="flex items-center gap-1 text-[#F59E0B] font-bold text-xs sm:text-sm">
+                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="text-[#0F172A]">4.9</span>
+                <span class="text-[11px] text-[#94A3B8] font-normal">(840)</span>
+              </div>
+            </div>
+            <!-- Action buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button data-preview-course="class-10-science-notes" class="w-full py-2.5 rounded-xl border border-[#CBD5E1] hover:bg-[#F8FAF9] text-xs font-bold text-[#334155] transition-colors flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">visibility</span>
+                <span>Preview</span>
+              </button>
+              <button data-buy-course="class-10-science-notes" class="w-full py-2.5 rounded-xl bg-[#20B486] hover:bg-[#1A966E] text-white text-xs font-bold transition-colors shadow-sm flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                <span>Buy Notes</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note Card 2: Class 10 Maths -->
+      <div data-course-card data-course-id="class-10-maths-notes" data-category="Class 10th" data-title="Class 10 Mathematics — Formula Sheets & High-Scorer Notes" data-price="499" data-original-price="550" data-instructor="Prof. A. Verma" class="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative aspect-video w-full overflow-hidden bg-[#F1F5F9]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8EmNPNjM3j2PNm1btixF4yL2u2vzfLSyi35mVUqBgmQSsQGsg8TwitekSb8mT0uXWXEHNXfvOJB6gWnHY87QDH1XcQMb-ToCWvvhqD5QfglnuAWdE4UQW0HM_y0ppD4MxrmVga5yoVmoXV99EpA0MkFlyKjcDBuxAyd5GTguLjnQ6GM9jJJHk8iIexUCMPkXZ5br6kwqEXNL8RsFRVRtoXZzN5dLOiNpywWxpvbeQ1LaUc6wEMvjnYYhfrU-oul5MzQOvzk7gZXsr" alt="Class 10 Maths Notes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-[#E8F7F0] text-[#0F5132] font-bold text-xs px-3 py-1 rounded-full shadow-xs">Class 10th</span>
+          <span class="absolute top-3 right-3 bg-[#17252A]/90 text-[#20B486] font-bold text-[11px] px-2.5 py-1 rounded-full">10% OFF</span>
+        </div>
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 mb-3">
+              <div class="w-8 h-8 rounded-full bg-[#E8F7F0] text-[#20B486] font-bold text-xs flex items-center justify-center shrink-0">AV</div>
+              <span class="text-xs sm:text-sm font-medium text-[#64748B]">Prof. A. Verma (Maths HOD)</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-[#0F172A] line-clamp-2 group-hover:text-[#20B486] transition-colors mb-4">
+              Class 10 Mathematics — Formula Sheets & High-Scorer Notes
+            </h3>
+          </div>
+          <div>
+            <div class="flex items-center gap-4 sm:gap-5 text-xs text-[#64748B] pb-4 border-b border-[#F1F5F9]">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">picture_as_pdf</span>
+                <span>Instant PDF Access</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">description</span>
+                <span>38 Topic Notes + Solutions</span>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center justify-between mb-4">
+              <div class="flex items-baseline gap-2">
+                <span class="text-lg sm:text-xl font-extrabold text-[#20B486]">₹499</span>
+                <span class="text-xs text-[#94A3B8] line-through">₹550</span>
+              </div>
+              <div class="flex items-center gap-1 text-[#F59E0B] font-bold text-xs sm:text-sm">
+                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="text-[#0F172A]">4.9</span>
+                <span class="text-[11px] text-[#94A3B8] font-normal">(920)</span>
+              </div>
+            </div>
+            <!-- Action buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button data-preview-course="class-10-maths-notes" class="w-full py-2.5 rounded-xl border border-[#CBD5E1] hover:bg-[#F8FAF9] text-xs font-bold text-[#334155] transition-colors flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">visibility</span>
+                <span>Preview</span>
+              </button>
+              <button data-buy-course="class-10-maths-notes" class="w-full py-2.5 rounded-xl bg-[#20B486] hover:bg-[#1A966E] text-white text-xs font-bold transition-colors shadow-sm flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                <span>Buy Notes</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note Card 3: Class 9 Science & Maths -->
+      <div data-course-card data-course-id="class-9-science-maths" data-category="Class 9th" data-title="Class 9 Science & Maths — Strong Foundation Concept Notes" data-price="399" data-original-price="449" data-instructor="Dr. Neha Gupta" class="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative aspect-video w-full overflow-hidden bg-[#F1F5F9]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ-oMuKLwlJB7pFgFlw1FH55coBJa-hbMbRN_SME0I5zAcSEQn5j_bV5kyhnJRcuCNhwO1tb7GFA9u0hekOp9T6Y2kTngQZF8H3K1H88PjPeN9u4gK3YglbEw_qKHHiJLpK8rWs_hMwL8y5H38BCxRne-yMhrInqPAaq52qXFEJ2_xgxkfdZUI2I46dei6f2_lClmjSBY7lWoK_9NMx1-1QrjIVcHTlZ9bONRtIE_ijSZqs-cRsm_om_crhaKriWgApQPFKd40cNON" alt="Class 9 Foundation Notes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-[#E8F7F0] text-[#0F5132] font-bold text-xs px-3 py-1 rounded-full shadow-xs">Class 9th</span>
+          <span class="absolute top-3 right-3 bg-[#17252A]/90 text-[#20B486] font-bold text-[11px] px-2.5 py-1 rounded-full">10% OFF</span>
+        </div>
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 mb-3">
+              <div class="w-8 h-8 rounded-full bg-[#E8F7F0] text-[#20B486] font-bold text-xs flex items-center justify-center shrink-0">NG</div>
+              <span class="text-xs sm:text-sm font-medium text-[#64748B]">Dr. Neha Gupta (Academic Mentor)</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-[#0F172A] line-clamp-2 group-hover:text-[#20B486] transition-colors mb-4">
+              Class 9 Science & Maths — Strong Foundation Concept Notes
+            </h3>
+          </div>
+          <div>
+            <div class="flex items-center gap-4 sm:gap-5 text-xs text-[#64748B] pb-4 border-b border-[#F1F5F9]">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">picture_as_pdf</span>
+                <span>Instant PDF Access</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">description</span>
+                <span>52 Chapter Modules</span>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center justify-between mb-4">
+              <div class="flex items-baseline gap-2">
+                <span class="text-lg sm:text-xl font-extrabold text-[#20B486]">₹399</span>
+                <span class="text-xs text-[#94A3B8] line-through">₹449</span>
+              </div>
+              <div class="flex items-center gap-1 text-[#F59E0B] font-bold text-xs sm:text-sm">
+                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="text-[#0F172A]">4.9</span>
+                <span class="text-[11px] text-[#94A3B8] font-normal">(650)</span>
+              </div>
+            </div>
+            <!-- Action buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button data-preview-course="class-9-science-maths" class="w-full py-2.5 rounded-xl border border-[#CBD5E1] hover:bg-[#F8FAF9] text-xs font-bold text-[#334155] transition-colors flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">visibility</span>
+                <span>Preview</span>
+              </button>
+              <button data-buy-course="class-9-science-maths" class="w-full py-2.5 rounded-xl bg-[#20B486] hover:bg-[#1A966E] text-white text-xs font-bold transition-colors shadow-sm flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                <span>Buy Notes</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note Card 4: Class 8 All-in-One -->
+      <div data-course-card data-course-id="class-8-all-in-one" data-category="Class 8th" data-title="Class 8 All-in-One Study Notes, Worksheets & Practice Sets" data-price="299" data-original-price="330" data-instructor="Sunil Kumar" class="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative aspect-video w-full overflow-hidden bg-[#F1F5F9]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuApDvuBSpUpuRazpUFFiFAC04gDBWxKKGjrZCbQ1z9_iBoisYETD9GYouiw_TMOd_ooDu_IbtC1puMpqYvxTgsA9EUWIAWhjRR6OON1kHGwOFpMCWOsTCBVtuTZrfGGP3Cc6-xJIy8tA-dyC9e83e2e020EUlS1NJMTzXvCF1rZgDnJ03_tpE6rKqz4boSt95VjDjwMWsjxUiw-Xz-Bipic67zEgFIHQeDKmJ2CGrYxMcySvdjWrqwszdYHgpW4VzxOu4kRA-UX3vaC" alt="Class 8 Study Notes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-[#E8F7F0] text-[#0F5132] font-bold text-xs px-3 py-1 rounded-full shadow-xs">Class 8th</span>
+          <span class="absolute top-3 right-3 bg-[#17252A]/90 text-[#20B486] font-bold text-[11px] px-2.5 py-1 rounded-full">10% OFF</span>
+        </div>
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 mb-3">
+              <div class="w-8 h-8 rounded-full bg-[#E8F7F0] text-[#20B486] font-bold text-xs flex items-center justify-center shrink-0">SK</div>
+              <span class="text-xs sm:text-sm font-medium text-[#64748B]">Sunil Kumar (Senior Educator)</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-[#0F172A] line-clamp-2 group-hover:text-[#20B486] transition-colors mb-4">
+              Class 8 All-in-One Study Notes, Worksheets & Practice Sets
+            </h3>
+          </div>
+          <div>
+            <div class="flex items-center gap-4 sm:gap-5 text-xs text-[#64748B] pb-4 border-b border-[#F1F5F9]">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">picture_as_pdf</span>
+                <span>Instant PDF Access</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">description</span>
+                <span>35 Chapter Notes</span>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center justify-between mb-4">
+              <div class="flex items-baseline gap-2">
+                <span class="text-lg sm:text-xl font-extrabold text-[#20B486]">₹299</span>
+                <span class="text-xs text-[#94A3B8] line-through">₹330</span>
+              </div>
+              <div class="flex items-center gap-1 text-[#F59E0B] font-bold text-xs sm:text-sm">
+                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="text-[#0F172A]">4.8</span>
+                <span class="text-[11px] text-[#94A3B8] font-normal">(480)</span>
+              </div>
+            </div>
+            <!-- Action buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button data-preview-course="class-8-all-in-one" class="w-full py-2.5 rounded-xl border border-[#CBD5E1] hover:bg-[#F8FAF9] text-xs font-bold text-[#334155] transition-colors flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">visibility</span>
+                <span>Preview</span>
+              </button>
+              <button data-buy-course="class-8-all-in-one" class="w-full py-2.5 rounded-xl bg-[#20B486] hover:bg-[#1A966E] text-white text-xs font-bold transition-colors shadow-sm flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                <span>Buy Notes</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note Card 5: Class 7 Foundation -->
+      <div data-course-card data-course-id="class-7-foundation-pack" data-category="Class 7th" data-title="Class 7 Foundation Notes, Quick Revision Maps & Sample Papers" data-price="249" data-original-price="275" data-instructor="Pooja Mishra" class="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative aspect-video w-full overflow-hidden bg-[#F1F5F9]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBae0Dr340zXnX1oXitB8W0CO1gCInLLRtceMSs5r449Dqs8tsds7fNpYOJxNK3UPB2wioBKg0y4aTmd_XFv88Go3sP3FFonERAvvDUA1rkVygTAv7pXvMKiOVCXC8IJqeE93U_C1ygUXriWTZPmSzKpE_Hq_MkJqH8cVh51zbvX0jE8RF5hccOEUK42TVk_zYpycm0LzwCXY9wpTPosbqL-eRAteif4VU5MMiNHcD_SXsB2m7bmfkkXbNNakHyNoyFj1bPkWjCOCm7" alt="Class 7 Notes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-[#E8F7F0] text-[#0F5132] font-bold text-xs px-3 py-1 rounded-full shadow-xs">Class 7th</span>
+          <span class="absolute top-3 right-3 bg-[#17252A]/90 text-[#20B486] font-bold text-[11px] px-2.5 py-1 rounded-full">10% OFF</span>
+        </div>
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 mb-3">
+              <div class="w-8 h-8 rounded-full bg-[#E8F7F0] text-[#20B486] font-bold text-xs flex items-center justify-center shrink-0">PM</div>
+              <span class="text-xs sm:text-sm font-medium text-[#64748B]">Pooja Mishra (Curriculum Specialist)</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-[#0F172A] line-clamp-2 group-hover:text-[#20B486] transition-colors mb-4">
+              Class 7 Foundation Notes, Quick Revision Maps & Sample Papers
+            </h3>
+          </div>
+          <div>
+            <div class="flex items-center gap-4 sm:gap-5 text-xs text-[#64748B] pb-4 border-b border-[#F1F5F9]">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">picture_as_pdf</span>
+                <span>Instant PDF Access</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">description</span>
+                <span>30 Revision Notes</span>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center justify-between mb-4">
+              <div class="flex items-baseline gap-2">
+                <span class="text-lg sm:text-xl font-extrabold text-[#20B486]">₹249</span>
+                <span class="text-xs text-[#94A3B8] line-through">₹275</span>
+              </div>
+              <div class="flex items-center gap-1 text-[#F59E0B] font-bold text-xs sm:text-sm">
+                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="text-[#0F172A]">4.9</span>
+                <span class="text-[11px] text-[#94A3B8] font-normal">(390)</span>
+              </div>
+            </div>
+            <!-- Action buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button data-preview-course="class-7-foundation-pack" class="w-full py-2.5 rounded-xl border border-[#CBD5E1] hover:bg-[#F8FAF9] text-xs font-bold text-[#334155] transition-colors flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">visibility</span>
+                <span>Preview</span>
+              </button>
+              <button data-buy-course="class-7-foundation-pack" class="w-full py-2.5 rounded-xl bg-[#20B486] hover:bg-[#1A966E] text-white text-xs font-bold transition-colors shadow-sm flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                <span>Buy Notes</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note Card 6: Class 6 Starter Kit -->
+      <div data-course-card data-course-id="class-6-starter-kit" data-category="Class 6th" data-title="Class 6 Junior Champs — Concept Notes & Activity Worksheets" data-price="Free" data-original-price="" data-instructor="Bright Future Team" class="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative aspect-video w-full overflow-hidden bg-[#F1F5F9]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGsg7vos6LfrZQyo1b-hV6IvRULp2Guqz2bph5SmupGvBepeDlsyb8aIZ5Y3WcYw_AdFcO16GO9jeL5LDCnal6htcQ1nYXFWmWMtVBbe7XtAK1lYNCb6NE3HGFzRzewAqnm4p8Qow_sPrxvCNApLm0yf7pFl5tMbw3wdfD6a-vCXWUhz47lAlabMD53UfbEe0cEhJoENG2TveCUWTvKkog8xVmcL1CDDxWucEMRbKw8QQnHzQm_37zHyoqOw2OMYeeuQm0sXO3KJOz" alt="Class 6 Notes Kit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-[#E8F7F0] text-[#0F5132] font-bold text-xs px-3 py-1 rounded-full shadow-xs">Class 6th</span>
+          <span class="absolute top-3 right-3 bg-[#20B486] text-white font-bold text-[11px] px-2.5 py-1 rounded-full">FREE</span>
+        </div>
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 mb-3">
+              <div class="w-8 h-8 rounded-full bg-[#E8F7F0] text-[#20B486] font-bold text-xs flex items-center justify-center shrink-0">BF</div>
+              <span class="text-xs sm:text-sm font-medium text-[#64748B]">Bright Future Academic Team</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-[#0F172A] line-clamp-2 group-hover:text-[#20B486] transition-colors mb-4">
+              Class 6 Junior Champs — Concept Notes & Activity Worksheets
+            </h3>
+          </div>
+          <div>
+            <div class="flex items-center gap-4 sm:gap-5 text-xs text-[#64748B] pb-4 border-b border-[#F1F5F9]">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">picture_as_pdf</span>
+                <span>Instant PDF Access</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">description</span>
+                <span>28 Chapter Notes</span>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center justify-between mb-4">
+              <div class="flex items-baseline gap-2">
+                <span class="text-lg sm:text-xl font-extrabold text-[#20B486]">Free Sample</span>
+              </div>
+              <div class="flex items-center gap-1 text-[#F59E0B] font-bold text-xs sm:text-sm">
+                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="text-[#0F172A]">4.9</span>
+                <span class="text-[11px] text-[#94A3B8] font-normal">(520)</span>
+              </div>
+            </div>
+            <!-- Action buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button data-preview-course="class-6-starter-kit" class="w-full py-2.5 rounded-xl border border-[#CBD5E1] hover:bg-[#F8FAF9] text-xs font-bold text-[#334155] transition-colors flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">visibility</span>
+                <span>Preview</span>
+              </button>
+              <button data-preview-course="class-6-starter-kit" class="w-full py-2.5 rounded-xl bg-[#20B486] hover:bg-[#1A966E] text-white text-xs font-bold transition-colors shadow-sm flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">download</span>
+                <span>Get Free</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================================
+       8. STUDENT & PARENT TESTIMONIALS (REAL TOPPER STORIES)
+       ========================================================================= -->
+  <section class="py-14 sm:py-20 bg-gradient-to-b from-white to-[#F8FAF9] border-t border-[#E2E8F0]" id="reviews">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#20B486] bg-[#E8F7F0] px-3.5 py-1 rounded-full inline-block mb-3">Topper Stories</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+          Loved by Over <span class="curved-underline text-[#20B486]">15,000 Students & Parents</span>
+        </h2>
+        <p class="text-[#64748B] text-xs sm:text-sm md:text-base mt-3">
+          Read genuine reviews from high-scoring students and delighted parents who trust Bright Future Academy.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Review 1 -->
+        <div class="bg-white rounded-2xl border border-[#E2E8F0] p-6 sm:p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="flex items-center gap-1 text-[#F59E0B] mb-4">
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#334155] leading-relaxed italic mb-6">
+              "The Class 10 Science formula sheets and chapter summaries saved my entire term! The diagrams are color-coded and the previous year question solutions matched the board pattern exactly. I scored 96.4%!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-[#F1F5F9]">
+            <div class="w-10 h-10 rounded-full bg-[#E8F7F0] text-[#20B486] font-extrabold flex items-center justify-center text-sm shrink-0">
+              AS
+            </div>
+            <div>
+              <p class="font-bold text-sm text-[#0F172A]">Aryan Sharma</p>
+              <p class="text-xs text-[#20B486] font-semibold">96.4% in CBSE Class 10th Boards</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white rounded-2xl border border-[#E2E8F0] p-6 sm:p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="flex items-center gap-1 text-[#F59E0B] mb-4">
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#334155] leading-relaxed italic mb-6">
+              "Math was always terrifying for me until I bought the Class 9 Foundation formula sheets. Instead of solving random problems blindly, these notes gave me step-by-step clarity for every single theorem."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-[#F1F5F9]">
+            <div class="w-10 h-10 rounded-full bg-[#FEF3C7] text-[#D97706] font-extrabold flex items-center justify-center text-sm shrink-0">
+              PP
+            </div>
+            <div>
+              <p class="font-bold text-sm text-[#0F172A]">Priya Patel</p>
+              <p class="text-xs text-[#D97706] font-semibold">Class 9th Maths Topper</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white rounded-2xl border border-[#E2E8F0] p-6 sm:p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="flex items-center gap-1 text-[#F59E0B] mb-4">
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#334155] leading-relaxed italic mb-6">
+              "As a parent, I was worried about my son's transition to Class 8. These notes gave him a neat daily revision routine without excessive screen fatigue. Printed them easily on A4 sheets!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-[#F1F5F9]">
+            <div class="w-10 h-10 rounded-full bg-[#E0E7FF] text-[#4F46E5] font-extrabold flex items-center justify-center text-sm shrink-0">
+              SV
+            </div>
+            <div>
+              <p class="font-bold text-sm text-[#0F172A]">Sunita Verma</p>
+              <p class="text-xs text-[#4F46E5] font-semibold">Parent of Class 8 & 10 Students</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. INTERACTIVE "REQUEST SPECIFIC CHAPTER NOTES / FORMULA PACK" SECTION
+       ========================================================================= -->
+  <section class="max-w-7xl mx-auto px-4 md:px-8 py-10 sm:py-16" id="request-notes">
+    <div class="relative bg-gradient-to-br from-[#E8F7F0] via-[#F0FDF4] to-[#E2F5EC] border border-[#C6ECD9] rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-14 overflow-hidden shadow-xs">
+      
+      <!-- Decorative background accent doodle -->
+      <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-[#20B486]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-6">
+          <span class="text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#20B486] bg-white/80 px-3 py-1 rounded-full inline-block mb-3">Custom Notes Service</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0F172A] tracking-tight leading-snug">
+            Need Specific Chapter Notes or Formula Sheets?
+          </h2>
+          <p class="text-[#64748B] text-xs sm:text-sm md:text-base mt-3 max-w-lg leading-relaxed">
+            Looking for handwritten summaries for a single difficult chapter (like Carbon Compounds or Trigonometry) or state board syllabus? Tell us what you need and our faculty will prepare it!
+          </p>
+
+          <div class="mt-6 flex flex-col gap-2.5 text-xs text-[#475569]">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px] text-[#20B486]">check_circle</span>
+              <span>Delivered directly to your WhatsApp / Email within 4 hours</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px] text-[#20B486]">check_circle</span>
+              <span>Available for all CBSE, ICSE & State Boards</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inline Quick Request Form -->
+        <div class="lg:col-span-6 bg-white/95 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-[#CBD5E1]/80 shadow-md">
+          <h3 class="text-lg font-bold text-[#0F172A] mb-4 flex items-center gap-2">
+            <span class="material-symbols-outlined text-[#20B486]">send</span>
+            <span>Request Chapter Notes</span>
+          </h3>
+          <form id="custom-notes-request-form" class="space-y-3.5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div>
+                <label class="block text-xs font-bold text-[#475569] mb-1">Your Class</label>
+                <select id="request-class" required class="w-full h-11 px-3 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none">
+                  <option value="Class 10th">Class 10th</option>
+                  <option value="Class 9th">Class 9th</option>
+                  <option value="Class 8th">Class 8th</option>
+                  <option value="Class 7th">Class 7th</option>
+                  <option value="Class 6th">Class 6th</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-[#475569] mb-1">Subject</label>
+                <input id="request-subject" type="text" required placeholder="e.g. Science, Maths" class="w-full h-11 px-3 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#475569] mb-1">Chapter / Topic Name</label>
+              <input id="request-chapter" type="text" required placeholder="e.g. Quadratic Equations, Light Reflection" class="w-full h-11 px-3 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#475569] mb-1">WhatsApp Number or Email</label>
+              <input id="request-contact" type="text" required placeholder="+91 98765 43210 or yourname@gmail.com" class="w-full h-11 px-3 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none" />
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-[#20B486] hover:bg-[#1A966E] text-white font-bold text-sm rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-[18px]">verified</span>
+              <span>Send Custom Notes Request</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. FREQUENTLY ASKED QUESTIONS (ACCORDION WITH EMIL KOWALSKI PHYSICS)
+       ========================================================================= -->
+  <section class="py-14 sm:py-20 max-w-4xl mx-auto px-4 md:px-8" id="faq">
+    <div class="text-center mb-10 sm:mb-14">
+      <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#20B486] bg-[#E8F7F0] px-3.5 py-1 rounded-full inline-block mb-3">Got Questions?</span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+        Frequently Asked <span class="curved-underline text-[#20B486]">Questions</span>
+      </h2>
+      <p class="text-[#64748B] text-xs sm:text-sm md:text-base mt-3">
+        Everything you need to know about Bright Future Academy study notes and formula sheets.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      
+      <!-- FAQ 1 -->
+      <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl p-5 sm:p-6 transition-all duration-200">
+        <button class="faq-trigger w-full flex items-center justify-between text-left gap-4 font-bold text-sm sm:text-base text-[#0F172A]">
+          <span>How do I receive the study notes after payment?</span>
+          <span class="faq-icon material-symbols-outlined text-[#20B486] transition-transform duration-300">expand_more</span>
+        </button>
+        <div class="faq-content hidden mt-3 pt-3 border-t border-[#F1F5F9] text-xs sm:text-sm text-[#64748B] leading-relaxed">
+          Immediately after checkout, you get instant download links on screen as well as a Google Drive link sent to your email and WhatsApp. You have lifetime access to view or download the PDFs anytime.
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl p-5 sm:p-6 transition-all duration-200">
+        <button class="faq-trigger w-full flex items-center justify-between text-left gap-4 font-bold text-sm sm:text-base text-[#0F172A]">
+          <span>Are these notes aligned with the latest 2024–2025 NCERT syllabus?</span>
+          <span class="faq-icon material-symbols-outlined text-[#20B486] transition-transform duration-300">expand_more</span>
+        </button>
+        <div class="faq-content hidden mt-3 pt-3 border-t border-[#F1F5F9] text-xs sm:text-sm text-[#64748B] leading-relaxed">
+          Yes! All notes are 100% updated according to the latest rationalized NCERT syllabus and latest CBSE/State Board examination guidelines. Deleted syllabus chapters have been removed to save your revision time.
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl p-5 sm:p-6 transition-all duration-200">
+        <button class="faq-trigger w-full flex items-center justify-between text-left gap-4 font-bold text-sm sm:text-base text-[#0F172A]">
+          <span>Can I print these notes or read them on my tablet?</span>
+          <span class="faq-icon material-symbols-outlined text-[#20B486] transition-transform duration-300">expand_more</span>
+        </button>
+        <div class="faq-content hidden mt-3 pt-3 border-t border-[#F1F5F9] text-xs sm:text-sm text-[#64748B] leading-relaxed">
+          Absolutely. The PDFs are formatted with crisp high-contrast text and optimized standard A4 margins. They look sharp on mobile screens, iPad/tablets, and can be printed at any local stationery shop.
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl p-5 sm:p-6 transition-all duration-200">
+        <button class="faq-trigger w-full flex items-center justify-between text-left gap-4 font-bold text-sm sm:text-base text-[#0F172A]">
+          <span>How does the 10% discount coupon work?</span>
+          <span class="faq-icon material-symbols-outlined text-[#20B486] transition-transform duration-300">expand_more</span>
+        </button>
+        <div class="faq-content hidden mt-3 pt-3 border-t border-[#F1F5F9] text-xs sm:text-sm text-[#64748B] leading-relaxed">
+          The 10% discount is automatically factored into our promotional pricing, or you can use coupon code <strong class="text-[#20B486] font-mono">TOP10</strong> during checkout to ensure you get the absolute lowest price.
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item bg-white border border-[#E2E8F0] rounded-2xl p-5 sm:p-6 transition-all duration-200">
+        <button class="faq-trigger w-full flex items-center justify-between text-left gap-4 font-bold text-sm sm:text-base text-[#0F172A]">
+          <span>What if I only need notes for one specific chapter?</span>
+          <span class="faq-icon material-symbols-outlined text-[#20B486] transition-transform duration-300">expand_more</span>
+        </button>
+        <div class="faq-content hidden mt-3 pt-3 border-t border-[#F1F5F9] text-xs sm:text-sm text-[#64748B] leading-relaxed">
+          You can use our "Request Chapter Notes" form above! Mention the exact chapter name and our academic desk will dispatch the standalone chapter module for nominal pricing or free depending on availability.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. FINAL HIGH-CONVERTING CALL TO ACTION BANNER
+       ========================================================================= -->
+  <section class="max-w-7xl mx-auto px-4 md:px-8 pb-14 sm:pb-20">
+    <div class="bg-[#17252A] rounded-2xl sm:rounded-3xl p-8 sm:p-12 md:p-16 text-center text-white relative overflow-hidden shadow-xl">
+      <!-- Decorative background blur -->
+      <div class="absolute -top-24 -left-24 w-72 h-72 bg-[#20B486]/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-[#20B486]/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#20B486] bg-[#20B486]/10 px-4 py-1.5 rounded-full inline-block mb-4 border border-[#20B486]/30">
+          Exclusive 10% Off With Code: TOP10
+        </span>
+        <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+          Ready to Ace Your Exams with Confidence?
+        </h2>
+        <p class="text-xs sm:text-sm md:text-base text-[#94A3B8] leading-relaxed mb-8">
+          Join 15,000+ students from Classes 6th to 10th who study smarter with Bright Future Academy concise handwritten notes and formula sheets.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <a href="#notes" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#20B486] hover:bg-[#1A966E] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#20B486]/40 transition-all hover:scale-105 active:scale-95">
+            Get Instant Notes Access
+          </a>
+          <button id="cta-sample-btn" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm sm:text-base transition-colors flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-[20px] text-[#20B486]">visibility</span>
+            <span>Download Free Sample PDF</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       12. COMPREHENSIVE FOOTER (MOBILE & TABLET REFLOW)
+       ========================================================================= -->
+  <footer class="bg-[#17252A] text-[#CBD5E1] pt-12 sm:pt-16 pb-10 sm:pb-12 border-t border-[#2C3E50]" id="contact">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-[#2C3E50]">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="sm:col-span-2">
+          <a href="./index.html" class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#20B486] text-white flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[22px] sm:text-[24px]">menu_book</span>
+            </div>
+            <span class="font-extrabold text-xl sm:text-2xl tracking-tight text-white">Bright Future <span class="text-[#20B486]">Academy</span></span>
+          </a>
+          <p class="text-xs sm:text-sm text-[#94A3B8] max-w-sm leading-relaxed mb-6">
+            Bright Future Academy provides premier study notes, formula sheets, and solved chapter question banks to empower school students of Classes 6th to 10th to score top marks in their exams.
+          </p>
+          <div class="text-xs text-[#94A3B8] flex flex-col gap-1.5">
+            <p><strong class="text-white">Contact Desk:</strong> +91 97026 21413</p>
+            <p><strong class="text-white">Email:</strong> support@brightfutureacademy.com</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Classes Notes -->
+        <div>
+          <h4 class="text-white font-bold text-sm sm:text-base mb-3 sm:mb-4">Classes 6–10 Notes</h4>
+          <ul class="space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-[#94A3B8]">
+            <li><button data-quick-filter="Class 10th" class="hover:text-[#20B486] transition-colors text-left">Class 10th Board Notes</button></li>
+            <li><button data-quick-filter="Class 9th" class="hover:text-[#20B486] transition-colors text-left">Class 9th Foundation Notes</button></li>
+            <li><button data-quick-filter="Class 8th" class="hover:text-[#20B486] transition-colors text-left">Class 8th All-in-One Notes</button></li>
+            <li><button data-quick-filter="Class 7th" class="hover:text-[#20B486] transition-colors text-left">Class 7th Study Kit</button></li>
+            <li><button data-quick-filter="Class 6th" class="hover:text-[#20B486] transition-colors text-left">Class 6th Starter Pack</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Subjects & Practice -->
+        <div>
+          <h4 class="text-white font-bold text-sm sm:text-base mb-3 sm:mb-4">Subjects & PYQs</h4>
+          <ul class="space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-[#94A3B8]">
+            <li><a href="#notes" class="hover:text-[#20B486] transition-colors">Science (Physics, Chem, Bio)</a></li>
+            <li><a href="#notes" class="hover:text-[#20B486] transition-colors">Mathematics Formula Sheets</a></li>
+            <li><a href="#notes" class="hover:text-[#20B486] transition-colors">Social Science Mind Maps</a></li>
+            <li><a href="#notes" class="hover:text-[#20B486] transition-colors">Previous 10-Year Solved Papers</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="text-white font-bold text-sm sm:text-base mb-3 sm:mb-4">Free Revision Tips</h4>
+          <p class="text-xs text-[#94A3B8] leading-relaxed mb-3 sm:mb-4">
+            Subscribe for free chapter summaries, formula sheets, and exam notifications.
+          </p>
+          <form id="newsletter-form" class="space-y-2">
+            <input 
+              type="email" 
+              required
+              placeholder="Student / Parent email" 
+              class="w-full px-3.5 py-2.5 rounded-lg bg-[#243338] border border-[#3A4B50] text-white text-xs placeholder-[#64748B] outline-none focus:border-[#20B486]"
+            />
+            <button type="submit" class="w-full py-2.5 rounded-lg bg-[#20B486] hover:bg-[#1A966E] text-white font-bold text-xs transition-colors">
+              Get Free Study Material
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Copyright bar -->
+      <div class="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#64748B] text-center sm:text-left">
+        <p>Managed by <a href="https://crosstech.in" target="_blank" rel="noopener noreferrer" class="text-[#20B486] hover:underline font-semibold">crosstech.in</a></p>
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          <a href="#" class="hover:text-[#20B486] transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-[#20B486] transition-colors">Terms & Refund Policy</a>
+          <a href="#contact" class="hover:text-[#20B486] transition-colors">Student Support</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       13. INTERACTIVE MODAL: FREE SAMPLE NOTES PREVIEW & DOWNLOAD
+       ========================================================================= -->
+  <div id="sample-preview-modal" class="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-xs hidden">
+    <div class="bg-white rounded-xl sm:rounded-2xl max-w-lg w-full max-h-[92vh] overflow-y-auto p-4 sm:p-8 shadow-2xl relative border border-[#E2E8F0]">
+      <button id="close-sample-modal" class="absolute top-3 right-3 sm:top-4 sm:right-4 p-1.5 text-gray-400 hover:text-gray-700 rounded-lg">
+        <span class="material-symbols-outlined text-[20px] sm:text-[22px]">close</span>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center">
+          <span class="material-symbols-outlined text-[24px]">visibility</span>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-[#0F172A]" id="sample-modal-title">Free Sample Study Notes</h3>
+          <p class="text-xs text-[#64748B]">Preview chapter structure and formula sheets</p>
+        </div>
+      </div>
+
+      <div class="bg-[#F8FAF9] p-4 rounded-xl border border-[#E2E8F0] mb-5 text-xs text-[#475569] space-y-2">
+        <div class="flex items-center gap-2 text-[#0F172A] font-bold">
+          <span class="material-symbols-outlined text-[16px] text-[#20B486]">check_circle</span>
+          <span id="sample-modal-highlight">Sample Includes: Chapter 1 & Formula Summary</span>
+        </div>
+        <p>• High-yield handwritten bullet points</p>
+        <p>• Colored diagrams with labels</p>
+        <p>• Solved NCERT exemplar questions with step marks</p>
+      </div>
+
+      <form id="sample-download-form" class="space-y-3">
+        <div>
+          <label class="block text-xs font-bold text-[#475569] mb-1">Select Your Class</label>
+          <select id="sample-class-select" class="w-full h-11 px-3 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none">
+            <option value="Class 10th">Class 10th (Science & Maths Sample)</option>
+            <option value="Class 9th">Class 9th (Foundation Sample)</option>
+            <option value="Class 8th">Class 8th (All-in-One Sample)</option>
+            <option value="Class 7th">Class 7th (Foundation Sample)</option>
+            <option value="Class 6th">Class 6th (Starter Kit Sample)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-[#475569] mb-1">Email or WhatsApp (to send link)</label>
+          <input id="sample-recipient" type="text" required placeholder="Enter WhatsApp number or email" class="w-full h-11 px-3 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none" />
+        </div>
+        <button type="submit" class="w-full py-3.5 bg-[#20B486] hover:bg-[#1A966E] text-white font-bold text-sm rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">download</span>
+          <span>Download Sample Notes PDF</span>
+        </button>
+      </form>
+    </div>
   </div>
 
+  <!-- =========================================================================
+       14. INTERACTIVE MODAL: QUICK BUY NOTES (10% OFF PRE-APPLIED)
+       ========================================================================= -->
+  <div id="buy-notes-modal" class="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-xs hidden">
+    <div class="bg-white rounded-xl sm:rounded-2xl max-w-lg w-full max-h-[92vh] overflow-y-auto p-4 sm:p-8 shadow-2xl relative border border-[#E2E8F0]">
+      <button id="close-buy-modal" class="absolute top-3 right-3 sm:top-4 sm:right-4 p-1.5 text-gray-400 hover:text-gray-700 rounded-lg">
+        <span class="material-symbols-outlined text-[20px] sm:text-[22px]">close</span>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center">
+          <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-[#0F172A]" id="buy-modal-title">Get Study Notes Access</h3>
+          <p class="text-xs text-[#20B486] font-bold">10% Off Special Discount Applied!</p>
+        </div>
+      </div>
+
+      <div class="bg-[#F8FAF9] p-4 rounded-xl border border-[#E2E8F0] mb-5 space-y-2">
+        <div class="flex justify-between items-center text-xs text-[#64748B]">
+          <span>Package:</span>
+          <span id="buy-modal-pkg" class="font-bold text-[#0F172A] text-right line-clamp-1">Class 10 Science Notes</span>
+        </div>
+        <div class="flex justify-between items-center text-xs text-[#64748B]">
+          <span>Original Price:</span>
+          <span id="buy-modal-orig" class="line-through text-[#94A3B8]">₹550</span>
+        </div>
+        <div class="flex justify-between items-center text-xs text-[#20B486] font-bold">
+          <span>Discount (Coupon TOP10):</span>
+          <span>-10%</span>
+        </div>
+        <div class="flex justify-between items-center text-sm font-extrabold text-[#0F172A] pt-2 border-t border-[#E2E8F0]">
+          <span>Total Payable:</span>
+          <span id="buy-modal-price" class="text-lg text-[#20B486]">₹499</span>
+        </div>
+      </div>
+
+      <form id="buy-notes-form" class="space-y-3">
+        <div>
+          <label class="block text-xs font-bold text-[#475569] mb-1">Student / Parent Name</label>
+          <input id="buy-name" type="text" required placeholder="Enter student name" class="w-full h-11 px-3 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-[#475569] mb-1">Email (to deliver Google Drive Access)</label>
+          <input id="buy-email" type="email" required placeholder="name@gmail.com" class="w-full h-11 px-3 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-[#475569] mb-1">WhatsApp Mobile Number</label>
+          <input id="buy-phone" type="tel" required placeholder="+91 98765 43210" class="w-full h-11 px-3 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none" />
+        </div>
+        <button type="submit" class="w-full py-3.5 bg-[#20B486] hover:bg-[#1A966E] text-white font-bold text-sm rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">lock</span>
+          <span>Proceed to Instant Access (UPI / Card)</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       15. TOAST NOTIFICATION CONTAINER (LIGHTWEIGHT FLOATING FEEDBACK)
+       ========================================================================= -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- App Entry Point Script -->
 </body>
 </html>

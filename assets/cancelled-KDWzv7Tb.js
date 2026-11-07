@@ -1,0 +1,1 @@
+import"./main-CV82Dt26.js";import{C as e}from"./config-DpFIr7Lr.js";document.getElementById("whatsapp-link").href=e.support.whatsappUrl;window.resumeCheckout=function(){const t=sessionStorage.getItem("razorpay");window.location.href=t?"/checkout":"/register"};

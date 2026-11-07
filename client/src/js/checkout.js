@@ -3,6 +3,7 @@
  * Handles package selection, coupon calculation, order creation, and Razorpay modal launch
  */
 import { API_BASE_URL } from './config.js';
+import confetti from 'canvas-confetti';
 
 // Pre-configured package catalog with prices
 const PACKAGES = {
@@ -44,7 +45,8 @@ const PACKAGES = {
 };
 
 let selectedPackage = PACKAGES['class-10-science-notes'];
-let discountPercent = 10; // TOP10 coupon default (10%)
+let appliedCouponCode = 'TOP10';
+let discountPercent = 10; // TOP10 default (10%)
 let couponApplied = true;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -151,6 +153,7 @@ function updateSummaryUI() {
   const metaEl = document.getElementById('summary-package-meta');
   const mrpEl = document.getElementById('summary-mrp');
   const baseEl = document.getElementById('summary-base-price');
+  const discountLabelEl = document.getElementById('summary-discount-label');
   const discountEl = document.getElementById('summary-discount');
   const totalEl = document.getElementById('summary-total');
   const payBtnText = document.getElementById('pay-button-text');
@@ -159,46 +162,218 @@ function updateSummaryUI() {
   if (metaEl) metaEl.textContent = selectedPackage.meta;
   if (mrpEl) mrpEl.textContent = `₹${mrp}`;
   if (baseEl) baseEl.textContent = `₹${basePrice}`;
-  if (discountEl) discountEl.textContent = couponApplied ? `-₹${discountAmount}` : '₹0';
+
+  if (discountLabelEl) {
+    discountLabelEl.textContent = couponApplied 
+      ? `Coupon ${appliedCouponCode} (${discountPercent}% Off):` 
+      : 'Coupon Discount:';
+  }
+
+  if (discountEl) {
+    discountEl.textContent = couponApplied ? `-₹${discountAmount}` : '₹0';
+    if (couponApplied) {
+      discountEl.className = 'font-bold text-[#20B486]';
+    } else {
+      discountEl.className = 'font-semibold text-[#94A3B8]';
+    }
+  }
+
   if (totalEl) totalEl.textContent = `₹${netPayable}`;
 
   if (payBtnText) {
     payBtnText.textContent = `Pay ₹${netPayable} & Unlock Google Drive Access`;
   }
+
+  // Update Left Column Coupon UI state
+  const inputContainer = document.getElementById('coupon-input-container');
+  const appliedContainer = document.getElementById('coupon-applied-container');
+  const appliedCodeBadge = document.getElementById('applied-code-badge');
+  const appliedDesc = document.getElementById('applied-coupon-description');
+  const savingsPill = document.getElementById('coupon-savings-pill');
+
+  if (couponApplied) {
+    if (inputContainer) inputContainer.classList.add('hidden');
+    if (appliedContainer) appliedContainer.classList.remove('hidden');
+    if (appliedCodeBadge) appliedCodeBadge.textContent = appliedCouponCode;
+    if (appliedDesc) {
+      appliedDesc.textContent = `Extra ${discountPercent}% Discount applied — You save ₹${discountAmount}!`;
+    }
+    if (savingsPill) {
+      savingsPill.textContent = `${discountPercent}% OFF ACTIVE`;
+      savingsPill.className = 'text-[11px] font-extrabold text-[#0F5132] bg-[#E8F7F0] px-2.5 py-0.5 rounded-full border border-[#20B486]/30';
+    }
+  } else {
+    if (appliedContainer) appliedContainer.classList.add('hidden');
+    if (inputContainer) inputContainer.classList.remove('hidden');
+    if (savingsPill) {
+      savingsPill.textContent = 'NO COUPON APPLIED';
+      savingsPill.className = 'text-[11px] font-bold text-[#64748B] bg-gray-100 px-2.5 py-0.5 rounded-full border border-gray-200';
+    }
+  }
 }
 
 /**
- * Coupon input & apply handler
+ * Fires celebratory micro-confetti when a coupon is successfully applied
+ */
+function triggerCelebrationAnimation() {
+  try {
+    confetti({
+      particleCount: 50,
+      spread: 70,
+      origin: { y: 0.65 },
+      colors: ['#20B486', '#10B981', '#F59E0B', '#3B82F6', '#8B5CF6'],
+      ticks: 200,
+      gravity: 1.1,
+      disableForReducedMotion: true
+    });
+  } catch (err) {
+    console.warn('Confetti trigger skipped:', err);
+  }
+}
+
+/**
+ * Coupon input, apply animation & remove handler
  */
 function initCouponSystem() {
   const applyBtn = document.getElementById('apply-coupon-btn');
   const couponInput = document.getElementById('coupon-input');
+  const removeBtn = document.getElementById('remove-coupon-btn');
+  const quickApplyBtn = document.getElementById('quick-apply-top10');
   const messageEl = document.getElementById('coupon-message');
+  const appliedContainer = document.getElementById('coupon-applied-container');
+  const discountEl = document.getElementById('summary-discount');
 
-  if (!applyBtn || !couponInput) return;
-
-  applyBtn.addEventListener('click', () => {
-    const code = couponInput.value.trim().toUpperCase();
-    if (code === 'TOP10' || code === 'BRIGHT10' || code === 'EARLY10') {
-      discountPercent = 10;
-      couponApplied = true;
-      messageEl.innerHTML = `<span class="material-symbols-outlined text-[14px]">check_circle</span><span>Coupon ${code} active — Extra 10% Off applied!</span>`;
-      messageEl.className = 'text-xs text-[#20B486] font-bold mt-1.5 flex items-center gap-1';
-      updateSummaryUI();
-    } else if (code === '') {
-      discountPercent = 0;
-      couponApplied = false;
-      messageEl.innerHTML = `<span>No coupon applied.</span>`;
-      messageEl.className = 'text-xs text-gray-500 font-medium mt-1.5';
-      updateSummaryUI();
+  // Helper to show message
+  function showMessage(html, type = 'success') {
+    if (!messageEl) return;
+    messageEl.innerHTML = html;
+    messageEl.classList.remove('hidden');
+    if (type === 'success') {
+      messageEl.className = 'text-xs text-[#20B486] font-bold mt-2 flex items-center gap-1.5 transition-all';
+    } else if (type === 'error') {
+      messageEl.className = 'text-xs text-red-500 font-bold mt-2 flex items-center gap-1.5 transition-all';
     } else {
-      discountPercent = 0;
-      couponApplied = false;
-      messageEl.innerHTML = `<span class="material-symbols-outlined text-[14px]">error</span><span>Invalid coupon code. Try TOP10.</span>`;
-      messageEl.className = 'text-xs text-red-500 font-bold mt-1.5 flex items-center gap-1';
-      updateSummaryUI();
+      messageEl.className = 'text-xs text-gray-500 font-medium mt-2 flex items-center gap-1.5 transition-all';
     }
-  });
+
+    // Auto-clear message after 5 seconds
+    setTimeout(() => {
+      if (messageEl) messageEl.classList.add('hidden');
+    }, 5000);
+  }
+
+  // Core function to validate and apply code
+  function applyCode(rawCode, isUserAction = false) {
+    const code = rawCode.trim().toUpperCase();
+
+    // Valid discount coupon codes
+    if (code === 'TOP10' || code === 'BRIGHT10' || code === 'EARLY10' || code === 'STUDY10') {
+      discountPercent = 10;
+      appliedCouponCode = code;
+      couponApplied = true;
+
+      // Update UI
+      updateSummaryUI();
+
+      // Trigger celebratory animations on user action
+      if (isUserAction) {
+        triggerCelebrationAnimation();
+
+        // Add pop card animation class
+        if (appliedContainer) {
+          appliedContainer.classList.remove('coupon-pop-card');
+          void appliedContainer.offsetWidth; // trigger reflow
+          appliedContainer.classList.add('coupon-pop-card');
+        }
+
+        // Add discount glow animation
+        if (discountEl) {
+          discountEl.classList.remove('discount-highlight-pulse');
+          void discountEl.offsetWidth;
+          discountEl.classList.add('discount-highlight-pulse');
+        }
+
+        showMessage(`<span class="material-symbols-outlined text-[16px]">celebration</span><span>🎉 Code ${code} applied! Extra 10% discount added.</span>`, 'success');
+      }
+
+      if (couponInput) couponInput.value = '';
+
+    } else if (code === 'TOP20' || code === 'SUPER20') {
+      discountPercent = 20;
+      appliedCouponCode = code;
+      couponApplied = true;
+
+      updateSummaryUI();
+
+      if (isUserAction) {
+        triggerCelebrationAnimation();
+        showMessage(`<span class="material-symbols-outlined text-[16px]">celebration</span><span>🚀 Mega Code ${code} applied! Extra 20% discount added.</span>`, 'success');
+      }
+
+      if (couponInput) couponInput.value = '';
+
+    } else if (code === '') {
+      if (couponInput) {
+        couponInput.classList.add('coupon-shake');
+        setTimeout(() => couponInput.classList.remove('coupon-shake'), 450);
+        couponInput.focus();
+      }
+      showMessage(`<span class="material-symbols-outlined text-[15px]">info</span><span>Please enter a coupon code (e.g. TOP10)</span>`, 'error');
+
+    } else {
+      // Invalid code entered
+      if (couponInput) {
+        couponInput.classList.add('coupon-shake');
+        setTimeout(() => couponInput.classList.remove('coupon-shake'), 450);
+        couponInput.focus();
+      }
+      showMessage(`<span class="material-symbols-outlined text-[15px]">error</span><span>Invalid coupon code "${code}". Try code <strong>TOP10</strong> for 10% off!</span>`, 'error');
+    }
+  }
+
+  // Remove coupon handler
+  function removeCode() {
+    couponApplied = false;
+    const previousCode = appliedCouponCode;
+    appliedCouponCode = '';
+    discountPercent = 0;
+
+    updateSummaryUI();
+
+    showMessage(`<span class="material-symbols-outlined text-[15px]">check</span><span>Coupon ${previousCode} removed. Total price reverted.</span>`, 'info');
+
+    if (couponInput) {
+      couponInput.focus();
+    }
+  }
+
+  // Bind Click Event on Apply Button
+  if (applyBtn && couponInput) {
+    applyBtn.addEventListener('click', () => {
+      applyCode(couponInput.value, true);
+    });
+
+    couponInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        applyCode(couponInput.value, true);
+      }
+    });
+  }
+
+  // Bind Quick Apply Suggestion Button
+  if (quickApplyBtn) {
+    quickApplyBtn.addEventListener('click', () => {
+      applyCode('TOP10', true);
+    });
+  }
+
+  // Bind Remove Coupon Button
+  if (removeBtn) {
+    removeBtn.addEventListener('click', () => {
+      removeCode();
+    });
+  }
 }
 
 /**
@@ -251,7 +426,7 @@ function initFormSubmission() {
         package_id: selectedPackage.id,
         course_name: selectedPackage.title,
         amount_paise: amountPaise,
-        coupon_code: couponApplied ? 'TOP10' : null
+        coupon_code: couponApplied ? appliedCouponCode : null
       };
 
       // Call Backend API to create Razorpay Order

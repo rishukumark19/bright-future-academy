@@ -133,3 +133,64 @@
 .animate-marquee-ltr:hover {
   animation-play-state: paused;
 }
+
+/* =========================================================
+   COUPON INTERACTIVE CELEBRATION & REMOVAL ANIMATIONS
+   ========================================================= */
+@keyframes couponPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(6px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.coupon-pop-card {
+  animation: couponPopIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes couponShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.coupon-shake {
+  animation: couponShake 0.4s ease-in-out;
+}
+
+@keyframes sparkleSpin {
+  0% { transform: scale(0.8) rotate(-15deg); }
+  50% { transform: scale(1.15) rotate(10deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.coupon-sparkle-icon {
+  animation: sparkleSpin 0.5s ease-out;
+}
+
+@keyframes discountGlow {
+  0% {
+    background-color: rgba(32, 180, 134, 0.3);
+    color: #065F46;
+    transform: scale(1.08);
+  }
+  100% {
+    background-color: transparent;
+    transform: scale(1);
+  }
+}
+
+.discount-highlight-pulse {
+  animation: discountGlow 0.9s ease-out;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 0 4px;
+}

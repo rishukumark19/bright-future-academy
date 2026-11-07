@@ -278,29 +278,84 @@
             </div>
           </div>
 
-          <!-- STEP 3: COUPON CODE BOX -->
-          <div class="pt-3 border-t border-[#E2E8F0]">
-            <label class="block text-xs font-bold text-[#475569] mb-1">Discount Coupon Code</label>
-            <div class="flex gap-2">
-              <input 
-                id="coupon-input" 
-                type="text" 
-                value="TOP10" 
-                class="uppercase font-mono font-bold tracking-wider text-xs sm:text-sm h-11 px-3.5 rounded-xl border border-[#CBD5E1] bg-white text-[#0F172A] focus:border-[#20B486] outline-none uppercase flex-1"
-                placeholder="ENTER COUPON"
-              />
+          <!-- STEP 3: COUPON CODE BOX WITH CELEBRATION ANIMATION & REMOVE OPTION -->
+          <div class="pt-4 border-t border-[#E2E8F0]" id="coupon-section-wrapper">
+            <div class="flex items-center justify-between mb-2">
+              <label class="block text-xs font-bold text-[#475569] flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">loyalty</span>
+                <span>Discount Coupon Code</span>
+              </label>
+              <span id="coupon-savings-pill" class="text-[11px] font-extrabold text-[#0F5132] bg-[#E8F7F0] px-2.5 py-0.5 rounded-full border border-[#20B486]/30">
+                10% OFF ACTIVE
+              </span>
+            </div>
+
+            <!-- STATE 1: COUPON INPUT FORM (Visible when no coupon is applied) -->
+            <div id="coupon-input-container" class="hidden">
+              <div class="flex gap-2 relative">
+                <input 
+                  id="coupon-input" 
+                  type="text" 
+                  class="uppercase font-mono font-bold tracking-wider text-xs sm:text-sm h-11 px-3.5 rounded-xl border border-[#CBD5E1] bg-white text-[#0F172A] focus:border-[#20B486] focus:ring-2 focus:ring-[#20B486]/20 outline-none uppercase flex-1 transition-all"
+                  placeholder="ENTER COUPON CODE"
+                  maxlength="20"
+                />
+                <button 
+                  type="button" 
+                  id="apply-coupon-btn" 
+                  class="px-5 h-11 rounded-xl bg-[#0F172A] hover:bg-[#20B486] active:scale-95 text-white font-bold text-xs transition-all shrink-0 flex items-center gap-1.5 shadow-sm cursor-pointer"
+                >
+                  <span class="material-symbols-outlined text-[16px]">check</span>
+                  <span>Apply</span>
+                </button>
+              </div>
+
+              <!-- Available Coupon Shortcut Suggestion -->
+              <div class="mt-2 flex items-center gap-2 text-xs text-[#64748B]">
+                <span>Available offer:</span>
+                <button type="button" id="quick-apply-top10" class="inline-flex items-center gap-1 font-mono font-bold text-xs text-[#20B486] bg-[#E8F7F0] hover:bg-[#20B486] hover:text-white px-2.5 py-0.5 rounded-lg border border-[#20B486]/30 transition-all cursor-pointer">
+                  <span>TOP10</span>
+                  <span class="text-[10px] font-sans font-semibold">(Instant 10% Off)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- STATE 2: APPLIED COUPON BADGE CARD WITH ANIMATION & REMOVE OPTION (Visible when applied) -->
+            <div id="coupon-applied-container" class="coupon-pop-card p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-[#F0FDF4] to-[#ECFDF5] border-2 border-dashed border-[#20B486] flex items-center justify-between gap-3 shadow-xs transition-all">
+              <div class="flex items-center gap-3 min-w-0">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shrink-0 shadow-sm shadow-emerald-500/25 coupon-sparkle-icon">
+                  <span class="material-symbols-outlined text-[20px]">local_offer</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <span id="applied-code-badge" class="font-mono font-extrabold text-xs sm:text-sm text-[#0F5132] tracking-wider uppercase bg-white px-2 py-0.5 rounded-md border border-[#20B486]/40 shadow-2xs">
+                      TOP10
+                    </span>
+                    <span class="text-xs font-bold text-[#20B486] flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[14px]">verified</span>
+                      <span>Applied!</span>
+                    </span>
+                  </div>
+                  <p id="applied-coupon-description" class="text-xs text-[#065F46] font-semibold mt-0.5 truncate">
+                    Extra 10% Discount applied — You save ₹50!
+                  </p>
+                </div>
+              </div>
+
+              <!-- Remove Coupon Button -->
               <button 
                 type="button" 
-                id="apply-coupon-btn" 
-                class="px-4 h-11 rounded-xl bg-[#17252A] hover:bg-[#20B486] text-white font-bold text-xs transition-all shrink-0"
+                id="remove-coupon-btn" 
+                class="px-3 py-1.5 rounded-lg border border-red-200 bg-white hover:bg-red-50 text-red-600 hover:text-red-700 font-bold text-xs transition-all flex items-center gap-1 shrink-0 shadow-2xs hover:scale-105 active:scale-95 cursor-pointer"
+                title="Remove discount coupon"
               >
-                Apply
+                <span class="material-symbols-outlined text-[15px]">close</span>
+                <span>Remove</span>
               </button>
             </div>
-            <p id="coupon-message" class="text-xs text-[#20B486] font-bold mt-1.5 flex items-center gap-1">
-              <span class="material-symbols-outlined text-[14px]">check_circle</span>
-              <span>Coupon TOP10 active — Extra 10% Off applied!</span>
-            </p>
+
+            <!-- Dynamic Feedback / Error Message -->
+            <p id="coupon-message" class="text-xs font-bold mt-2 hidden items-center gap-1 transition-all"></p>
           </div>
 
           <!-- SUBMIT CTA BUTTON -->
@@ -389,8 +444,8 @@
               <span>Base Price:</span>
               <span id="summary-base-price" class="font-semibold text-[#0F172A]">₹499</span>
             </div>
-            <div class="flex justify-between text-[#20B486] font-bold">
-              <span>Coupon TOP10 (10% Off):</span>
+            <div id="summary-discount-row" class="flex justify-between text-[#20B486] font-bold">
+              <span id="summary-discount-label">Coupon TOP10 (10% Off):</span>
               <span id="summary-discount">-₹50</span>
             </div>
             <div class="flex justify-between text-base font-extrabold text-[#0F172A] pt-2 border-t border-[#E2E8F0]">

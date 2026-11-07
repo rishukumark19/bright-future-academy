@@ -43,14 +43,14 @@
        2. CHECKOUT HEADER & PROGRESS STEPPER
        ========================================================================= -->
   <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E2E8F0] shadow-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
       
       <!-- Brand Logo -->
       <a href="./index.html" class="flex items-center gap-2 text-decoration-none group shrink-0">
         <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs shrink-0">
           <span class="material-symbols-outlined text-[20px] sm:text-[24px]">menu_book</span>
         </div>
-        <span class="font-extrabold text-base sm:text-xl tracking-tight text-[#0F172A] whitespace-nowrap">Bright Future <span class="text-[#20B486]">Academy</span></span>
+        <span class="font-extrabold text-sm min-[360px]:text-base sm:text-xl tracking-tight text-[#0F172A] whitespace-nowrap">Bright Future <span class="text-[#20B486]">Academy</span></span>
       </a>
 
       <!-- Visual Stepper Indicator -->
@@ -72,9 +72,9 @@
       </div>
 
       <!-- Secure Badge -->
-      <div class="flex items-center gap-1.5 text-xs font-semibold text-[#0F5132] bg-[#E8F7F0] px-3 py-1.5 rounded-full border border-[#20B486]/20 shrink-0">
-        <span class="material-symbols-outlined text-[16px] text-[#20B486]">lock</span>
-        <span>Secure Checkout</span>
+      <div class="flex items-center gap-1.5 text-xs font-semibold text-[#0F5132] bg-[#E8F7F0] px-2.5 sm:px-3 py-1.5 rounded-full border border-[#20B486]/20 shrink-0">
+        <span class="material-symbols-outlined text-[15px] sm:text-[16px] text-[#20B486]">lock</span>
+        <span>Secure<span class="hidden min-[380px]:inline"> Checkout</span></span>
       </div>
 
     </div>
@@ -321,22 +321,22 @@
             </div>
 
             <!-- STATE 2: APPLIED COUPON BADGE CARD WITH ANIMATION & REMOVE OPTION (Visible when applied) -->
-            <div id="coupon-applied-container" class="coupon-pop-card p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-[#F0FDF4] to-[#ECFDF5] border-2 border-dashed border-[#20B486] flex items-center justify-between gap-3 shadow-xs transition-all">
-              <div class="flex items-center gap-3 min-w-0">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shrink-0 shadow-sm shadow-emerald-500/25 coupon-sparkle-icon">
-                  <span class="material-symbols-outlined text-[20px]">local_offer</span>
+            <div id="coupon-applied-container" class="coupon-pop-card p-3 sm:p-4 rounded-xl bg-gradient-to-r from-[#F0FDF4] to-[#ECFDF5] border-2 border-dashed border-[#20B486] flex items-center justify-between gap-2 sm:gap-3 shadow-xs transition-all">
+              <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shrink-0 shadow-sm shadow-emerald-500/25 coupon-sparkle-icon">
+                  <span class="material-symbols-outlined text-[18px] sm:text-[20px]">local_offer</span>
                 </div>
                 <div class="min-w-0">
-                  <div class="flex items-center gap-2 flex-wrap">
+                  <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
                     <span id="applied-code-badge" class="font-mono font-extrabold text-xs sm:text-sm text-[#0F5132] tracking-wider uppercase bg-white px-2 py-0.5 rounded-md border border-[#20B486]/40 shadow-2xs">
                       TOP10
                     </span>
-                    <span class="text-xs font-bold text-[#20B486] flex items-center gap-1">
+                    <span class="text-[11px] sm:text-xs font-bold text-[#20B486] flex items-center gap-0.5">
                       <span class="material-symbols-outlined text-[14px]">verified</span>
                       <span>Applied!</span>
                     </span>
                   </div>
-                  <p id="applied-coupon-description" class="text-xs text-[#065F46] font-semibold mt-0.5 truncate">
+                  <p id="applied-coupon-description" class="text-[11px] sm:text-xs text-[#065F46] font-semibold mt-0.5 truncate">
                     Extra 10% Discount applied — You save ₹50!
                   </p>
                 </div>
@@ -346,10 +346,10 @@
               <button 
                 type="button" 
                 id="remove-coupon-btn" 
-                class="px-3 py-1.5 rounded-lg border border-red-200 bg-white hover:bg-red-50 text-red-600 hover:text-red-700 font-bold text-xs transition-all flex items-center gap-1 shrink-0 shadow-2xs hover:scale-105 active:scale-95 cursor-pointer"
+                class="px-2.5 sm:px-3 py-1.5 rounded-lg border border-red-200 bg-white hover:bg-red-50 text-red-600 hover:text-red-700 font-bold text-[11px] sm:text-xs transition-all flex items-center gap-1 shrink-0 shadow-2xs hover:scale-105 active:scale-95 cursor-pointer"
                 title="Remove discount coupon"
               >
-                <span class="material-symbols-outlined text-[15px]">close</span>
+                <span class="material-symbols-outlined text-[14px] sm:text-[15px]">close</span>
                 <span>Remove</span>
               </button>
             </div>

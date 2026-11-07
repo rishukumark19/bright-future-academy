@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCustomNotesForm();
   initNewsletter();
   initQuickFilters();
+  initCatalogScroll();
 });
 
 let currentCategory = 'all';
@@ -148,7 +149,42 @@ function initQuickFilters() {
       }
       const notesSection = document.getElementById('notes');
       if (notesSection) {
-        notesSection.scrollIntoView({ behavior: 'smooth' });
+        const nav = document.getElementById('main-nav');
+        const navHeight = nav ? nav.offsetHeight : 70;
+        const targetTop = notesSection.getBoundingClientRect().top + window.pageYOffset - navHeight - 10;
+        window.scrollTo({
+          top: targetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
+
+// ── 3B. SMOOTH SLIDE TO NOTES CATALOG ─────────────────────────────────────
+function initCatalogScroll() {
+  const catalogLinks = document.querySelectorAll('a[href="#notes"]');
+  catalogLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      // If mobile drawer is open, close it cleanly first
+      const drawer = document.getElementById('mobile-menu-drawer');
+      const backdrop = document.getElementById('mobile-menu-backdrop');
+      if (drawer && !drawer.classList.contains('translate-x-full')) {
+        drawer.classList.add('translate-x-full');
+        backdrop?.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      e.preventDefault();
+      const notesSection = document.getElementById('notes');
+      if (notesSection) {
+        const nav = document.getElementById('main-nav');
+        const navHeight = nav ? nav.offsetHeight : 70;
+        const targetTop = notesSection.getBoundingClientRect().top + window.pageYOffset - navHeight - 10;
+        window.scrollTo({
+          top: targetTop,
+          behavior: 'smooth'
+        });
       }
     });
   });

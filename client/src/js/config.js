@@ -7,6 +7,8 @@
  * Search for "TODO:" comments to find things that need your input.
  */
 
+export const RAZORPAY_TEST_KEY = 'rzp_test_TRIVOTJegogcYL';
+
 export const API_BASE_URL = window.location.hostname.includes('github.io') || window.location.hostname.includes('is-a.dev') || window.location.hostname.includes('crosstech.in')
   ? 'https://bright-future-academy-production.up.railway.app' 
   : '';

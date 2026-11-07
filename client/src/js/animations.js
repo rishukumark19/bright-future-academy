@@ -9,7 +9,6 @@ export function initAnimations() {
   initHeroEntrance();
   initCard3DTilt();
   initMagneticButtons();
-  initSlidingTabIndicator();
   initScrollReveals();
 }
 
@@ -156,58 +155,6 @@ function initMagneticButtons() {
       });
     });
   }
-}
-
-// ── 4. SLIDING TAB PILL INDICATOR (Fluid layout transition) ────────────────
-function initSlidingTabIndicator() {
-  const container = document.getElementById('category-pills-container');
-  if (!container) return;
-
-  // Create sliding backdrop indicator element if not exists
-  let indicator = document.getElementById('tab-sliding-indicator');
-  if (!indicator) {
-    indicator = document.createElement('div');
-    indicator.id = 'tab-sliding-indicator';
-    indicator.className = 'absolute bg-[#20B486] rounded-full transition-all duration-300 pointer-events-none shadow-md';
-    indicator.style.zIndex = '0';
-    container.style.position = 'relative';
-    container.prepend(indicator);
-  }
-
-  const buttons = container.querySelectorAll('.filter-btn');
-
-  function updateIndicator(activeBtn) {
-    if (!activeBtn) return;
-    const btnRect = activeBtn.getBoundingClientRect();
-    const containerRect = container.getBoundingClientRect();
-
-    const left = btnRect.left - containerRect.left + container.scrollLeft;
-    const top = btnRect.top - containerRect.top;
-
-    indicator.style.left = `${left}px`;
-    indicator.style.top = `${top}px`;
-    indicator.style.width = `${btnRect.width}px`;
-    indicator.style.height = `${btnRect.height}px`;
-    indicator.style.opacity = '1';
-  }
-
-  // Set on active button initially
-  const activeBtn = container.querySelector('[data-filter-category="all"]');
-  if (activeBtn) {
-    setTimeout(() => updateIndicator(activeBtn), 100);
-  }
-
-  buttons.forEach(btn => {
-    btn.style.zIndex = '1';
-    btn.addEventListener('click', () => {
-      updateIndicator(btn);
-    });
-  });
-
-  window.addEventListener('resize', () => {
-    const currentActive = container.querySelector('.bg-[#20B486]') || activeBtn;
-    if (currentActive) updateIndicator(currentActive);
-  });
 }
 
 // ── 5. SCROLL-TRIGGERED REVEALS (Intersection Observer + GSAP) ──────────────

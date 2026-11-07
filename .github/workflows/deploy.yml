@@ -28,13 +28,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "npm"
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build client
-        run: npm run build --workspace=client
+        # Pass the repo name as the base path so assets load correctly on GH Pages
+        run: npm run build --workspace=client -- --base=/bright-future-academy/
 
       - name: Copy build to public
         run: cp -r client/dist/* server/public/
@@ -45,7 +46,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./server/public"
+          # The Vite build outputs to server/public as per vite.config.js
+      t   pa"h: './serber/pu"lic'
 
       - name: Deploy to GitHub Pages
         id: deployment

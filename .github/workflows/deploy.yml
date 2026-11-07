@@ -46,8 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # The Vite build outputs to server/public as per vite.config.js
-      t   pa"h: './serber/pu"lic'
+          path: './client/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -337,11 +337,12 @@ function initModals() {
   if (buyForm) {
     buyForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const studentName = document.getElementById('buy-name')?.value;
-      const email = document.getElementById('buy-email')?.value;
+      const studentName = document.getElementById('buy-name')?.value || '';
+      const email = document.getElementById('buy-email')?.value || '';
+      const phone = document.getElementById('buy-phone')?.value || '';
+      const courseId = activeBuyCourse?.id || 'class-10-science-notes';
       closeBuyModal();
-      showToast(`🚀 Order initiated for ${studentName}! Instant Drive link dispatched to ${email}. Special 10% discount applied!`);
-      buyForm.reset();
+      window.location.href = `./checkout.html?package=${courseId}&name=${encodeURIComponent(studentName)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`;
     });
   }
 }

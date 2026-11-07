@@ -1,94 +1,105 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment Failed — [COURSE BRAND]</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Payment Unsuccessful — Bright Future Academy</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <script type="module" crossorigin src="./assets/failed-C-MG8T66.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/main-B6UXiDVK.js">
-  <link rel="modulepreload" crossorigin href="./assets/config-DpFIr7Lr.js">
-  <link rel="stylesheet" crossorigin href="./assets/main-MokF3Ry1.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" crossorigin href="./assets/main-QDG_ytjy.css">
 </head>
-<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
+<body class="bg-[#F8FAF9] text-[#1E293B] font-sans antialiased selection:bg-[#20B486] selection:text-white min-h-screen flex flex-col">
 
-  <header class="site-header">
-    <div class="page-container h-16 flex items-center justify-between">
-      <a href="./index.html" class="flex items-center gap-space-sm">
-        <span class="material-symbols-outlined text-primary-container text-[20px]">terminal</span>
-        <span class="font-headline-md text-headline-md text-on-surface tracking-tight" id="nav-brand">[COURSE BRAND]</span>
+  <!-- Header -->
+  <nav class="bg-white border-b border-[#E2E8F0] py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-2 text-decoration-none group">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs shrink-0">
+          <span class="material-symbols-outlined text-[20px] sm:text-[24px]">menu_book</span>
+        </div>
+        <span class="font-extrabold text-base sm:text-xl tracking-tight text-[#0F172A]">Bright Future <span class="text-[#20B486]">Academy</span></span>
       </a>
-      <a href="./help.html" class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors uppercase">Help</a>
+
+      <a href="./checkout.html" class="text-xs font-bold text-[#20B486] hover:underline">Return to Checkout</a>
     </div>
-  </header>
+  </nav>
 
-  <main class="pt-16 flex-1 flex items-center">
-    <div class="page-container py-space-xl max-w-2xl mx-auto">
+  <!-- Main Container -->
+  <main class="flex-1 max-w-xl mx-auto px-4 py-12 w-full flex flex-col items-center">
 
-      <!-- Reassurance banner -->
-      <div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-space-md mb-space-lg border-l-2 border-l-secondary">
-        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">verified_user</span>
-        <div>
-          <p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Bank Auto-Reversal Guarantee · RBI Mandate</p>
-          <p class="font-body-sm text-body-sm text-on-surface mt-0.5">
-            If any amount was debited from your bank, NPCI protocol triggers an automatic reversal within 24–48 hours back to your original source account. You will not lose money.
-          </p>
-        </div>
+    <!-- Reassurance Banner -->
+    <div class="w-full bg-[#E8F7F0] rounded-2xl p-4 border border-[#20B486]/30 flex items-start gap-3 mb-6 text-xs text-[#0F5132]">
+      <span class="material-symbols-outlined text-[#20B486] text-[22px] shrink-0 mt-0.5">verified_user</span>
+      <div>
+        <p class="font-bold text-sm text-[#0F172A]">Safe & Protected: RBI / NPCI Reversal Guarantee</p>
+        <p class="mt-0.5">If money was debited from your bank account during UPI or card verification, your bank will automatically reverse the full amount within 24–48 hours.</p>
+      </div>
+    </div>
+
+    <!-- Main Failure Card -->
+    <div class="w-full bg-white rounded-2xl border border-[#E2E8F0] p-6 sm:p-8 shadow-xs text-center space-y-6">
+      
+      <div class="w-16 h-16 rounded-full bg-red-50 border-2 border-red-200 text-red-500 flex items-center justify-center mx-auto">
+        <span class="material-symbols-outlined text-[36px]">credit_card_off</span>
       </div>
 
-      <!-- Main card -->
-      <div class="card flex flex-col gap-space-lg">
-        <div class="flex items-start gap-space-md">
-          <div class="w-12 h-12 rounded-xl bg-error-container/20 border border-error/30 flex items-center justify-center shrink-0">
-            <span class="material-symbols-outlined text-error text-[26px]">credit_card_off</span>
-          </div>
-          <div class="flex flex-col gap-1">
-            <span class="font-label-sm text-label-sm text-error uppercase tracking-wider">Payment Could Not Be Completed</span>
-            <h1 class="font-headline-md text-headline-md text-on-surface">Transaction Unsuccessful</h1>
-            <p class="font-body-sm text-body-sm text-on-surface-variant" id="failure-reason">
-              The payment did not go through. This could be due to a UPI timeout, insufficient funds, or a temporary bank issue.
-            </p>
-          </div>
-        </div>
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-red-600 bg-red-50 px-3 py-1 rounded-full">
+          Transaction Incomplete
+        </span>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-[#0F172A] mt-3">Payment Did Not Go Through</h1>
+        <p id="failure-reason" class="text-xs sm:text-sm text-[#64748B] mt-2">
+          The payment could not be processed. This is usually caused by a bank server timeout, incorrect UPI PIN, or poor network connectivity.
+        </p>
+      </div>
 
-        <div class="divider"></div>
+      <!-- Action Buttons -->
+      <div class="space-y-3 pt-2">
+        <a 
+          href="./checkout.html" 
+          class="w-full py-3.5 bg-[#20B486] hover:bg-[#1A966E] text-white font-bold text-sm rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
+        >
+          <span class="material-symbols-outlined text-[18px]">refresh</span>
+          <span>Retry Payment (10% Off Still Active)</span>
+        </a>
 
-        <!-- What happened -->
-        <div class="flex flex-col gap-space-sm">
-          <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">What Happened?</p>
-          <div class="flex flex-col gap-space-sm">
-            <div class="flex items-start gap-space-sm">
-              <span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">info</span>
-              <p class="font-body-sm text-body-sm text-on-surface-variant">Your payment was <strong class="text-on-surface">not charged</strong> or will be <strong class="text-on-surface">automatically reversed</strong> by your bank within 24–48 hours.</p>
-            </div>
-            <div class="flex items-start gap-space-sm">
-              <span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">replay</span>
-              <p class="font-body-sm text-body-sm text-on-surface-variant">You can retry immediately using a different payment method (e.g., switch from UPI to Card).</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- Actions -->
-        <div class="flex flex-col gap-space-sm">
-          <button class="btn-hero" id="retry-btn" onclick="retryPayment()">
-            <span class="material-symbols-outlined text-[20px]">replay</span>
-            Retry Payment with Alternate Method
-          </button>
-          <a id="whatsapp-help" href="#" target="_blank" rel="noopener" class="btn-secondary h-[52px] px-space-xl flex items-center justify-center gap-space-sm">
-            <span class="material-symbols-outlined text-[20px]">chat</span>
-            Pay via Direct UPI / WhatsApp Assistance
-          </a>
-          <a href="./index.html" class="text-center font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors mt-1">
-            Return to Course Page
-          </a>
-        </div>
+        <a 
+          href="https://wa.me/919876543210?text=Hello%20Bright%20Future%20Academy%2C%20my%20payment%20failed%20and%20I%20need%20help%20getting%20study%20notes%20access." 
+          target="_blank" 
+          rel="noopener"
+          class="w-full py-3.5 bg-white hover:bg-gray-50 text-[#0F172A] font-bold text-sm rounded-xl border border-[#CBD5E1] transition-all shadow-xs flex items-center justify-center gap-2"
+        >
+          <span class="material-symbols-outlined text-[18px] text-[#20B486]">chat</span>
+          <span>WhatsApp Academic Counselor</span>
+        </a>
       </div>
 
     </div>
+
+    <div class="mt-8 text-center text-xs text-[#64748B]">
+      <a href="./index.html" class="hover:text-[#20B486] font-semibold">← Return to Bright Future Academy Home</a>
+    </div>
+
   </main>
-
+
+  <footer class="border-t border-[#E2E8F0] bg-white py-6 text-center text-xs text-[#64748B]">
+    <p>© 2026 Bright Future Academy. Managed by <a href="https://crosstech.in" target="_blank" class="text-[#20B486] font-semibold">crosstech.in</a>.</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const reason = params.get('reason');
+    if (reason) {
+      const reasonEl = document.getElementById('failure-reason');
+      if (reasonEl) reasonEl.textContent = decodeURIComponent(reason);
+    }
+  </script>
 </body>
 </html>

@@ -1,194 +1,522 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Checkout — [COURSE BRAND]</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <script>
+    if (window.location.hostname !== 'crosstech.in' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      window.location.replace('https://crosstech.in/bright-future-academy/checkout.html' + window.location.search + window.location.hash);
+    }
+  </script>
+  <title>Checkout & Instant Access — Bright Future Academy</title>
+  <meta name="description" content="Secure Razorpay checkout for Bright Future Academy study notes and formula sheets. Instant Google Drive & PDF access." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  
+
   <!-- Razorpay Checkout JS SDK -->
   <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
-  <script type="module" crossorigin src="./assets/checkout-Ee9aYZPa.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/main-B6UXiDVK.js">
-  <link rel="modulepreload" crossorigin href="./assets/config-DpFIr7Lr.js">
-  <link rel="stylesheet" crossorigin href="./assets/main-MokF3Ry1.css">
+  <script type="module" crossorigin src="./assets/checkout-DPw8tDvw.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="./assets/config-LZyn_8zi.js">
+  <link rel="modulepreload" crossorigin href="./assets/confetti.module-B5JVzsfH.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-QDG_ytjy.css">
 </head>
-<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
+<body class="bg-[#F8FAF9] text-[#1E293B] font-sans antialiased selection:bg-[#20B486] selection:text-white min-h-screen flex flex-col">
 
-  <header class="site-header">
-    <div class="page-container h-16 flex items-center justify-between">
-      <a href="./index.html" class="flex items-center gap-space-sm">
-        <span class="material-symbols-outlined text-primary-container text-[20px]">terminal</span>
-        <span class="font-headline-md text-headline-md text-on-surface tracking-tight" id="nav-brand">[COURSE BRAND]</span>
-      </a>
-
-      <nav class="hidden lg:flex items-center gap-1 bg-surface-container-lowest/80 p-1.5 rounded-xl border border-surface-container-high/50">
-        <div class="step-item done">
-          <span class="material-symbols-outlined text-[14px] text-primary-container">check_circle</span>
-          01 Register
-        </div>
-        <span class="text-outline-variant text-xs">→</span>
-        <div class="step-item active">
-          <span class="w-2 h-2 rounded-full bg-on-primary-container animate-ping-slow"></span>
-          02 Payment
-        </div>
-        <span class="text-outline-variant text-xs">→</span>
-        <div class="step-item pending">
-          <span class="material-symbols-outlined text-[14px]">lock</span>
-          03 Confirmation
-        </div>
-        <span class="text-outline-variant text-xs">→</span>
-        <div class="step-item pending">
-          <span class="material-symbols-outlined text-[14px]">lock</span>
-          04 Access
-        </div>
-      </nav>
-
-      <div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-high text-on-surface-variant">
-        <span class="material-symbols-outlined text-[16px] text-primary-container">lock</span>
-        <span class="font-label-sm text-label-sm uppercase tracking-widest">256-Bit Encrypted</span>
+  <!-- =========================================================================
+       1. TOP TRUST STRIP
+       ========================================================================= -->
+  <header class="w-full bg-[#17252A] text-[#E2E8F0] py-2 px-4 text-xs flex items-center justify-between border-b border-[#2C3E50] select-none">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#20B486] animate-pulse"></span>
+        <span class="font-medium">Direct Instant Delivery: <span class="text-[#20B486] font-bold">Google Drive Folder</span> shared immediately upon payment</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-4 text-[#94A3B8]">
+        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-[#20B486]">verified_user</span> 256-Bit SSL Encrypted</span>
+        <span>•</span>
+        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-[#20B486]">support_agent</span> WhatsApp Help: +91 98765 43210</span>
       </div>
     </div>
   </header>
 
-  <main class="pt-16 flex-1">
-    <div class="relative w-full overflow-hidden py-space-xl px-margin md:px-margin-md">
-
-      <!-- Ambient glows -->
-      <div class="ambient-spot w-[600px] h-[300px] bg-primary-container/5 top-1/4 left-1/2 -translate-x-1/2 opacity-60"></div>
-
-      <!-- Step identity -->
-      <div class="max-w-[760px] mx-auto mb-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
-        <div class="flex items-center gap-space-sm">
-          <span class="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">02</span>
-          <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Step 02 — Review & Launch Payment</span>
+  <!-- =========================================================================
+       2. CHECKOUT HEADER & PROGRESS STEPPER
+       ========================================================================= -->
+  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E2E8F0] shadow-xs">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="./index.html" class="flex items-center gap-2 text-decoration-none group shrink-0">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs shrink-0">
+          <span class="material-symbols-outlined text-[20px] sm:text-[24px]">menu_book</span>
         </div>
-        <div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container text-on-surface-variant self-start sm:self-auto">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
-          </span>
-          <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container">Gateway Armed</span>
+        <span class="font-extrabold text-sm min-[360px]:text-base sm:text-xl tracking-tight text-[#0F172A] whitespace-nowrap">Bright Future <span class="text-[#20B486]">Academy</span></span>
+      </a>
+
+      <!-- Visual Stepper Indicator -->
+      <div class="hidden md:flex items-center gap-2 lg:gap-3 text-xs font-bold text-[#64748B]">
+        <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#E8F7F0] text-[#0F5132] border border-[#20B486]/30">
+          <span class="w-5 h-5 rounded-full bg-[#20B486] text-white flex items-center justify-center text-[10px]">1</span>
+          <span>Package & Details</span>
+        </div>
+        <span class="text-[#CBD5E1]">→</span>
+        <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F1F5F9] text-[#64748B]">
+          <span class="w-5 h-5 rounded-full bg-[#94A3B8] text-white flex items-center justify-center text-[10px]">2</span>
+          <span>Razorpay Payment</span>
+        </div>
+        <span class="text-[#CBD5E1]">→</span>
+        <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F1F5F9] text-[#64748B]">
+          <span class="material-symbols-outlined text-[16px]">folder_open</span>
+          <span>Drive Access</span>
         </div>
       </div>
 
-      <!-- Main card -->
-      <div class="max-w-[760px] mx-auto card-glass overflow-hidden">
+      <!-- Secure Badge -->
+      <div class="flex items-center gap-1.5 text-xs font-semibold text-[#0F5132] bg-[#E8F7F0] px-2.5 sm:px-3 py-1.5 rounded-full border border-[#20B486]/20 shrink-0">
+        <span class="material-symbols-outlined text-[15px] sm:text-[16px] text-[#20B486]">lock</span>
+        <span>Secure<span class="hidden min-[380px]:inline"> Checkout</span></span>
+      </div>
 
-        <!-- Security ribbon -->
-        <div class="px-space-lg py-space-sm bg-surface-container flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
-          <div class="flex items-center gap-space-xs">
-            <span class="material-symbols-outlined text-[15px] text-primary-container">verified_user</span>
-            <span class="tracking-widest uppercase">Razorpay Tokenized Gateway // 256-Bit Encryption</span>
-          </div>
-          <div class="flex items-center gap-space-xs">
-            <span class="material-symbols-outlined text-[14px] text-secondary">flash_on</span>
-            <span class="text-secondary font-medium tracking-wide">Zero Latency Sync</span>
-          </div>
-        </div>
+    </div>
+  </nav>
 
-        <div class="p-space-lg md:p-space-xl flex flex-col gap-space-lg">
+  <!-- =========================================================================
+       3. MAIN CHECKOUT SECTION
+       ========================================================================= -->
+  <main class="flex-1 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
 
-          <!-- Title -->
-          <div>
-            <div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-1">
-              <span>Order Checkpoint</span>
-              <span class="text-on-surface-variant">•</span>
-              <span id="order-token">TOKEN ID: —</span>
-            </div>
-            <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-on-surface tracking-tight">
-              Review Order & Launch Gateway
-            </h1>
-            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mt-1">
-              Confirm your details. Once settled, your Google Drive privileges are provisioned automatically within 60 seconds.
-            </p>
-          </div>
+    <!-- Page Title -->
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#20B486] mb-1">
+        <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+        <span>Fast 1-Click Enrollment</span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">Complete Your Study Notes Access</h1>
+      <p class="text-sm text-[#64748B] mt-1">Get lifetime Google Drive permissions & printable PDF downloads within 60 seconds.</p>
+    </div>
 
-          <!-- Order summary card -->
-          <div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col gap-space-md">
-            <div class="flex items-center justify-between flex-wrap gap-space-md">
-              <div>
-                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Enrolling In</p>
-                <p class="font-headline-md text-headline-md text-on-surface mt-0.5" id="checkout-course-name">[COURSE NAME]</p>
-              </div>
-              <div class="text-right">
-                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Total Due</p>
-                <p class="font-headline-lg text-headline-lg text-primary-container font-bold" id="checkout-price">[PRICE]</p>
-              </div>
-            </div>
-
-            <!-- Registered details -->
-            <div class="divider"></div>
-            <div class="flex flex-col gap-space-sm">
-              <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Registered Details</p>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
-                <div class="flex flex-col">
-                  <span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Name</span>
-                  <span class="font-body-sm text-body-sm text-on-surface" id="detail-name">—</span>
-                </div>
-                <div class="flex flex-col">
-                  <span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Google Email (Drive Access)</span>
-                  <span class="font-body-sm text-body-sm text-primary-container" id="detail-email">—</span>
-                </div>
-                <div class="flex flex-col">
-                  <span class="font-label-sm text-[10px] text-on-surface-variant uppercase">WhatsApp</span>
-                  <span class="font-body-sm text-body-sm text-on-surface" id="detail-phone">Not provided</span>
-                </div>
-              </div>
-            </div>
-
-            <a href="./register.html" class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-1 self-start">
-              <span class="material-symbols-outlined text-[14px]">edit</span>
-              Edit Details
-            </a>
-          </div>
-
-          <!-- Drive banner -->
-          <div class="border-drive pl-4 py-3 bg-surface-container-low rounded-r-xl">
-            <p class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Drive Access Provisioning</p>
-            <p class="font-body-sm text-body-sm text-on-surface mt-0.5">
-              Folder shared to <strong class="text-primary-container" id="drive-email-preview">your Gmail</strong> within 60 seconds of settlement.
-            </p>
-          </div>
-
-          <!-- Error banner -->
-          <div id="payment-error" class="hidden bg-error-container/20 border border-error/30 rounded-xl p-space-md flex items-start gap-space-sm">
-            <span class="material-symbols-outlined text-error text-[20px] shrink-0">error</span>
-            <div>
-              <p class="font-label-sm text-label-sm text-error uppercase">Payment Error</p>
-              <p class="font-body-sm text-body-sm text-on-surface mt-0.5" id="payment-error-text">An error occurred. Please try again.</p>
-            </div>
-          </div>
-
-          <!-- Launch button -->
-          <div class="flex flex-col gap-space-sm">
-            <button class="btn-hero" id="launch-payment-btn" onclick="launchRazorpay()">
-              <span class="material-symbols-outlined text-[20px]">payments</span>
-              <span id="launch-btn-text">Launch Secure Payment — <span id="launch-price">[PRICE]</span></span>
-            </button>
-            <p class="text-center font-label-sm text-label-sm text-on-surface-variant">
-              You will be redirected to Razorpay's secure checkout. Do not close the window during UPI verification.
-            </p>
-          </div>
-
-          <!-- Payment methods -->
-          <div class="flex flex-wrap justify-center gap-2">
-            <span class="badge">UPI</span>
-            <span class="badge">GPay</span>
-            <span class="badge">PhonePe</span>
-            <span class="badge">Cards</span>
-            <span class="badge">Net Banking</span>
-            <span class="badge" id="checkout-emi" style="display:none">EMI</span>
-          </div>
-
-          <a href="./index.html" class="text-center font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors flex items-center justify-center gap-1">
-            <span class="material-symbols-outlined text-[14px]">arrow_back</span>
-            Return to Course Details
-          </a>
-        </div>
+    <!-- Error Banner -->
+    <div id="checkout-error-banner" class="hidden mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm flex items-start gap-3">
+      <span class="material-symbols-outlined text-[20px] text-red-500 shrink-0 mt-0.5">error</span>
+      <div>
+        <p class="font-bold">Payment Setup Failed</p>
+        <p id="checkout-error-text" class="text-xs text-red-600 mt-0.5">Please check your details and try again.</p>
       </div>
     </div>
+
+    <!-- 2-Column Responsive Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- =====================================================================
+           LEFT COLUMN: FORM & PACKAGE SELECTION (7 COLS)
+           ===================================================================== -->
+      <div class="lg:col-span-7 space-y-6">
+
+        <!-- STEP 1: PACKAGE SELECTOR -->
+        <div class="bg-white rounded-2xl border border-[#E2E8F0] p-5 sm:p-6 shadow-xs">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-base sm:text-lg font-bold text-[#0F172A] flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-[#E8F7F0] text-[#20B486] text-xs font-extrabold flex items-center justify-center">1</span>
+              <span>Choose Study Notes Package</span>
+            </h2>
+            <span class="text-xs text-[#20B486] font-bold">100% NCERT Aligned</span>
+          </div>
+
+          <div class="space-y-3" id="package-selector-container">
+            
+            <!-- Option 1: Class 10 (Default) -->
+            <label class="package-option-card relative flex items-center justify-between p-4 rounded-xl border-2 border-[#20B486] bg-[#F0FDF4] cursor-pointer transition-all">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="notes-package" value="class-10-science-notes" checked class="w-4 h-4 text-[#20B486] focus:ring-[#20B486]" />
+                <div>
+                  <div class="flex items-center gap-2">
+                    <p class="font-bold text-sm sm:text-base text-[#0F172A]">Class 10 — All Subjects Notes + PYQ Bank</p>
+                    <span class="bg-[#20B486] text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">Popular</span>
+                  </div>
+                  <p class="text-xs text-[#64748B]">Complete Science, Maths & Formula Sheets with 10-Year Solved Papers</p>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="text-base sm:text-lg font-extrabold text-[#0F172A]">₹499</p>
+                <p class="text-xs text-[#94A3B8] line-through">₹550</p>
+              </div>
+            </label>
+
+            <!-- Option 2: Class 9 -->
+            <label class="package-option-card relative flex items-center justify-between p-4 rounded-xl border border-[#E2E8F0] bg-white hover:border-[#20B486]/50 cursor-pointer transition-all">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="notes-package" value="class-9-science-maths" class="w-4 h-4 text-[#20B486] focus:ring-[#20B486]" />
+                <div>
+                  <p class="font-bold text-sm sm:text-base text-[#0F172A]">Class 9 — Science & Maths Foundation Pack</p>
+                  <p class="text-xs text-[#64748B]">Conceptual Revision Notes, Solved Numericals & Exam Questions</p>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="text-base sm:text-lg font-extrabold text-[#0F172A]">₹399</p>
+                <p class="text-xs text-[#94A3B8] line-through">₹449</p>
+              </div>
+            </label>
+
+            <!-- Option 3: Class 8 -->
+            <label class="package-option-card relative flex items-center justify-between p-4 rounded-xl border border-[#E2E8F0] bg-white hover:border-[#20B486]/50 cursor-pointer transition-all">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="notes-package" value="class-8-all-in-one" class="w-4 h-4 text-[#20B486] focus:ring-[#20B486]" />
+                <div>
+                  <p class="font-bold text-sm sm:text-base text-[#0F172A]">Class 8 — All-in-One Notes & Practice Sets</p>
+                  <p class="text-xs text-[#64748B]">Maths, Science & English Chapter Summaries with Worksheets</p>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="text-base sm:text-lg font-extrabold text-[#0F172A]">₹299</p>
+                <p class="text-xs text-[#94A3B8] line-through">₹330</p>
+              </div>
+            </label>
+
+            <!-- Option 4: Class 7 -->
+            <label class="package-option-card relative flex items-center justify-between p-4 rounded-xl border border-[#E2E8F0] bg-white hover:border-[#20B486]/50 cursor-pointer transition-all">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="notes-package" value="class-7-foundation-pack" class="w-4 h-4 text-[#20B486] focus:ring-[#20B486]" />
+                <div>
+                  <p class="font-bold text-sm sm:text-base text-[#0F172A]">Class 7 — Foundation Notes & Quick Revision Maps</p>
+                  <p class="text-xs text-[#64748B]">Core Science & Maths Revision Notes with Diagram Practice Sets</p>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="text-base sm:text-lg font-extrabold text-[#0F172A]">₹249</p>
+                <p class="text-xs text-[#94A3B8] line-through">₹275</p>
+              </div>
+            </label>
+
+            <!-- Option 5: Classes 6-10 All-in-One Combo -->
+            <label class="package-option-card relative flex items-center justify-between p-4 rounded-xl border border-[#E2E8F0] bg-white hover:border-[#20B486]/50 cursor-pointer transition-all">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="notes-package" value="classes-6-10-master-pass" class="w-4 h-4 text-[#20B486] focus:ring-[#20B486]" />
+                <div>
+                  <div class="flex items-center gap-2">
+                    <p class="font-bold text-sm sm:text-base text-[#0F172A]">Classes 6th to 10th — Master Pass (All Classes)</p>
+                    <span class="bg-[#F59E0B] text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">Best Value</span>
+                  </div>
+                  <p class="text-xs text-[#64748B]">Full access to all 500+ Notes, Formula Sheets & Solved Papers</p>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="text-base sm:text-lg font-extrabold text-[#0F172A]">₹799</p>
+                <p class="text-xs text-[#94A3B8] line-through">₹999</p>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- STEP 2: STUDENT & GOOGLE DRIVE ACCESS DETAILS -->
+        <form id="checkout-form" class="bg-white rounded-2xl border border-[#E2E8F0] p-5 sm:p-6 shadow-xs space-y-4">
+          <div class="flex items-center justify-between mb-1">
+            <h2 class="text-base sm:text-lg font-bold text-[#0F172A] flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-[#E8F7F0] text-[#20B486] text-xs font-extrabold flex items-center justify-center">2</span>
+              <span>Student & Access Delivery Details</span>
+            </h2>
+            <span class="text-xs text-[#64748B]">Required for Drive Sharing</span>
+          </div>
+
+          <!-- Alert Callout for Gmail -->
+          <div class="p-3.5 rounded-xl bg-[#E8F7F0] border border-[#20B486]/30 flex items-start gap-2.5 text-xs text-[#0F5132]">
+            <span class="material-symbols-outlined text-[20px] text-[#20B486] shrink-0 mt-0.5">add_to_drive</span>
+            <div>
+              <span class="font-bold">Important Google Drive Note:</span> Please enter the active <strong>Gmail address</strong> you use on your phone or PC. Automated access permissions are directly granted to this Google account.
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Student Name -->
+            <div class="sm:col-span-2">
+              <label for="student-name" class="block text-xs font-bold text-[#475569] mb-1">Student / Parent Full Name *</label>
+              <input 
+                id="student-name" 
+                name="name"
+                type="text" 
+                required 
+                placeholder="e.g. Rahul Sharma" 
+                class="w-full h-11 px-3.5 rounded-xl border border-[#CBD5E1] bg-white text-sm text-[#0F172A] focus:border-[#20B486] focus:ring-1 focus:ring-[#20B486] outline-none transition-all"
+              />
+            </div>
+
+            <!-- Google Email -->
+            <div class="sm:col-span-2">
+              <label for="student-email" class="block text-xs font-bold text-[#475569] mb-1">Google Email (Gmail for Drive Access) *</label>
+              <div class="relative">
+                <input 
+                  id="student-email" 
+                  name="email"
+                  type="email" 
+                  required 
+                  placeholder="rahul.student@gmail.com" 
+                  class="w-full h-11 pl-10 pr-3.5 rounded-xl border border-[#CBD5E1] bg-white text-sm text-[#0F172A] focus:border-[#20B486] focus:ring-1 focus:ring-[#20B486] outline-none transition-all"
+                />
+                <span class="material-symbols-outlined text-[18px] text-[#94A3B8] absolute left-3 top-3">mail</span>
+              </div>
+            </div>
+
+            <!-- WhatsApp Number -->
+            <div class="sm:col-span-2">
+              <label for="student-phone" class="block text-xs font-bold text-[#475569] mb-1">WhatsApp Number (for Instant Delivery Link & Invoice) *</label>
+              <div class="relative flex items-center">
+                <span class="h-11 px-3 bg-[#F1F5F9] border border-r-0 border-[#CBD5E1] rounded-l-xl text-xs font-bold text-[#475569] flex items-center gap-1 select-none">
+                  <span>🇮🇳</span>
+                  <span>+91</span>
+                </span>
+                <input 
+                  id="student-phone" 
+                  name="phone"
+                  type="tel" 
+                  required 
+                  placeholder="98765 43210" 
+                  pattern="[0-9]{10}"
+                  maxlength="10"
+                  class="w-full h-11 px-3.5 rounded-r-xl border border-[#CBD5E1] bg-white text-sm text-[#0F172A] focus:border-[#20B486] focus:ring-1 focus:ring-[#20B486] outline-none transition-all"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: COUPON CODE BOX WITH CELEBRATION ANIMATION & REMOVE OPTION -->
+          <div class="pt-4 border-t border-[#E2E8F0]" id="coupon-section-wrapper">
+            <div class="flex items-center justify-between mb-2">
+              <label class="block text-xs font-bold text-[#475569] flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">loyalty</span>
+                <span>Discount Coupon Code</span>
+              </label>
+              <span id="coupon-savings-pill" class="text-[11px] font-extrabold text-[#0F5132] bg-[#E8F7F0] px-2.5 py-0.5 rounded-full border border-[#20B486]/30">
+                10% OFF ACTIVE
+              </span>
+            </div>
+
+            <!-- STATE 1: COUPON INPUT FORM (Visible when no coupon is applied) -->
+            <div id="coupon-input-container" class="hidden">
+              <div class="flex gap-2 relative">
+                <input 
+                  id="coupon-input" 
+                  type="text" 
+                  class="uppercase font-mono font-bold tracking-wider text-xs sm:text-sm h-11 px-3.5 rounded-xl border border-[#CBD5E1] bg-white text-[#0F172A] focus:border-[#20B486] focus:ring-2 focus:ring-[#20B486]/20 outline-none uppercase flex-1 transition-all"
+                  placeholder="ENTER COUPON CODE"
+                  maxlength="20"
+                />
+                <button 
+                  type="button" 
+                  id="apply-coupon-btn" 
+                  class="px-5 h-11 rounded-xl bg-[#0F172A] hover:bg-[#20B486] active:scale-95 text-white font-bold text-xs transition-all shrink-0 flex items-center gap-1.5 shadow-sm cursor-pointer"
+                >
+                  <span class="material-symbols-outlined text-[16px]">check</span>
+                  <span>Apply</span>
+                </button>
+              </div>
+
+              <!-- Available Coupon Shortcut Suggestion -->
+              <div class="mt-2 flex items-center gap-2 text-xs text-[#64748B]">
+                <span>Available offer:</span>
+                <button type="button" id="quick-apply-top10" class="inline-flex items-center gap-1 font-mono font-bold text-xs text-[#20B486] bg-[#E8F7F0] hover:bg-[#20B486] hover:text-white px-2.5 py-0.5 rounded-lg border border-[#20B486]/30 transition-all cursor-pointer">
+                  <span>TOP10</span>
+                  <span class="text-[10px] font-sans font-semibold">(Instant 10% Off)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- STATE 2: APPLIED COUPON BADGE CARD WITH ANIMATION & REMOVE OPTION (Visible when applied) -->
+            <div id="coupon-applied-container" class="coupon-pop-card p-3 sm:p-4 rounded-xl bg-gradient-to-r from-[#F0FDF4] to-[#ECFDF5] border-2 border-dashed border-[#20B486] flex items-center justify-between gap-2 sm:gap-3 shadow-xs transition-all">
+              <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shrink-0 shadow-sm shadow-emerald-500/25 coupon-sparkle-icon">
+                  <span class="material-symbols-outlined text-[18px] sm:text-[20px]">local_offer</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                    <span id="applied-code-badge" class="font-mono font-extrabold text-xs sm:text-sm text-[#0F5132] tracking-wider uppercase bg-white px-2 py-0.5 rounded-md border border-[#20B486]/40 shadow-2xs">
+                      TOP10
+                    </span>
+                    <span class="text-[11px] sm:text-xs font-bold text-[#20B486] flex items-center gap-0.5">
+                      <span class="material-symbols-outlined text-[14px]">verified</span>
+                      <span>Applied!</span>
+                    </span>
+                  </div>
+                  <p id="applied-coupon-description" class="text-[11px] sm:text-xs text-[#065F46] font-semibold mt-0.5 truncate">
+                    Extra 10% Discount applied — You save ₹50!
+                  </p>
+                </div>
+              </div>
+
+              <!-- Remove Coupon Button -->
+              <button 
+                type="button" 
+                id="remove-coupon-btn" 
+                class="px-2.5 sm:px-3 py-1.5 rounded-lg border border-red-200 bg-white hover:bg-red-50 text-red-600 hover:text-red-700 font-bold text-[11px] sm:text-xs transition-all flex items-center gap-1 shrink-0 shadow-2xs hover:scale-105 active:scale-95 cursor-pointer"
+                title="Remove discount coupon"
+              >
+                <span class="material-symbols-outlined text-[14px] sm:text-[15px]">close</span>
+                <span>Remove</span>
+              </button>
+            </div>
+
+            <!-- Dynamic Feedback / Error Message -->
+            <p id="coupon-message" class="text-xs font-bold mt-2 hidden items-center gap-1 transition-all"></p>
+          </div>
+
+          <!-- SUBMIT CTA BUTTON -->
+          <div class="pt-4 border-t border-[#E2E8F0]">
+            <button 
+              type="submit" 
+              id="pay-button" 
+              class="w-full py-4 bg-[#20B486] hover:bg-[#1A966E] text-white font-extrabold text-base rounded-xl transition-all shadow-lg shadow-[#20B486]/30 flex items-center justify-center gap-2 group cursor-pointer"
+            >
+              <span class="material-symbols-outlined text-[20px]">lock</span>
+              <span id="pay-button-text">Pay ₹449 & Unlock Google Drive Access</span>
+            </button>
+
+            <!-- Microcopy & Payment Methods -->
+            <div class="mt-4 text-center space-y-2">
+              <p class="text-xs text-[#64748B]">
+                Secured by <strong>Razorpay</strong>. Instant UPI payment via Google Pay, PhonePe, Paytm, QR, or Cards.
+              </p>
+              <div class="flex items-center justify-center gap-2 flex-wrap">
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-[10px] font-bold text-gray-600">GPay</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-[10px] font-bold text-gray-600">PhonePe</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-[10px] font-bold text-gray-600">Paytm UPI</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-[10px] font-bold text-gray-600">Visa</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-[10px] font-bold text-gray-600">Mastercard</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-[10px] font-bold text-gray-600">RuPay</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-[10px] font-bold text-gray-600">NetBanking</span>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+      <!-- =====================================================================
+           RIGHT COLUMN: STICKY ORDER SUMMARY (5 COLS)
+           ===================================================================== -->
+      <div class="lg:col-span-5 sticky top-24 space-y-4">
+        
+        <!-- Summary Card -->
+        <div class="bg-white rounded-2xl border border-[#E2E8F0] p-5 sm:p-6 shadow-xs">
+          <div class="flex items-center justify-between pb-4 border-b border-[#E2E8F0]">
+            <h3 class="font-bold text-base text-[#0F172A]">Order Summary</h3>
+            <span class="text-xs font-bold text-[#20B486] bg-[#E8F7F0] px-2.5 py-0.5 rounded-full">Digital Access</span>
+          </div>
+
+          <!-- Package Details Display -->
+          <div class="py-4 border-b border-[#E2E8F0] space-y-3">
+            <div class="flex gap-3 items-start">
+              <div class="w-12 h-12 rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[24px]">description</span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <h4 id="summary-package-title" class="font-bold text-sm text-[#0F172A] leading-tight line-clamp-2">Class 10 — All Subjects Notes + PYQ Bank</h4>
+                <p id="summary-package-meta" class="text-xs text-[#64748B] mt-0.5">Classes 6th to 10th Curriculum · NCERT Aligned</p>
+              </div>
+            </div>
+
+            <!-- Features Checklist -->
+            <div class="space-y-1.5 pt-2 text-xs text-[#475569]">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">check_circle</span>
+                <span>Lifetime Google Drive Folder Access</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">check_circle</span>
+                <span>Chapter-wise Handwritten Notes (Printable PDF)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">check_circle</span>
+                <span>Formula Sheets, Mind Maps & PYQ Question Bank</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-[#20B486]">check_circle</span>
+                <span>WhatsApp Study Community & Doubt Support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Price Calculations -->
+          <div class="py-4 border-b border-[#E2E8F0] space-y-2 text-xs sm:text-sm">
+            <div class="flex justify-between text-[#64748B]">
+              <span>Package MRP:</span>
+              <span id="summary-mrp" class="line-through text-[#94A3B8]">₹550</span>
+            </div>
+            <div class="flex justify-between text-[#64748B]">
+              <span>Base Price:</span>
+              <span id="summary-base-price" class="font-semibold text-[#0F172A]">₹499</span>
+            </div>
+            <div id="summary-discount-row" class="flex justify-between text-[#20B486] font-bold">
+              <span id="summary-discount-label">Coupon TOP10 (10% Off):</span>
+              <span id="summary-discount">-₹50</span>
+            </div>
+            <div class="flex justify-between text-base font-extrabold text-[#0F172A] pt-2 border-t border-[#E2E8F0]">
+              <span>Total Payable:</span>
+              <span id="summary-total" class="text-xl text-[#20B486]">₹449</span>
+            </div>
+          </div>
+
+          <!-- Trust Guarantees -->
+          <div class="pt-4 space-y-2">
+            <div class="flex items-center gap-2 text-xs text-[#64748B]">
+              <span class="material-symbols-outlined text-[18px] text-[#20B486]">bolt</span>
+              <span><strong>Instant Provisioning:</strong> Google Drive permissions update automatically within 60s.</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-[#64748B]">
+              <span class="material-symbols-outlined text-[18px] text-[#20B486]">verified</span>
+              <span><strong>100% Quality Guarantee:</strong> Curated by senior faculty and board toppers.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Help Card -->
+        <div class="bg-[#F1F5F9] rounded-2xl p-4 border border-[#E2E8F0] flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-white text-[#20B486] flex items-center justify-center shadow-xs">
+              <span class="material-symbols-outlined text-[20px]">chat</span>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-[#0F172A]">Need Help Before Paying?</p>
+              <p class="text-[11px] text-[#64748B]">WhatsApp our academic advisor</p>
+            </div>
+          </div>
+          <a 
+            href="https://wa.me/919876543210?text=Hello%20Bright%20Future%20Academy%2C%20I%20have%20a%20question%20regarding%20study%20notes%20checkout" 
+            target="_blank" 
+            rel="noopener"
+            class="px-3 py-1.5 bg-white hover:bg-[#20B486] hover:text-white text-xs font-bold text-[#0F172A] rounded-lg border border-[#CBD5E1] transition-all shadow-xs"
+          >
+            Chat Now
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
   </main>
-
+
+  <!-- =========================================================================
+       4. FOOTER
+       ========================================================================= -->
+  <footer class="mt-auto border-t border-[#E2E8F0] bg-white py-6 px-4 text-center text-xs text-[#64748B]">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© 2026 Bright Future Academy. Managed by <a href="https://crosstech.in" target="_blank" class="text-[#20B486] font-semibold hover:underline">crosstech.in</a>.</p>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="./help.html" class="hover:text-[#20B486]">Help & Email Correction</a>
+        <span>•</span>
+        <a href="./index.html" class="hover:text-[#20B486]">Return to Home</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

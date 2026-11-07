@@ -1,46 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment Cancelled — [COURSE BRAND]</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Payment Cancelled — Bright Future Academy</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <script type="module" crossorigin src="./assets/cancelled-tw0QHDCj.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/main-B6UXiDVK.js">
-  <link rel="modulepreload" crossorigin href="./assets/config-DpFIr7Lr.js">
-  <link rel="stylesheet" crossorigin href="./assets/main-MokF3Ry1.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" crossorigin href="./assets/main-QDG_ytjy.css">
 </head>
-<body class="bg-background text-on-surface antialiased min-h-screen flex items-center justify-center">
-  <div class="page-container py-space-xl max-w-lg mx-auto flex flex-col items-center gap-space-xl text-center">
+<body class="bg-[#F8FAF9] text-[#1E293B] font-sans antialiased selection:bg-[#20B486] selection:text-white min-h-screen flex flex-col">
 
-    <div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center">
-      <span class="material-symbols-outlined text-on-surface-variant text-[32px]">cancel</span>
-    </div>
-
-    <div class="flex flex-col gap-space-sm">
-      <span class="badge mx-auto">Payment Cancelled</span>
-      <h1 class="font-headline-lg text-headline-lg-mobile text-on-surface">You cancelled the payment</h1>
-      <p class="font-body-md text-body-md text-on-surface-variant">
-        No money was charged. Your details are saved — you can pick up right where you left off.
-      </p>
-    </div>
-
-    <div class="flex flex-col gap-space-sm w-full">
-      <button onclick="resumeCheckout()" class="btn-hero">
-        <span class="material-symbols-outlined text-[20px]">replay</span>
-        Resume — Try Again
-      </button>
-      <a href="./index.html" class="btn-secondary h-[52px] px-space-xl flex items-center justify-center gap-space-sm">
-        Return to Course Details
+  <!-- Header -->
+  <nav class="bg-white border-b border-[#E2E8F0] py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-2 text-decoration-none group">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs shrink-0">
+          <span class="material-symbols-outlined text-[20px] sm:text-[24px]">menu_book</span>
+        </div>
+        <span class="font-extrabold text-base sm:text-xl tracking-tight text-[#0F172A]">Bright Future <span class="text-[#20B486]">Academy</span></span>
       </a>
+
+      <a href="./checkout.html" class="text-xs font-bold text-[#20B486] hover:underline">Resume Checkout</a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-xl mx-auto px-4 py-16 w-full flex flex-col items-center">
+
+    <div class="w-full bg-white rounded-2xl border border-[#E2E8F0] p-6 sm:p-8 shadow-xs text-center space-y-6">
+      
+      <div class="w-16 h-16 rounded-full bg-amber-50 border-2 border-amber-200 text-[#F59E0B] flex items-center justify-center mx-auto">
+        <span class="material-symbols-outlined text-[36px]">cancel</span>
+      </div>
+
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-[#F59E0B] bg-amber-50 px-3 py-1 rounded-full">
+          Payment Dismissed
+        </span>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-[#0F172A] mt-3">You Closed the Payment Window</h1>
+        <p class="text-xs sm:text-sm text-[#64748B] mt-2">
+          No charges were deducted. Your <strong>10% Off</strong> coupon (TOP10) is preserved. Ready to complete your notes access?
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="space-y-3 pt-2">
+        <a 
+          href="./checkout.html" 
+          class="w-full py-3.5 bg-[#20B486] hover:bg-[#1A966E] text-white font-bold text-sm rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
+        >
+          <span class="material-symbols-outlined text-[18px]">shopping_cart_checkout</span>
+          <span>Return to Checkout & Complete Order</span>
+        </a>
+
+        <a 
+          href="./index.html" 
+          class="w-full py-3.5 bg-white hover:bg-gray-50 text-[#0F172A] font-bold text-sm rounded-xl border border-[#CBD5E1] transition-all shadow-xs flex items-center justify-center gap-2"
+        >
+          <span class="material-symbols-outlined text-[18px]">home</span>
+          <span>Back to Home</span>
+        </a>
+      </div>
+
     </div>
 
-    <p class="font-body-sm text-body-sm text-on-surface-variant">
-      Need help choosing a payment method?
-      <a id="whatsapp-link" href="#" target="_blank" rel="noopener" class="text-primary-container hover:underline">Chat on WhatsApp</a>
-    </p>
-  </div>
-
+  </main>
+
+  <footer class="border-t border-[#E2E8F0] bg-white py-6 text-center text-xs text-[#64748B]">
+    <p>© 2026 Bright Future Academy. Managed by <a href="https://crosstech.in" target="_blank" class="text-[#20B486] font-semibold">crosstech.in</a>.</p>
+  </footer>
+
 </body>
 </html>

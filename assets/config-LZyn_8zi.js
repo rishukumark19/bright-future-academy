@@ -1,0 +1,1 @@
+const o=window.location.hostname.includes("github.io")||window.location.hostname.includes("is-a.dev")||window.location.hostname.includes("crosstech.in")?"https://bright-future-academy-production.up.railway.app":"",t={support:{whatsappUrl:"https://wa.me/919876543210"},drive:{folderUrl:"https://drive.google.com/drive/folders/[FOLDER_ID]"}};export{o as A,t as C};

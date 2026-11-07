@@ -1,134 +1,224 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Help & Support — [COURSE BRAND]</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Help & Access Support — Bright Future Academy</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <script type="module" crossorigin src="./assets/help-B1AQZ6Qq.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/main-B6UXiDVK.js">
-  <link rel="modulepreload" crossorigin href="./assets/config-DpFIr7Lr.js">
-  <link rel="stylesheet" crossorigin href="./assets/main-MokF3Ry1.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" crossorigin href="./assets/main-QDG_ytjy.css">
 </head>
-<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
+<body class="bg-[#F8FAF9] text-[#1E293B] font-sans antialiased selection:bg-[#20B486] selection:text-white min-h-screen flex flex-col">
 
-  <header class="site-header">
-    <div class="page-container h-16 flex items-center justify-between">
-      <a href="./index.html" class="flex items-center gap-space-sm">
-        <span class="material-symbols-outlined text-primary-container text-[20px]">terminal</span>
-        <span class="font-headline-md text-headline-md text-on-surface tracking-tight" id="nav-brand">[COURSE BRAND]</span>
+  <!-- Header -->
+  <nav class="bg-white border-b border-[#E2E8F0] py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-2 text-decoration-none group">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs shrink-0">
+          <span class="material-symbols-outlined text-[20px] sm:text-[24px]">menu_book</span>
+        </div>
+        <span class="font-extrabold text-base sm:text-xl tracking-tight text-[#0F172A]">Bright Future <span class="text-[#20B486]">Academy</span></span>
       </a>
-      <div class="flex items-center gap-space-sm bg-surface-container-low px-space-sm py-space-xs rounded-lg">
-        <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
-        <span class="font-label-sm text-label-sm text-primary-container uppercase">Support Active</span>
-      </div>
+
+      <a href="./checkout.html" class="text-xs font-bold text-[#20B486] hover:underline">Go to Checkout</a>
     </div>
-  </header>
+  </nav>
 
-  <main class="pt-16 flex-1">
-    <div class="page-container py-space-xl max-w-3xl">
+  <!-- Main Container -->
+  <main class="flex-1 max-w-3xl mx-auto px-4 py-12 w-full space-y-8">
 
-      <div class="flex flex-col gap-space-sm mb-space-xl">
-        <span class="section-tag">Instant Resolution Desk</span>
-        <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">How Can We Help?</h1>
-        <p class="font-body-md text-body-md text-on-surface-variant">
-          Choose your issue below. Most problems are resolved in under 15 minutes.
-        </p>
+    <div>
+      <span class="text-xs font-bold uppercase tracking-wider text-[#20B486] bg-[#E8F7F0] px-3 py-1 rounded-full">
+        Self-Serve Support Center
+      </span>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-[#0F172A] mt-3">Study Notes Access & Payment Help</h1>
+      <p class="text-xs sm:text-sm text-[#64748B] mt-1.5">
+        Need assistance with your Google Drive permissions, entered the wrong email, or have a question? We resolve most queries instantly.
+      </p>
+    </div>
+
+    <!-- Card 1: Check Access Status by Email -->
+    <div class="bg-white rounded-2xl border border-[#E2E8F0] p-6 shadow-xs space-y-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[22px]">folder_shared</span>
+        </div>
+        <div>
+          <h2 class="text-base font-bold text-[#0F172A]">Check Your Google Drive Access Status</h2>
+          <p class="text-xs text-[#64748B]">Verify if your email address is active in our automated enrollment system.</p>
+        </div>
       </div>
 
-      <div class="flex flex-col gap-space-md">
-
-        <!-- Issue 1: Check access status -->
-        <div class="card flex flex-col gap-space-md">
-          <div class="flex items-start gap-space-md">
-            <div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-primary-container text-[22px]">folder_open</span>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="font-headline-md text-headline-md text-on-surface">Haven't Received Drive Access Yet?</h2>
-              <p class="font-body-sm text-body-sm text-on-surface-variant">Enter your registered email or phone to check your access status.</p>
-            </div>
-          </div>
-
-          <form id="status-check-form" class="flex flex-col gap-space-sm" onsubmit="checkAccessStatus(event)">
-            <input
-              class="input-field"
-              id="lookup-email"
-              type="email"
-              placeholder="yourname@gmail.com"
-              required
+      <form id="check-status-form" class="space-y-3">
+        <div>
+          <label class="block text-xs font-bold text-[#475569] mb-1">Your Registered Gmail Address</label>
+          <div class="flex gap-2">
+            <input 
+              id="lookup-email" 
+              type="email" 
+              required 
+              placeholder="student@gmail.com" 
+              class="flex-1 h-11 px-3.5 rounded-xl border border-[#CBD5E1] bg-white text-sm text-[#0F172A] focus:border-[#20B486] outline-none"
             />
-            <button class="btn-primary h-10 px-space-lg text-[14px] self-start" type="submit">
+            <button 
+              type="submit" 
+              class="px-5 h-11 rounded-xl bg-[#20B486] hover:bg-[#1A966E] text-white font-bold text-xs transition-all shrink-0 flex items-center gap-1.5"
+            >
               <span class="material-symbols-outlined text-[16px]">search</span>
-              Check My Access
+              <span>Check Access</span>
             </button>
-          </form>
-
-          <div id="status-result" class="hidden bg-surface-container-low rounded-lg p-space-md">
-            <p class="font-body-sm text-body-sm text-on-surface" id="status-result-text"></p>
           </div>
         </div>
-
-        <!-- Issue 2: Wrong email -->
-        <div class="card flex flex-col gap-space-md">
-          <div class="flex items-start gap-space-md">
-            <div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-secondary text-[22px]">manage_accounts</span>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="font-headline-md text-headline-md text-on-surface">Wrong Email Address?</h2>
-              <p class="font-body-sm text-body-sm text-on-surface-variant">Entered the wrong Gmail? Submit a correction request below.</p>
-            </div>
-          </div>
-
-          <form id="email-update-form" class="flex flex-col gap-space-sm" onsubmit="requestEmailUpdate(event)">
-            <input class="input-field" id="old-email" type="email" placeholder="Email you registered with" required />
-            <input class="input-field" id="new-email" type="email" placeholder="Correct Gmail address" required />
-            <input class="input-field" id="update-phone" type="tel" placeholder="Your WhatsApp number (for verification)" />
-            <button class="btn-primary h-10 px-space-lg text-[14px] self-start" type="submit">
-              <span class="material-symbols-outlined text-[16px]">send</span>
-              Submit Correction Request
-            </button>
-          </form>
-
-          <div id="update-result" class="hidden bg-surface-container-low rounded-lg p-space-md">
-            <p class="font-body-sm text-body-sm text-on-surface" id="update-result-text"></p>
-          </div>
-        </div>
-
-        <!-- Issue 3: WhatsApp direct -->
-        <div class="card border border-primary-container/15 flex flex-col gap-space-md">
-          <div class="flex items-start gap-space-md">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background: #25D366;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="font-headline-md text-headline-md text-on-surface">Direct WhatsApp Support</h2>
-              <p class="font-body-sm text-body-sm text-on-surface-variant">
-                Talk to a real person instantly. We respond in <strong class="text-on-surface" id="response-time">under 15 minutes</strong> during support hours.
-              </p>
-              <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">
-                Hours: <span class="text-on-surface" id="support-hours">9 AM – 11 PM IST</span>
-              </p>
-            </div>
-          </div>
-          <a id="whatsapp-primary" href="#" target="_blank" rel="noopener" class="btn-hero">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            Chat on WhatsApp Now (Fastest)
-          </a>
-          <a id="email-support" href="#" class="text-center font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors">
-            Prefer email? Write to us
-          </a>
-        </div>
-
-      </div>
+        <div id="lookup-result" class="hidden p-3.5 rounded-xl text-xs"></div>
+      </form>
     </div>
+
+    <!-- Card 2: Update Wrong Email -->
+    <div class="bg-white rounded-2xl border border-[#E2E8F0] p-6 shadow-xs space-y-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-amber-50 text-[#F59E0B] flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[22px]">edit_note</span>
+        </div>
+        <div>
+          <h2 class="text-base font-bold text-[#0F172A]">Entered the Wrong Gmail Address?</h2>
+          <p class="text-xs text-[#64748B]">Request an instant update to re-route your Google Drive folder access.</p>
+        </div>
+      </div>
+
+      <form id="update-email-form" class="space-y-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-[#475569] mb-1">Old / Mistyped Email</label>
+            <input 
+              id="old-email" 
+              type="email" 
+              required 
+              placeholder="mistyped@gmail.com" 
+              class="w-full h-11 px-3.5 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-[#475569] mb-1">New Correct Gmail</label>
+            <input 
+              id="new-email" 
+              type="email" 
+              required 
+              placeholder="correct@gmail.com" 
+              class="w-full h-11 px-3.5 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none"
+            />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-[#475569] mb-1">WhatsApp Mobile Number used at payment</label>
+          <input 
+            id="correction-phone" 
+            type="tel" 
+            required 
+            placeholder="98765 43210" 
+            class="w-full h-11 px-3.5 rounded-xl border border-[#CBD5E1] bg-white text-xs sm:text-sm text-[#0F172A] focus:border-[#20B486] outline-none"
+          />
+        </div>
+        <button 
+          type="submit" 
+          class="w-full py-3 bg-[#17252A] hover:bg-[#20B486] text-white font-bold text-xs rounded-xl transition-all shadow-xs"
+        >
+          Submit Correction & Re-Grant Drive Access
+        </button>
+        <div id="correction-result" class="hidden p-3.5 rounded-xl text-xs"></div>
+      </form>
+    </div>
+
+    <!-- Card 3: WhatsApp Direct Help -->
+    <div class="bg-[#E8F7F0] rounded-2xl p-6 border border-[#20B486]/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3.5 text-left">
+        <div class="w-12 h-12 rounded-2xl bg-white text-[#20B486] flex items-center justify-center shadow-xs shrink-0">
+          <span class="material-symbols-outlined text-[28px]">chat</span>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-[#0F172A]">Prefer WhatsApp Support?</h3>
+          <p class="text-xs text-[#0F5132]">Chat with our senior academic counselor for any questions about notes or access.</p>
+        </div>
+      </div>
+      <a 
+        href="https://wa.me/919876543210?text=Hello%20Bright%20Future%20Academy%20Support%2C%20I%20need%20help%20with%20my%20study%20notes%20access." 
+        target="_blank" 
+        rel="noopener"
+        class="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#20B486] hover:bg-[#1A966E] text-white font-bold text-xs shadow-md transition-all whitespace-nowrap text-center"
+      >
+        Chat on WhatsApp (+91 98765 43210)
+      </a>
+    </div>
+
   </main>
-
+
+  <footer class="border-t border-[#E2E8F0] bg-white py-6 text-center text-xs text-[#64748B]">
+    <p>© 2026 Bright Future Academy. Managed by <a href="https://crosstech.in" target="_blank" class="text-[#20B486] font-semibold">crosstech.in</a>.</p>
+  </footer>
+
+  <script>
+    // Status check handler
+    document.getElementById('check-status-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('lookup-email').value.trim();
+      const resultBox = document.getElementById('lookup-result');
+      resultBox.className = 'p-3.5 rounded-xl text-xs bg-gray-100 text-gray-700 block';
+      resultBox.textContent = 'Checking database records…';
+
+      try {
+        const res = await fetch(`/api/check-access?email=${encodeURIComponent(email)}`);
+        const data = await res.json();
+
+        if (data.has_access) {
+          resultBox.className = 'p-3.5 rounded-xl text-xs bg-[#E8F7F0] text-[#0F5132] border border-[#20B486]/30 block';
+          resultBox.innerHTML = `<strong>Access Active! ✓</strong> Google Drive folder permissions are active for <em>${email}</em>. <a href="https://drive.google.com" target="_blank" class="underline font-bold">Open Google Drive</a> and look under "Shared with me".`;
+        } else {
+          resultBox.className = 'p-3.5 rounded-xl text-xs bg-amber-50 text-amber-800 border border-amber-200 block';
+          resultBox.innerHTML = `No completed enrollment found for <em>${email}</em>. If you just paid, please allow up to 2 minutes or <a href="./checkout.html" class="underline font-bold">complete your enrollment here</a>.`;
+        }
+      } catch (err) {
+        resultBox.className = 'p-3.5 rounded-xl text-xs bg-gray-100 text-gray-700 block';
+        resultBox.textContent = 'Could not connect to access server. Please contact WhatsApp support.';
+      }
+    });
+
+    // Email correction handler
+    document.getElementById('update-email-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const oldEmail = document.getElementById('old-email').value.trim();
+      const newEmail = document.getElementById('new-email').value.trim();
+      const phone = document.getElementById('correction-phone').value.trim();
+      const resultBox = document.getElementById('correction-result');
+      
+      resultBox.className = 'p-3.5 rounded-xl text-xs bg-gray-100 text-gray-700 block';
+      resultBox.textContent = 'Submitting email correction request…';
+
+      try {
+        const res = await fetch('/api/update-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ old_email: oldEmail, new_email: newEmail, phone })
+        });
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          resultBox.className = 'p-3.5 rounded-xl text-xs bg-[#E8F7F0] text-[#0F5132] border border-[#20B486]/30 block';
+          resultBox.innerHTML = `<strong>Correction Submitted! ✓</strong> Google Drive permissions will update to <em>${newEmail}</em> within 5 minutes.`;
+        } else {
+          resultBox.className = 'p-3.5 rounded-xl text-xs bg-amber-50 text-amber-800 border border-amber-200 block';
+          resultBox.textContent = data.error || 'Could not find a paid order matching those details. Please message us on WhatsApp.';
+        }
+      } catch {
+        resultBox.className = 'p-3.5 rounded-xl text-xs bg-red-50 text-red-700 block';
+        resultBox.textContent = 'Submission failed. Please contact WhatsApp support for manual verification.';
+      }
+    });
+  </script>
 </body>
 </html>

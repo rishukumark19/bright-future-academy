@@ -1,133 +1,154 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Access Granted — [COURSE BRAND]</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <script>
+    if (window.location.hostname !== 'crosstech.in' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      window.location.replace('https://crosstech.in/bright-future-academy/success.html' + window.location.search + window.location.hash);
+    }
+  </script>
+  <title>Payment Successful! — Bright Future Academy</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <canvas id="confetti-canvas"></canvas>
-  <script type="module" crossorigin src="./assets/success-CGVgaj3O.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/main-B6UXiDVK.js">
-  <link rel="modulepreload" crossorigin href="./assets/config-DpFIr7Lr.js">
-  <link rel="stylesheet" crossorigin href="./assets/main-MokF3Ry1.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  
+  <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-50 w-full h-full"></canvas>
+  <script type="module" crossorigin src="./assets/success-D4nbC08G.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="./assets/config-LZyn_8zi.js">
+  <link rel="modulepreload" crossorigin href="./assets/confetti.module-B5JVzsfH.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-QDG_ytjy.css">
 </head>
-<body class="bg-background text-on-surface antialiased min-h-screen">
+<body class="bg-[#F8FAF9] text-[#1E293B] font-sans antialiased selection:bg-[#20B486] selection:text-white min-h-screen flex flex-col">
 
-  <header class="site-header">
-    <div class="page-container h-16 flex items-center justify-between">
-      <div class="flex items-center gap-space-sm">
-        <span class="material-symbols-outlined text-primary-container text-[20px]">terminal</span>
-        <span class="font-headline-md text-headline-md text-on-surface tracking-tight" id="nav-brand">[COURSE BRAND]</span>
-      </div>
-      <div class="badge-primary flex items-center gap-1">
-        <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
-        Drive Access Live
-      </div>
-    </div>
-  </header>
-
-  <main class="pt-16 min-h-screen">
-    <div class="relative overflow-hidden">
-      <!-- Massive ambient glow -->
-      <div class="ambient-spot w-[800px] h-[800px] bg-primary-container/10 top-0 left-1/2 -translate-x-1/2 opacity-60"></div>
-
-      <div class="page-container py-[60px] relative z-10 flex flex-col items-center gap-space-xl">
-
-        <!-- SUCCESS ICON -->
-        <div class="success-ring w-24 h-24 rounded-full bg-primary-container/10 border-2 border-primary-container flex items-center justify-center">
-          <span class="material-symbols-outlined text-primary-container text-[48px]">check_circle</span>
+  <!-- Header -->
+  <nav class="bg-white border-b border-[#E2E8F0] py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-2 text-decoration-none group">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#E8F7F0] text-[#20B486] flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs shrink-0">
+          <span class="material-symbols-outlined text-[20px] sm:text-[24px]">menu_book</span>
         </div>
+        <span class="font-extrabold text-base sm:text-xl tracking-tight text-[#0F172A]">Bright Future <span class="text-[#20B486]">Academy</span></span>
+      </a>
 
-        <!-- Heading -->
-        <div class="text-center flex flex-col gap-space-sm max-w-xl">
-          <span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest mx-auto">
-            Payment Verified · Access Granted
-          </span>
-          <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface">
-            You're In. 🎉
-          </h1>
-          <p class="font-body-lg text-body-lg text-on-surface-variant" id="success-sub">
-            Your Google Drive course vault has been shared to your email. Click below to open it now.
-          </p>
-        </div>
-
-        <!-- Email confirmation box -->
-        <div class="card border border-primary-container/20 max-w-lg w-full flex flex-col gap-space-sm">
-          <div class="flex items-center gap-space-sm">
-            <span class="material-symbols-outlined text-primary-container text-[20px]">check_circle</span>
-            <span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider">Drive Access Granted</span>
-          </div>
-          <div class="bg-surface-container-lowest rounded-lg px-space-md py-space-sm flex items-center gap-space-sm">
-            <span class="material-symbols-outlined text-secondary text-[18px]">mail</span>
-            <span class="font-body-md text-body-md text-on-surface" id="access-email">your registered Gmail</span>
-          </div>
-          <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Check your inbox for the Google Drive share notification. If it's not there, check your Spam folder or click the button below to open directly.
-          </p>
-        </div>
-
-        <!-- PRIMARY ACTION -->
-        <div class="flex flex-col gap-space-sm w-full max-w-lg">
-          <a id="drive-link" href="#" target="_blank" rel="noopener" class="btn-hero text-center">
-            <span class="material-symbols-outlined text-[22px]">folder_open</span>
-            Open Your Google Drive Vault Now
-          </a>
-          <p class="text-center font-label-sm text-label-sm text-on-surface-variant">
-            Opens in Google Drive. Look in <strong class="text-on-surface">"Shared with me"</strong> if you don't see it immediately.
-          </p>
-        </div>
-
-        <!-- Order reference -->
-        <div class="card max-w-lg w-full flex flex-col gap-space-sm">
-          <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Order Details</p>
-          <div class="grid grid-cols-2 gap-space-sm">
-            <div class="flex flex-col">
-              <span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Order Reference</span>
-              <span class="font-label-md text-label-md text-on-surface" id="order-ref">—</span>
-            </div>
-            <div class="flex flex-col">
-              <span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Course</span>
-              <span class="font-body-sm text-body-sm text-on-surface" id="success-course">[COURSE NAME]</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Backup instructions -->
-        <div class="card-glass max-w-lg w-full flex flex-col gap-space-md">
-          <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Backup Access Instructions</p>
-          <div class="flex flex-col gap-space-sm">
-            <div class="flex items-start gap-space-sm">
-              <span class="font-label-sm text-label-sm text-primary-container shrink-0">1.</span>
-              <p class="font-body-sm text-body-sm text-on-surface-variant">
-                Open <strong class="text-on-surface">Google Drive</strong> → Click <strong class="text-on-surface">"Shared with me"</strong> in the left sidebar.
-              </p>
-            </div>
-            <div class="flex items-start gap-space-sm">
-              <span class="font-label-sm text-label-sm text-primary-container shrink-0">2.</span>
-              <p class="font-body-sm text-body-sm text-on-surface-variant">
-                Right-click the course folder → <strong class="text-on-surface">"Add shortcut to Drive"</strong> for one-click access anytime.
-              </p>
-            </div>
-            <div class="flex items-start gap-space-sm">
-              <span class="font-label-sm text-label-sm text-primary-container shrink-0">3.</span>
-              <p class="font-body-sm text-body-sm text-on-surface-variant">
-                A backup link has been sent to your email and WhatsApp (if provided).
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Support -->
-        <div class="text-center flex flex-col gap-space-sm">
-          <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Not seeing your access? <a id="whatsapp-support" href="#" target="_blank" rel="noopener" class="text-primary-container hover:underline">Chat with us on WhatsApp</a> — we respond in under 15 minutes.
-          </p>
-        </div>
-
+      <div class="flex items-center gap-2 text-xs font-bold text-[#0F5132] bg-[#E8F7F0] px-3.5 py-1.5 rounded-full border border-[#20B486]/30">
+        <span class="w-2 h-2 rounded-full bg-[#20B486] animate-pulse"></span>
+        <span>Drive Permissions Granted</span>
       </div>
     </div>
+  </nav>
+
+  <!-- Main Success Container -->
+  <main class="flex-1 max-w-3xl mx-auto px-4 py-10 sm:py-16 w-full flex flex-col items-center text-center">
+
+    <!-- Celebration Icon Ring -->
+    <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#E8F7F0] border-4 border-[#20B486] flex items-center justify-center shadow-xl shadow-[#20B486]/20 mb-6">
+      <span class="material-symbols-outlined text-[#20B486] text-[40px] sm:text-[52px]">check_circle</span>
+    </div>
+
+    <!-- Title & Badge -->
+    <span class="text-xs font-extrabold uppercase tracking-widest text-[#20B486] bg-[#E8F7F0] px-3 py-1 rounded-full border border-[#20B486]/20 mb-3">
+      Payment Verified · Order Complete
+    </span>
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">You're In! Welcome to Bright Future Academy 🎉</h1>
+    <p class="text-sm sm:text-base text-[#64748B] mt-2 max-w-xl" id="success-sub">
+      Your Google Drive folder has been provisioned. Access permissions are granted to <strong class="text-[#0F172A]" id="access-email">your registered Gmail</strong>.
+    </p>
+
+    <!-- PRIMARY ACTION BUTTONS -->
+    <div class="w-full max-w-md space-y-3 mt-8">
+      <a 
+        id="drive-link" 
+        href="https://drive.google.com" 
+        target="_blank" 
+        rel="noopener" 
+        class="w-full py-4 bg-[#20B486] hover:bg-[#1A966E] text-white font-extrabold text-base rounded-2xl transition-all shadow-xl shadow-[#20B486]/30 flex items-center justify-center gap-2.5 group"
+      >
+        <span class="material-symbols-outlined text-[24px]">folder_open</span>
+        <span>Open Your Google Drive Notes Folder</span>
+      </a>
+
+      <a 
+        id="sample-pdf-download"
+        href="./index.html#sample-preview-modal" 
+        class="w-full py-3.5 bg-white hover:bg-gray-50 text-[#0F172A] font-bold text-sm rounded-2xl border border-[#CBD5E1] transition-all shadow-xs flex items-center justify-center gap-2"
+      >
+        <span class="material-symbols-outlined text-[18px] text-[#20B486]">download</span>
+        <span>Download Quick Formula Sheet (PDF)</span>
+      </a>
+      <p class="text-xs text-[#64748B]">Folder appears directly under <strong>"Shared with me"</strong> in your Google Drive app or web.</p>
+    </div>
+
+    <!-- ORDER SUMMARY CARD -->
+    <div class="w-full max-w-md bg-white rounded-2xl border border-[#E2E8F0] p-6 shadow-xs mt-8 text-left space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-[#E2E8F0]">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#64748B]">Enrollment Details</span>
+        <span class="text-xs font-bold text-[#20B486] flex items-center gap-1">
+          <span class="material-symbols-outlined text-[14px]">verified</span> Paid & Active
+        </span>
+      </div>
+
+      <div class="space-y-2.5 text-xs sm:text-sm">
+        <div class="flex justify-between">
+          <span class="text-[#64748B]">Order Reference:</span>
+          <span id="order-ref" class="font-mono font-bold text-[#0F172A]">#BFA-SUCCESS</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-[#64748B]">Package:</span>
+          <span id="success-course" class="font-bold text-[#0F172A] text-right line-clamp-1">Classes 6th–10th Study Notes</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-[#64748B]">Drive Email:</span>
+          <span id="receipt-email" class="font-medium text-[#20B486]">Active Google Account</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHAT TO DO NEXT -->
+    <div class="w-full max-w-md bg-[#F1F5F9] rounded-2xl p-5 border border-[#E2E8F0] mt-6 text-left space-y-3">
+      <h3 class="text-xs font-bold uppercase tracking-wider text-[#475569]">How to access your study notes:</h3>
+      <div class="space-y-2 text-xs text-[#475569]">
+        <div class="flex items-start gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-[#20B486] text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">1</span>
+          <span>Open <strong>Google Drive</strong> on your phone or laptop with your registered email.</span>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-[#20B486] text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">2</span>
+          <span>Tap on <strong>"Shared with me"</strong> tab to find the <em>Bright Future Academy</em> folder.</span>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-[#20B486] text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">3</span>
+          <span>Bookmark or tap <strong>"Add shortcut to Drive"</strong> for offline 1-click access anytime.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUPPORT LINK -->
+    <div class="mt-8 text-center text-xs text-[#64748B] space-y-2">
+      <p>Need help or entered the wrong Gmail? <a href="./help.html" class="text-[#20B486] font-bold hover:underline">Update your email here</a></p>
+      <a 
+        id="whatsapp-support" 
+        href="https://wa.me/919876543210?text=Hello%20Bright%20Future%20Academy%20Support%2C%20I%20completed%20my%20payment%20and%20would%20like%20assistance" 
+        target="_blank" 
+        rel="noopener"
+        class="inline-flex items-center gap-1.5 text-[#0F5132] font-bold bg-[#E8F7F0] px-3.5 py-1.5 rounded-full hover:bg-[#20B486] hover:text-white transition-all"
+      >
+        <span class="material-symbols-outlined text-[16px]">chat</span>
+        <span>Direct WhatsApp Academic Support: +91 98765 43210</span>
+      </a>
+    </div>
+
   </main>
-
+
+  <footer class="border-t border-[#E2E8F0] bg-white py-6 text-center text-xs text-[#64748B]">
+    <p>© 2026 Bright Future Academy. Managed by <a href="https://crosstech.in" target="_blank" class="text-[#20B486] font-semibold">crosstech.in</a>.</p>
+  </footer>
+
 </body>
 </html>

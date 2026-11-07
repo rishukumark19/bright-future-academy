@@ -22,9 +22,9 @@
   <!-- Material Symbols Outlined -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   
-  <script type="module" crossorigin src="./assets/main-CRom_muD.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
-  <link rel="stylesheet" crossorigin href="./assets/main-QDG_ytjy.css">
+  <script type="module" crossorigin src="/bright-future-academy/assets/main-DmlEG1jQ.js"></script>
+  <link rel="modulepreload" crossorigin href="/bright-future-academy/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="/bright-future-academy/assets/main-Br77o-LC.css">
 </head>
 <body class="bg-[#F8FAF9] text-[#1E293B] font-sans antialiased selection:bg-[#20B486] selection:text-white overflow-x-hidden max-w-[100vw]">
 
@@ -180,7 +180,7 @@
   <!-- =========================================================================
        3. HERO SECTION (WITH THREE.JS 3D AMBIENT CANVAS & CLEAN MINIMAL MOBILE LAYOUT)
        ========================================================================= -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-[#E8F7F0] via-[#F4FBF7] to-[#F8FAF9] pt-5 sm:pt-12 md:pt-16 pb-10 sm:pb-20 md:pb-28">
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#E8F7F0] via-[#F4FBF7] to-[#F8FAF9] pt-4 sm:pt-12 md:pt-16 pb-6 sm:pb-20 md:pb-28">
     
     <!-- Three.js Ambient 3D Interactive Canvas -->
     <canvas id="hero-three-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-80"></canvas>
@@ -200,7 +200,107 @@
     </div>
 
     <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-12 items-center">
+      
+      <!-- =====================================================================
+           MOBILE HERO: MINIMAL, IMPACTFUL & UNCLUTTERED (< sm)
+           ===================================================================== -->
+      <div id="hero-mobile-container" class="block sm:hidden text-center pb-2">
+        
+        <!-- Live Status Pill -->
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#20B486]/30 text-[#0F172A] text-[11px] font-bold shadow-xs mx-auto mb-3">
+          <span class="w-2 h-2 rounded-full bg-[#20B486] animate-pulse"></span>
+          <span class="text-[#20B486]">Classes 6th–10th</span>
+          <span class="text-gray-300">•</span>
+          <span class="text-gray-600">Exam Notes 2024–25</span>
+        </div>
+
+        <!-- Crisp, Impactful Headline -->
+        <h1 class="text-[27px] font-black text-[#0F172A] leading-[1.22] tracking-tight mb-2">
+          Score 95%+ with Curated <br />
+          <span class="curved-underline text-[#20B486]">Chapter Study Notes</span>
+        </h1>
+
+        <!-- 1-Sentence Clear Subtitle -->
+        <p class="text-xs text-[#475569] leading-relaxed max-w-[320px] mx-auto mb-3.5">
+          Senior faculty handwritten notes, 1-page formula cheat sheets & 10-year solved question banks.
+        </p>
+
+        <!-- High-Impact Action Card -->
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-[#20B486]/20 shadow-xl shadow-[#20B486]/5 p-4 text-left">
+          
+          <!-- Student Proof Snippet -->
+          <div class="flex items-center justify-between gap-2 pb-3 border-b border-gray-100">
+            <div class="flex items-center gap-2.5">
+              <img 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLQlq1KtK00Aa2BnyChOPEKYd4SGDg_ZutOaSKiyn_dFp_fscobZrWDeS0-da8SkLxKWWliBWEJAUOemRzLmd3Ef7CnRvAZUTlFd4UckTh_YLIgdnH-6x57-hWnOAhA0NkeR_83mkzqBfJOAMnBSPsVaJbb6VdZ9Jk459YMI4LORxErug_utQXpbDx5_pwPu0F--VkTLMOPq1lt5bkW2eDipDmKJ0haw35QTrik3oBzQ7XAFaJLD-sKGzYpUy_nnI15HdWLwHR9Hyh" 
+                alt="Student" 
+                class="w-10 h-10 rounded-xl object-cover border border-[#20B486]/40 shadow-xs shrink-0"
+              />
+              <div>
+                <div class="flex items-center gap-1 text-[#F59E0B] text-xs font-black leading-tight">
+                  <span>★ 4.9</span>
+                  <span class="text-gray-400 font-normal">/ 5</span>
+                  <span class="text-gray-300">•</span>
+                  <span class="text-[#0F172A] font-bold">15,000+ Enrolled</span>
+                </div>
+                <p class="text-[10px] text-[#20B486] font-semibold flex items-center gap-0.5 mt-0.5">
+                  <span class="material-symbols-outlined text-[13px]">verified</span>
+                  <span>100% NCERT · Printable PDF</span>
+                </p>
+              </div>
+            </div>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-black text-[10px] border border-emerald-200 shrink-0">
+              10% OFF
+            </span>
+          </div>
+
+          <!-- Primary Direct Action CTA -->
+          <div class="mt-3 flex flex-col gap-2">
+            <a href="#notes" class="w-full py-3 px-4 rounded-xl bg-[#20B486] hover:bg-[#1A966E] text-white font-black text-sm shadow-md shadow-[#20B486]/30 flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+              <span>Explore Notes Catalog</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+            
+            <!-- Free Sample Preview Button -->
+            <button class="mobile-hero-sample-btn w-full py-2 rounded-xl bg-white hover:bg-gray-50 border border-gray-200 text-[#334155] font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors">
+              <span class="material-symbols-outlined text-[16px] text-[#20B486]">visibility</span>
+              <span>Preview Free Sample PDF</span>
+            </button>
+          </div>
+
+          <!-- Direct 1-Tap Class Jump -->
+          <div class="pt-3 border-t border-gray-100 mt-3">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Tap to View Class Notes:</span>
+              <span class="text-[10px] font-semibold text-[#20B486]">1-Tap Filter ↓</span>
+            </div>
+            <div class="grid grid-cols-5 gap-1.5">
+              <button data-quick-filter="Class 10th" class="py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-black text-xs border border-indigo-200/70 active:scale-95 transition-all text-center">
+                10th
+              </button>
+              <button data-quick-filter="Class 9th" class="py-1.5 rounded-lg bg-teal-50 hover:bg-teal-100 text-teal-700 font-black text-xs border border-teal-200/70 active:scale-95 transition-all text-center">
+                9th
+              </button>
+              <button data-quick-filter="Class 8th" class="py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 font-black text-xs border border-amber-200/70 active:scale-95 transition-all text-center">
+                8th
+              </button>
+              <button data-quick-filter="Class 7th" class="py-1.5 rounded-lg bg-purple-50 hover:bg-purple-100 text-purple-700 font-black text-xs border border-purple-200/70 active:scale-95 transition-all text-center">
+                7th
+              </button>
+              <button data-quick-filter="Class 6th" class="py-1.5 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-700 font-black text-xs border border-rose-200/70 active:scale-95 transition-all text-center">
+                6th
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- =====================================================================
+           DESKTOP & TABLET HERO (RICH 2-COLUMN VIEW >= sm)
+           ===================================================================== -->
+      <div class="hidden sm:grid sm:grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-12 items-center">
         
         <!-- Left Hero Content -->
         <div class="lg:col-span-7 flex flex-col items-start z-10 text-left">
@@ -298,52 +398,76 @@
   </section>
 
   <!-- =========================================================================
-       4. KEY STATS & CREDIBILITY STRIP (VIBRANT GRADIENT ICONS)
+       4. KEY STATS & CREDIBILITY STRIP (CLEAN SLIM ROW ON MOBILE, 4-CARD ON DESKTOP)
        ========================================================================= -->
-  <section class="relative z-20 -mt-6 sm:-mt-8 max-w-7xl mx-auto px-3 sm:px-4 md:px-8">
-    <div class="bg-white rounded-xl sm:rounded-2xl border border-[#E2E8F0] shadow-lg p-3 sm:p-6 md:p-8 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6 lg:gap-8">
+  <section class="relative z-20 -mt-2 sm:-mt-8 max-w-7xl mx-auto px-4 md:px-8">
+    
+    <!-- Mobile Clean 1-Row Micro-Stats (< sm) -->
+    <div class="block sm:hidden bg-white/95 backdrop-blur-md rounded-2xl border border-emerald-100 shadow-md p-3">
+      <div class="grid grid-cols-4 gap-1 text-center divide-x divide-gray-100">
+        <div class="px-0.5">
+          <p class="text-xs font-black text-[#0F172A] leading-tight">15K+</p>
+          <p class="text-[9px] font-bold text-blue-600 leading-tight mt-0.5">Students</p>
+        </div>
+        <div class="px-0.5">
+          <p class="text-xs font-black text-[#0F172A] leading-tight">100%</p>
+          <p class="text-[9px] font-bold text-amber-600 leading-tight mt-0.5">NCERT</p>
+        </div>
+        <div class="px-0.5">
+          <p class="text-xs font-black text-[#0F172A] leading-tight">Instant</p>
+          <p class="text-[9px] font-bold text-emerald-600 leading-tight mt-0.5">Drive PDF</p>
+        </div>
+        <div class="px-0.5">
+          <p class="text-xs font-black text-[#0F172A] leading-tight">98.4%</p>
+          <p class="text-[9px] font-bold text-purple-600 leading-tight mt-0.5">Top Score</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop & Tablet Stats Grid (>= sm) -->
+    <div class="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 bg-white rounded-2xl border border-[#E2E8F0] shadow-lg p-6 md:p-8">
       
       <!-- Stat 1: Students Enrolled (Electric Blue Gradient) -->
-      <div class="flex items-center gap-2 sm:gap-3.5 md:gap-4 p-2 sm:p-2 rounded-xl bg-blue-50/50 sm:bg-transparent hover:bg-blue-50/60 transition-colors">
-        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/25">
-          <span class="material-symbols-outlined text-[18px] sm:text-[24px]">groups</span>
+      <div class="flex items-center gap-3.5 md:gap-4 p-2 rounded-xl hover:bg-blue-50/60 transition-colors">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/25">
+          <span class="material-symbols-outlined text-[24px]">groups</span>
         </div>
         <div class="min-w-0">
-          <p class="text-sm sm:text-xl lg:text-2xl font-black text-[#0F172A] tracking-tight leading-tight">15,000+</p>
-          <p class="text-[10px] sm:text-xs md:text-sm font-semibold text-blue-700/80 leading-tight truncate sm:whitespace-normal">Students Enrolled</p>
+          <p class="text-xl lg:text-2xl font-black text-[#0F172A] tracking-tight leading-tight">15,000+</p>
+          <p class="text-xs md:text-sm font-semibold text-blue-700/80 leading-tight">Students Enrolled</p>
         </div>
       </div>
 
       <!-- Stat 2: NCERT Aligned (Warm Amber/Gold Gradient) -->
-      <div class="flex items-center gap-2 sm:gap-3.5 md:gap-4 p-2 sm:p-2 rounded-xl bg-amber-50/50 sm:bg-transparent hover:bg-amber-50/60 transition-colors">
-        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-white flex items-center justify-center shrink-0 shadow-md shadow-amber-500/25">
-          <span class="material-symbols-outlined text-[18px] sm:text-[24px]">menu_book</span>
+      <div class="flex items-center gap-3.5 md:gap-4 p-2 rounded-xl hover:bg-amber-50/60 transition-colors">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-white flex items-center justify-center shrink-0 shadow-md shadow-amber-500/25">
+          <span class="material-symbols-outlined text-[24px]">menu_book</span>
         </div>
         <div class="min-w-0">
-          <p class="text-sm sm:text-xl lg:text-2xl font-black text-[#0F172A] tracking-tight leading-tight">100%</p>
-          <p class="text-[10px] sm:text-xs md:text-sm font-semibold text-amber-700/80 leading-tight truncate sm:whitespace-normal">NCERT Aligned</p>
+          <p class="text-xl lg:text-2xl font-black text-[#0F172A] tracking-tight leading-tight">100%</p>
+          <p class="text-xs md:text-sm font-semibold text-amber-700/80 leading-tight">NCERT Aligned</p>
         </div>
       </div>
 
       <!-- Stat 3: Instant Access (Emerald/Teal Gradient) -->
-      <div class="flex items-center gap-2 sm:gap-3.5 md:gap-4 p-2 sm:p-2 rounded-xl bg-emerald-50/50 sm:bg-transparent hover:bg-emerald-50/60 transition-colors">
-        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-emerald-500/25">
-          <span class="material-symbols-outlined text-[18px] sm:text-[24px]">download_for_offline</span>
+      <div class="flex items-center gap-3.5 md:gap-4 p-2 rounded-xl hover:bg-emerald-50/60 transition-colors">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-emerald-500/25">
+          <span class="material-symbols-outlined text-[24px]">download_for_offline</span>
         </div>
         <div class="min-w-0">
-          <p class="text-sm sm:text-xl lg:text-2xl font-black text-[#0F172A] tracking-tight leading-tight">Instant</p>
-          <p class="text-[10px] sm:text-xs md:text-sm font-semibold text-emerald-700/80 leading-tight truncate sm:whitespace-normal">PDF & Drive Access</p>
+          <p class="text-xl lg:text-2xl font-black text-[#0F172A] tracking-tight leading-tight">Instant</p>
+          <p class="text-xs md:text-sm font-semibold text-emerald-700/80 leading-tight">PDF & Drive Access</p>
         </div>
       </div>
 
       <!-- Stat 4: Score Improvement (Royal Purple Gradient) -->
-      <div class="flex items-center gap-2 sm:gap-3.5 md:gap-4 p-2 sm:p-2 rounded-xl bg-purple-50/50 sm:bg-transparent hover:bg-purple-50/60 transition-colors">
-        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-purple-500/25">
-          <span class="material-symbols-outlined text-[18px] sm:text-[24px]">trending_up</span>
+      <div class="flex items-center gap-3.5 md:gap-4 p-2 rounded-xl hover:bg-purple-50/60 transition-colors">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-purple-500/25">
+          <span class="material-symbols-outlined text-[24px]">trending_up</span>
         </div>
         <div class="min-w-0">
-          <p class="text-sm sm:text-xl lg:text-2xl font-black text-[#0F172A] tracking-tight leading-tight">98.4%</p>
-          <p class="text-[10px] sm:text-xs md:text-sm font-semibold text-purple-700/80 leading-tight truncate sm:whitespace-normal">Score Improvement</p>
+          <p class="text-xl lg:text-2xl font-black text-[#0F172A] tracking-tight leading-tight">98.4%</p>
+          <p class="text-xs md:text-sm font-semibold text-purple-700/80 leading-tight">Score Improvement</p>
         </div>
       </div>
 
